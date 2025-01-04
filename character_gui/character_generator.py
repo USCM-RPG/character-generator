@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import dearpygui.dearpygui as dpg
 import json
 from copy import deepcopy
