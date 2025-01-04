@@ -4,12 +4,13 @@ class ValueType(TypedDict):
     value: int
     tooltip: NotRequired[str]
     extended: NotRequired[str]
+    cost_table: NotRequired[list[int]]
 
-class MinMaxType(TypedDict):
+class MinMaxType(ValueType):
     max: int
     min: int
 
-class CostType(TypedDict):
+class CostType(ValueType):
     cost: int
 
 class RequirementType(TypedDict):
@@ -19,22 +20,23 @@ class RequirementType(TypedDict):
 class RequirementsType(TypedDict, total=False):
     requirements: dict[str, RequirementType]
 
-class AttributeType(ValueType, MinMaxType):
+class AttributeType(MinMaxType):
     pass
-type AttributesType = dict[str, AttributeType]
+type AttributeGroupType = dict[str, AttributeType]
+type AttributesType = dict[str, AttributeGroupType]
 
-class SkillType(ValueType, MinMaxType):
+class SkillType(MinMaxType):
     pass
 type SkillGroupType = dict[str, SkillType]
 type SkillsType = dict[str, SkillGroupType]
 
-class TraitType(ValueType, CostType, RequirementsType):
+class TraitType(CostType, RequirementsType):
     pass
-type TraitSubtabType = dict[str, TraitType]
-type TraitGroupType = dict[str, TraitSubtabType]
+type TraitSubgroupType = dict[str, TraitType]
+type TraitGroupType = dict[str, TraitSubgroupType]
 type TraitsType = dict[str, TraitGroupType]
 
-class ExpertiseType(ValueType, CostType):
+class ExpertiseType(CostType):
     pass
 type ExpertiseSubcategoryType = dict[str, ExpertiseType]
 type ExpertiseCategoryType = dict[str, ExpertiseSubcategoryType]
