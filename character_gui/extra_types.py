@@ -40,29 +40,35 @@ type ExpertiseSubcategoryType = dict[str, ExpertiseType]
 type ExpertiseCategoryType = dict[str, ExpertiseSubcategoryType]
 type ExpertisesType = dict[str, ExpertiseCategoryType]
 
-class PlayerInfoType(TypedDict):
-    Player: str
-    Email: str
-    Name: str
-    Platoon: str
-    Rank: int
-    Speciality: str
-    Gender: str
-    Age: str
+PlayerInfoType = TypedDict("PlayerInfoType",
+    {
+        "Player": str,
+        "E-mail": str,
+        "Name": str,
+        "Platoon": str,
+        "Rank": int,
+        "Speciality": str,
+        "Gender": str,
+        "Age": int
+    }
+)
 
-class CharacterConfigType(TypedDict):
-    StartingXP: int
-    StartingAP: int
-    StartingTraits: int
-    Specialities: list[str]
-    Platoons: list[str]
-    Genders: list[str]
-    SkillCostTable: list[int]
-    Age: dict[str, int]
-    RankLabels: list[str]
-    RankBonus: list[int]
-    CarryCapacityTable: list[int]
-    CombatLoadTable: list[int]
+CharacterConfigType = TypedDict("CharacterConfigType",
+    {
+        "Starting XP": int,
+        "Starting AP": int,
+        "Starting Traits": int,
+        "specialities": list[str],
+        "platoons": list[str],
+        "genders": list[str],
+        "skill_cost_table": list[int],
+        "age": dict[str, int],
+        "Rank Labels": list[str],
+        "Rank Bonus": list[int],
+        "Carry Capacity Table": list[int],
+        "Combat Load Table": list[int]
+    }
+)
     
 class CharacterPropertiesType(TypedDict):
     Attributes: AttributesType
@@ -70,8 +76,10 @@ class CharacterPropertiesType(TypedDict):
     Traits: TraitsType
     Expertise: ExpertisesType
 
-class CharacterDataType(TypedDict):
-    PlayerInfo: PlayerInfoType
-    Config: CharacterConfigType
-    Character: CharacterPropertiesType
-       
+CharacterDataType = TypedDict("CharacterDataType",
+    {
+        "Player Info": PlayerInfoType,
+        "Config": CharacterConfigType,
+        "Character": CharacterPropertiesType,
+    }
+)
