@@ -22,12 +22,14 @@ class RequirementsType(TypedDict, total=False):
 
 class AttributeType(MinMaxType):
     pass
-type AttributeGroupType = dict[str, AttributeType]
+type AttributeSubgroupType = dict[str, AttributeType]
+type AttributeGroupType = dict[str, AttributeSubgroupType]
 type AttributesType = dict[str, AttributeGroupType]
 
 class SkillType(MinMaxType):
     pass
-type SkillGroupType = dict[str, SkillType]
+type SkillSubGroupType = dict[str, SkillType]
+type SkillGroupType = dict[str, SkillSubGroupType]
 type SkillsType = dict[str, SkillGroupType]
 
 class TraitType(CostType, RequirementsType):
