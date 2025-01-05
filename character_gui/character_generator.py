@@ -6,6 +6,7 @@ from copy import deepcopy
 from reportlab.pdfgen import canvas
 
 import glob
+from pathlib import Path
 import os
 import sys
 import subprocess
@@ -1102,7 +1103,7 @@ class CharacterImport:
         self._character = character
 
     @classmethod
-    def from_json(cls, character_path: str | os.PathLike):
+    def from_json(cls, character_path: Path):
         with open(character_path) as setup_file:
             imported_character: CharacterDataType = json.load(setup_file)
 
@@ -1117,13 +1118,13 @@ class CharacterExport:
     Handle import of character. Currenty only from json-file.
     """
 
-    def __init__(self, character_path: str | os.PathLike,
+    def __init__(self, character_path: Path,
                  character: CharacterDataType):
         self._character = deepcopy(character)
         self._character_path = character_path
 
     @classmethod
-    def to_json(cls, character_path: str | os.PathLike,
+    def to_json(cls, character_path: Path,
                  character: CharacterDataType):
         character_out = deepcopy(character)
         # Convert from true/false to 1/0
