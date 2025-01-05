@@ -187,12 +187,14 @@
                     "Close Combat: Standup": {
                         "value": 2,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Any kind of striking, kicking or using a melee weapon."
                     },
                     "Close Combat: Grappling": {
                         "value": 1,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Wrestling and fighting on the ground."
                     },
                     "Stealth": {
                         "value": 2,
@@ -202,12 +204,14 @@
                     "Swimming": {
                         "value": 1,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "At skill level 2 you can stay afloat in calm water (DL 2) without any dice rolls."
                     },
                     "Sleight of Hand": {
                         "value": 0,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Can be used for a combined roll with any Tools skill to complete work faster."
                     },
                     "Zero-G ": {
                         "value": 2,
@@ -219,7 +223,8 @@
                     "Driving": {
                         "value": 3,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Expertise on a vehicle and Driving >0 means you have a drivers license for it."
                     },
                     "Parachute": {
                         "value": 2,
@@ -250,7 +255,8 @@
                     "Utility Equipment": {
                         "value": 1,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "A key skill for many workers in space ports or colonies. Most equipment of this type is not mobile or has very limited mobility under own power. Example: Excavators, cranes, bulldozers, airlock umbilicals or industrial machinery.\nExpertise: Powerloader, Crane, Engineering machinery"
                     }
                 },
                 "Technical Skills": {
