@@ -5,7 +5,6 @@ import json
 from copy import deepcopy
 from reportlab.pdfgen import canvas
 
-import glob
 from pathlib import Path
 import os
 import sys
@@ -477,20 +476,18 @@ class CharacterGenerator:
                 overview_list = overview_list + f"{property_key} ({cost})\n"
         dpg.set_value("overview_list", overview_list)
 
+    def _get_current_character_name(self):
+        current_character_name = self._current_character["Player Info"]["Name"]
+        return current_character_name.replace(" ", "_").lower()
+    
     def _save_character_callback(self):
-        file_path = os.path.abspath(
-            "local_characters/"
-            + self._current_character["Player Info"]["Name"].replace(" ", "_").lower()
-            + ".json"
-        )
+        file_path = get_character_save_location().joinpath(
+            self._get_current_character_name()).with_suffix(".json")
         CharacterExport.to_json(file_path, self._current_character)
 
     def _export_to_pdf_callback(self):
-        file_path = os.path.abspath(
-            "local_characters/"
-            + self._current_character["Player Info"]["Name"].replace(" ", "_").lower()
-            + ".pdf"
-        )
+        file_path = get_pdf_save_location().joinpath(
+            self._get_current_character_name()).with_suffix(".pdf")
         ctp = CharacterToPdf(self._current_character, self._stats, file_path)
         ctp.write_pdf()
         print(f"Created: {file_path}")
@@ -936,6 +933,7 @@ class CharacterSelector:
         self._section_title_color = [150, 250, 150]
 
         self._available_characters: list[str] = []
+        self._characters_files: list[Path] = []
 
         """
         When true, the character i fully editable in the same way as creating a new character.
@@ -946,11 +944,10 @@ class CharacterSelector:
 
         self._extend_character = {"military": True, "navy": True, "colonist": True}
 
-        self._characters_files = glob.glob("local_characters/*.json")
-        for file in self._characters_files:
-            path, file = os.path.split(file)
-            character, ext = file.split(".")
-            self._available_characters.append(character.replace("_", " ").title())
+        for file in get_character_save_location().glob("*.json"):
+            self._available_characters.append(
+                file.stem.replace("_", " ").title())
+            self._characters_files.append(file)
 
         if self._available_characters:
             self._selected_character = self._available_characters[0]
@@ -995,7 +992,7 @@ class CharacterSelector:
         """
         Continue with template character and setup next stage for creation mode.
         """
-        self._selected_character_file = r"local_characters/template/template.json"
+        self._selected_character_file = get_character_template()
 
         ci = CharacterImport.from_json(self._selected_character_file)
 
@@ -1071,7 +1068,7 @@ class CharacterSelector:
         # Uncomment this and comment below to skip selector page and
         # go directly to character creation.
         """
-        self._selected_character_file = r"local_characters/template/template.json"
+        self._selected_character_file = get_character_template()
 
         ci = CharacterImport.from_json(self._selected_character_file)
         cg = CharacterGenerator(character=ci.get_character(), create_mode=True)
@@ -1104,8 +1101,8 @@ class CharacterImport:
 
     @classmethod
     def from_json(cls, character_path: Path):
-        with open(character_path) as setup_file:
-            imported_character: CharacterDataType = json.load(setup_file)
+        with character_path.open() as setup_file:
+            imported_character = json.load(setup_file)
 
         return cls(imported_character)
 
@@ -1144,7 +1141,7 @@ class CharacterExport:
                             ][label]["value"]
                         )
         as_json = json.dumps(character_out, indent=4)
-        with open(character_path, "w") as out_file:
+        with character_path.open(mode="w") as out_file:
             out_file.write(as_json)
         return cls(character_path, character)
 
@@ -1159,7 +1156,7 @@ class CharacterToPdf:
         self._font_size = 12
         self._character = character
         self._stats = stats
-        self.out_file = out_file
+        self.out_file = str(out_file)
         self._canvas = canvas.Canvas(self.out_file, pagesize=(595, 842))
 
     def _write_line(self, line: str, title=False):
@@ -1226,6 +1223,40 @@ class CharacterToPdf:
         self._canvas.save()
 
 
+
+def get_installation_dir() -> Path:
+    installation_path = Path(__file__).resolve().parent
+    return installation_path
+
+def get_character_template_location() -> Path:
+    template_dir = Path(os.getenv(
+        "USCM_TEMPLATE_DIR",
+        default=get_installation_dir().joinpath("local_characters","template")
+        )
+    )
+    return template_dir
+
+def get_character_save_location() -> Path:
+    character_save_dir = Path(os.getenv(
+        "USCM_CHARACTER_DIR",
+        default=get_installation_dir().joinpath("local_characters")
+        )
+    )
+    return character_save_dir
+
+def get_pdf_save_location() -> Path:
+    pdf_save_dir = Path(os.getenv(
+        "USCM_PDF_DIR",
+        default=get_installation_dir().joinpath("local_characters")
+        )
+    )
+    return pdf_save_dir
+
+def get_character_template() -> Path:
+    template = get_character_template_location().joinpath("template.json")
+    return template
+
+
 def set_theme():
     with dpg.theme() as global_theme:
         with dpg.theme_component(dpg.mvAll):
@@ -1244,7 +1275,6 @@ def set_theme():
             dpg.add_theme_color(dpg.mvThemeCol_FrameBgActive, [0, 0, 0])
 
     dpg.bind_theme(global_theme)
-
 
 if __name__ == "__main__":
     dpg.create_context()
