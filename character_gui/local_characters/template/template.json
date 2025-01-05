@@ -260,38 +260,43 @@
                     }
                 },
                 "Technical Skills": {
-                    "Navigation": {
-                        "value": 2,
-                        "min": 0,
-                        "max": 5
-                    },
                     "Comtech": {
                         "value": 1,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Expertise: Radio, EW, Morse, Tightbeam, FTL Communication"
                     },
                     "Computer Systems": {
                         "value": 1,
+                        "min": 0,
+                        "max": 5,
+                        "tooltip": "Knowing your way around a computer terminal.\nExpertise: Interface 2037, USCM Interface, USN Interface, Programming, Hacking, AI, Autodoc, Engineering machinery"
+                    },
+                    "Electronic Tools": {
+                        "value": 0,
+                        "min": 0,
+                        "max": 5,
+                        "tooltip": "Tools for working with electronic components and wiring.\nExpertise: Lockpicking, Electricity, Hotwiring"
+                    },
+                    "Mechanic Tools": {
+                        "value": 1,
+                        "min": 0,
+                        "max": 5,
+                        "tooltip": "Skill with common tools found in a workshop.\nExpertise: Chainsaw, Power Tools, Lockpicking, Carpentry, Ordnance, Weaponsmith, Hotwiring"
+                    },
+                    "Navigation": {
+                        "value": 2,
                         "min": 0,
                         "max": 5
                     },
                     "Sensor Systems": {
                         "value": 1,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Using various sensors and reading their output right.\nExpertise: Covert Sensors, IR, Lidar, Motion Tracker, Photography, PUPS, Radar, Sensor Networking"
                     },
                     "Science Equipment": {
                         "value": 0,
-                        "min": 0,
-                        "max": 5
-                    },
-                    "Electronic Tools": {
-                        "value": 0,
-                        "min": 0,
-                        "max": 5
-                    },
-                    "Mechanic Tools": {
-                        "value": 1,
                         "min": 0,
                         "max": 5
                     },
@@ -303,7 +308,8 @@
                     "Space Crew": {
                         "value": 1,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Profession skill to fill a basic crew role on a spaceship or station. Covers operation and maintenance of things like airlocks, cryopods, suits or life support systems.\nExpertise: Starship, Damage Control, Starship Identification, Environmental Suit, Life Support"
                     },
                     "Starship Bridge": {
                         "value": 0,
