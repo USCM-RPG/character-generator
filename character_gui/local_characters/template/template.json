@@ -156,22 +156,26 @@
                     "Indirect Fire": {
                         "value": 1,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Expertise: Forward Observer, M41 Pulse Rifle, M790 Grenade Launcher, Mortar, Artillery"
                     },
                     "Shoulder-launched": {
                         "value": 1,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Expertise: M5 RPG, M83 SADAR, M78 PIG, SIM-118"
                     },
                     "Missile Weapons": {
                         "value": 0,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "This skill is mainly for launching missiles from a vehicle/starship.\nExpertise: SIM-118, M112 HIMAT, ASAT, ABM, AAM, ASM, SAM"
                     },
                     "Heavy Cannon": {
                         "value": 0,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Direct fire with a cannon heavier than a HMG, mounted on a vehicle or building.\nExpertise: Ballistic, Laser, Railgun, Particle Beam, Plasma"
                     }
                 },
                 "Physical Skills": {
