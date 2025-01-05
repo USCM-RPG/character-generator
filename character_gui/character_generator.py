@@ -10,7 +10,7 @@ import os
 import sys
 import subprocess
 
-from character_gui.extra_types import *
+from extra_types import *
 
 
 class CharacterGenerator:
@@ -110,7 +110,7 @@ class CharacterGenerator:
         return self._imported_character["Config"]["Starting Traits"]
 
     @staticmethod
-    def _get_total_knowledge_cost(skills: SkillsType, default_cost: list[int]) -> int:
+    def _get_total_knowledge_cost(skills: SkillGroupType, default_cost: list[int]) -> int:
         """
         Calulate the xp cost for either all skills.
         """
@@ -126,7 +126,6 @@ class CharacterGenerator:
 
     def _get_total_attribute_cost(self) -> int:
         sum_points = 0
-        attribute: AttributeType
         for attribute in self._current_character["Character"]["Attributes"]["All"]["Attribute"].values():
             sum_points = sum_points + attribute["value"]
         return sum_points
@@ -204,7 +203,7 @@ class CharacterGenerator:
         self._update_combat_load()
         self._check_property_disable()
 
-    def _get_value_from_character_state(self, property_data: dict) -> int:
+    def _get_value_from_character_state(self, property_data: dict[str, str]) -> int:
         """
         Helper function to get a specific value.
         """
