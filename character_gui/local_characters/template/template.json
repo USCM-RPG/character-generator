@@ -1708,71 +1708,92 @@
                     }
                 },
                 "Military Training": {
+                    "Airforce Tactics": {
+                        "value": 0,
+                        "cost": 5,
+                        "tooltip": "Used with Piloting: Atmospheric."
+                    },
                     "Drill": {
                         "value": 0,
-                        "cost": 1
+                        "cost": 1,
+                        "tooltip": "Wear a dress uniform correctly, march in formation, perform formal drills and ceremonies. Uses Soldiering or Space Crew."
                     },
-                    "Infantry Tactics": {
+                    "FAC": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 3,
+                        "tooltip": "Forward Air Controller. To call in and direct close air support (CAS) or missiles. Includes using target marking equipment for laser guidance. Uses the Soldiering skill."
+                    },
+                    "Forced Entry": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Kick in doors, break them with a ram or budge the frame with a crowbar for a quick entry. Also applies to windows or other entrances (if there is no atmosphere you need Hull breaching). Usable with Criminal, Policework, Strength or Demolition (if using explosives)."
+                    },
+                    "Forward Observer": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "To call in and adjust artillery fire. Uses Indirect Fire or Soldiering skill. If using a drone to observe it will be a combined roll with Remote Piloting."
                     },
                     "Hull breaching": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "How to forcibly breach through a ships hull to allow entrance. Usable with Demolition or Welding skill, the latter will likely also require plasma expertise."
+                    },
+                    "Infantry Tactics": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Small unit tactics during combat or movement. Used with Soldiering."
+                    },
+                    "Interrogation": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Techniques & tactics to get more information out of someone in your custody. Used with Policework, Intelligence, Intimidation, Streetwise or Charisma depending on situation."
                     },
                     "Mobile Tactics": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 4,
+                        "tooltip": "Mobile and armored warfare. Includes vehicle combat and how to operate tactically during traveling and escort duty. Used with Soldiering or Driving."
                     },
-                    "Airforce Tactics": {
+                    "Naval Tactics": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Wet navy tactics, on or below the surface. How to operate in combat or as part of a formation. Used with Seamanship."
+                    },
+                    "Nuclear Bomb": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Handle nuclear explosive devices. Used with CBRN Warfare or Demolition."
+                    },
+                    "Ordnance": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Knowledge of ammunition, grenades, artillery shells etc. Required to safely modify or disarm ammunition. Allows setting shell fuzes. Used with Utility Equipment to rearm a dropship, with Mechanic Tools to safely cut a shell open or with Mine Warfare to dismantle a mine into components."
+                    },
+                    "Parachute wings": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Training badge for completing basic Parachute training."
+                    },
+                    "RTI": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Resistance to interrogation training prepares a soldier in case they are captured. Provides bonus to Psy or Tou to resist interrogation and torture. Can also be used with Soldiering or Criminal"
                     },
                     "Space Tactics": {
                         "value": 0,
                         "cost": 5,
-                        "extended": "navy"
-                    },
-                    "Naval Tactics": {
-                        "value": 0,
-                        "cost": 5
-                    },
-                    "Ordnance": {
-                        "value": 0,
-                        "cost": 5
-                    },
-                    "Forced Entry": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Forward Observer": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "FAC": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Interrogation": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Parachute wings": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "RTI": {
-                        "value": 0,
-                        "cost": 3
+                        "extended": "navy",
+                        "tooltip": "Tactics for ship combat in deep space or orbit. Used with Starship Bridge or for smaller ships with Space Crew."
                     },
                     "Starship Identification": {
                         "value": 0,
                         "cost": 3,
-                        "extended": "navy"
+                        "extended": "navy",
+                        "tooltip": "Knowledge of basic facts about starships used by various foreign powers and how to tell them apart based on passive visual/EM signatures or discovered capabilities like profiles for active sensors or acceleration. Used with Space Crew or Starship Bridge."
                     },
                     "Vehicle Identification": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Knowledge of basic facts about vehicles used by various foreign powers and how to tell them apart based on visual, audible or EM signatures. Used with Soldiering or Intelligence."
                     }
                 },
                 "Sensors & IT": {
