@@ -401,6 +401,13 @@
                     }
                 },
                 "Expert Skills": {
+                    "Artistry": {
+                        "value": 0,
+                        "min": 0,
+                        "max": 5,
+                        "extended": "colonist",
+                        "tooltip": "Expertise: Forgery, Music, Painting, Singing, Performance, Writing"
+                    },
                     "Commerce": {
                         "value": 0,
                         "min": 0,
@@ -428,7 +435,8 @@
                     "Medical": {
                         "value": 0,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Expertise: IV, Toxicology, Infections, Dive Medicine, Aerospace Medicine, Altitude Medicine, Cold climate, Herbalism, Hot climate, CBRN Treatment, Autodoc, Surgery."
                     },
                     "Mining": {
                         "value": 0,
