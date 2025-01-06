@@ -1651,49 +1651,60 @@
                     "Chainsaw": {
                         "value": 0,
                         "cost": 3,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Can be used with Mechanic Tools or Outdoorsman."
                     },
                     "Damage Control": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Used with Space Crew or Seamanship."
                     },
                     "Electricity": {
                         "value": 0,
                         "cost": 15,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Professional knowledge of electric cabling, power generators, batteries and safety near high voltage lines. Used with Electronics Tools."
                     },
                     "Engineering machinery": {
                         "value": 0,
-                        "cost": 3,
-                        "extended": "colonist"
+                        "cost": 15,
+                        "extended": "colonist",
+                        "tooltip": "Operating industrial machines like CNC milling or lathe machines. Used with Utility Equipment for direct operation, Computer Systems for programming them or Engineering for creating a new design. Large military starships will have this type of machinery in their workshop to assist with repairs or manufacturing of spare parts."
                     },
                     "EOD": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Explosive Ordnance Disposal. Training in how to find, expose and remove explosive devices as well as using specialized equipment for this. The disposal part usually means safely detonating them. Actually disarming while keeping ordnance intact requires Ordnance. Used with Mine Warfare."
                     },
                     "Hotwiring": {
                         "value": 0,
-                        "cost": 3
-                    },
-                    "IED": {
-                        "value": 0,
-                        "cost": 4
-                    },
-                    "Lockpicking": {
-                        "value": 0,
-                        "cost": 7
-                    },
-                    "Power Tools": {
-                        "value": 0,
-                        "cost": 2
+                        "cost": 3,
+                        "tooltip": "Start a vehicle without the key. For simpler low-tech vehicles it may be enough with some know-how and a skill like Sleight of Hand, Criminal or Mechanic Tools, for ones with better anti-theft protection you need more advanced equipment and the Electronic Tools skill."
                     },
                     "Hyperbaric": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Work in elevated pressures. Typically used for hull work like underwater welding on wet navy ships, but would also apply for setting explosive charges in a liquid medium and understanding how shockwaves propagate. Uses Welding or Demolition."
+                    },
+                    "IED": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Improvised Explosive Device. Knowledge how to create improvised mines or explosive charges. Used with Demolition or Mine Warfare."
+                    },
+                    "Lockpicking": {
+                        "value": 0,
+                        "cost": 7,
+                        "tooltip": "Low-tech locks may be possible to defeat with a pin and the Sleight of Hand or Criminal skill. More advanced locks require Mechanic Tools or Electronics Tools skills to run a bypass."
+                    },
+                    "Power Tools": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Hand-held powered tools like saws, hammer-drills, grinders etc. Does not include chainsaw which is a separate expertise. Uses Mechanic Tools."
                     },
                     "Weaponsmith": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Allows you to modify firearms or create crude ones given the right tools and materials. Uses Mechanic Tools skill."
                     }
                 },
                 "Military Training": {
