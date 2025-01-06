@@ -1940,10 +1940,6 @@
                     }
                 },
                 "Navigation": {
-                    "Orienteering": {
-                        "value": 0,
-                        "cost": 2
-                    },
                     "Interplanetary": {
                         "value": 0,
                         "cost": 6
@@ -1952,6 +1948,11 @@
                         "value": 0,
                         "cost": 10,
                         "extended": "navy"
+                    },
+                    "Orienteering": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Provides bonus to navigation over land regardless of terrain."
                     },
                     "Nautical Charts": {
                         "value": 0,
