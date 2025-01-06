@@ -1368,7 +1368,8 @@
                 "US military small arms": {
                     "M41 Pulse Rifle": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Also covers the built-in U1 grenade launcher and variants like the M41AE2 AR."
                     },
                     "M39 SMG": {
                         "value": 0,
@@ -1376,7 +1377,8 @@
                     },
                     "VP55 LR Pistol": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Low-recoil pistol specialized for use aboard spacecraft."
                     },
                     "M42 Sniper Rifle": {
                         "value": 0,
@@ -1390,15 +1392,11 @@
                         "value": 0,
                         "cost": 8
                     },
-                    "Harrington AR": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "military"
-                    },
                     "Morita I AR": {
                         "value": 0,
                         "cost": 3,
-                        "extended": "military"
+                        "extended": "military",
+                        "tooltip": "Used mainly by mobile infantry."
                     }
                 },
                 "Generic": {
@@ -1437,35 +1435,53 @@
                     }
                 },
                 "Other military small arms": {
+                    "F44AA Pulse Rifle": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "military",
+                        "tooltip": "Old experimental PR with aim assist that predated the M41 & M56 designs."
+                    },
+                    "Harrington AR": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "military",
+                        "tooltip": "Older precursor to the US pulse rifle that has now been phased out of active use."
+                    },
                     "SK813 PR": {
                         "value": 0,
                         "cost": 5,
-                        "extended": "military"
+                        "extended": "military",
+                        "tooltip": "Chinese made pulse rifle."
                     },
                     "NSG23 AR": {
                         "value": 0,
                         "cost": 5,
-                        "extended": "military"
+                        "extended": "military",
+                        "tooltip": "German made assault rifle."
                     },
                     "Weyland Storm Rifle": {
                         "value": 0,
                         "cost": 5,
-                        "extended": "military"
+                        "extended": "military",
+                        "tooltip": "Older assault rifle model manufactured by Weyland Corp."
                     },
                     "X-9 AR": {
                         "value": 0,
                         "cost": 3,
-                        "extended": "military"
+                        "extended": "military",
+                        "tooltip": "Older model that is actually a carbine since there is no built-in grenade launcher."
                     }
                 },
                 "Fixed/Mounted Weapons": {
                     "HMG": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Heavy Machine Gun up to 30mm, anything bigger counts as cannon. Uses Shooting: Auto."
                     },
                     "Ballistic": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Ballistic cannons like the ones mounted on an Infantry Fighting Vehicle (IFV) or Main Battle Tank (MBT)."
                     },
                     "Laser": {
                         "value": 0,
@@ -1477,86 +1493,105 @@
                     },
                     "Particle Beam": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Good at destroying electronics, mounted on vehicles or starships."
                     },
                     "Plasma": {
                         "value": 0,
-                        "cost": 6
+                        "cost": 6,
+                        "tooltip": "Plasma punches through almost anything. This represents general training on plasma technology applicable both for mounted weapons or other uses like welding."
                     },
                     "Flamer": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Vehicle mounted flamethrowers. Uses Shooting: Auto."
                     }
                 },
                 "Support Weapons": {
                     "M112 HIMAT": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Portable anti-tank missile system used by infantry squads. Uses Missile skill."
                     },
                     "M5 RPG": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Reloadable rocket weapon. Uses Shoulder-launched."
                     },
                     "M78 PIG": {
                         "value": 0,
-                        "cost": 8
+                        "cost": 8,
+                        "tooltip": "Portable plasma gun, uses Shoulder-launched."
                     },
                     "M790 Grenade Launcher": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Handheld launcher for 40mm grenades, very simple but effective design. Uses Indirect Fire."
                     },
                     "M83 SADAR": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Disposable anti-tank rocket, uses Shoulder-launched."
                     },
                     "SIM-118": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Manpad anti-air missile. Uses Missile Weapons or Shoulder-launched."
                     }
                 },
                 "Missile Weapons": {
                     "AAM": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Air-air missile like the AIM-90E Headlock. Fired from an aircraft against other aircraft."
                     },
                     "ABM": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Anti-ballistic missile. Intended to intercept another projectile in space or atmosphere."
                     },
                     "ASAT": {
                         "value": 0,
                         "cost": 3,
-                        "extended": "navy"
+                        "extended": "navy",
+                        "tooltip": "Anti-satellite missile. Fired against targets in orbit or deep space."
                     },
                     "ASM": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Air-surface missile. Also applies for orbit-surface. Includes dropship armament like the AGM-220C, Mk.88 SGW, Mk.10 ZEUS and Banshee 70."
                     },
                     "SAM": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Surface-air missile like the LIM-417 Phalanx primarily used by colonial marine forces."
                     }
                 },
                 "Close Combat Weapons": {
                     "Baton": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Baton fighting technique typically taught to police or security guards. Also applicable to tonfa, tire iron or a short metal pipe (but not a baseball bat)."
                     },
                     "Bayonet": {
                         "value": 0,
-                        "cost": 1
+                        "cost": 1,
+                        "tooltip": "Part of basic infantry training since ancient times and provides +1 Close Combat: Standup bonus with a bayonet mounted on your weapon."
                     },
                     "Handcuffs": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Techniques to handcuff an unwilling target."
                     },
                     "Knife": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 2,
+                        "tooltip": "From improvised shank to specialized combat or throwing knifes."
                     },
                     "Sword": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 4,
+                        "tooltip": "A machete, katana or the traditional marine corps saber all count as sword."
                     }
                 }
             },
