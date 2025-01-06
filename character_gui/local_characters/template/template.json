@@ -1887,11 +1887,13 @@
                     "Bushcrafting": {
                         "value": 0,
                         "cost": 3,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Uses Outdoorsman."
                     },
                     "Evasion": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Advanced training to hide tracks while moving through terrain and strategies to confuse pursuers, dogs or sensors. Used with Outdoorsman or Camouflage."
                     },
                     "Fishing": {
                         "value": 0,
@@ -1901,7 +1903,8 @@
                     "Herbalism": {
                         "value": 0,
                         "cost": 5,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Knowledge of plants with medicinal effects. To find such plants the current terrain is also a required expertise. Used with Outdoorsman or Medical skill."
                     },
                     "Herding": {
                         "value": 0,
@@ -1910,11 +1913,13 @@
                     },
                     "Hunting": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "You know where to find game, how to get close and how to skin and butcher them after the shot. Used with Outdoorsman and terrain expertise."
                     },
                     "K9": {
                         "value": 0,
-                        "cost": 8
+                        "cost": 8,
+                        "tooltip": "You have specialist K9 training to work with dogs for for searching, guarding etc. Your squad will benefit from the senses of your dog for detection purposes (combined roll using dog perception + your Animal Handling which in practice means your skill is used since it will be lower)."
                     },
                     "Riding": {
                         "value": 0,
@@ -1926,7 +1931,8 @@
                     },
                     "Tracking": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Read tracks to uncover the story they tell, in what direction, how many, how fast they were moving etc. Used with Outdoorsman. If tracking a vehicle and you also have Vehicle Identification it allows you to identify the model instead of only the general type as wheeled, tracked."
                     },
                     "Trapping": {
                         "value": 0,
