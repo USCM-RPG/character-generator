@@ -1209,7 +1209,8 @@
                 "Aircrafts": {
                     "Shuttle": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Includes the CS-14 Briaeros."
                     },
                     "Gliderplane": {
                         "value": 0,
@@ -1242,7 +1243,8 @@
                     },
                     "PUPS": {
                         "value": 0,
-                        "cost": 12
+                        "cost": 12,
+                        "tooltip": "Advanced antigrav spectrograh drone. Restricted WY technology not available in normal military training."
                     }
                 },
                 "Land Vehicles": {
@@ -1277,13 +1279,15 @@
                     },
                     "M292 Artillery": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Firing it is done with the Indirect Fire skill and requires the Artillery expertise."
                     }
                 },
                 "Sea Vehicles": {
                     "CRRC": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Combat Rubber Reconnaissance Craft. Often used by marines and special forces."
                     },
                     "Kayak": {
                         "value": 0,
@@ -1292,12 +1296,14 @@
                     },
                     "Motorboat": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Motor powered solid hull boats up to class 3 (which would include coastal Fast Attack Crafts, FAC:s)."
                     },
                     "Sailing": {
                         "value": 0,
                         "cost": 5,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Any boat or larger ship as long as it is mainly sail-powered."
                     }
                 },
                 "Starship": {
