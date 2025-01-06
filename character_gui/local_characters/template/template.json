@@ -355,16 +355,6 @@
                     }
                 },
                 "General Skills": {
-                    "First Aid": {
-                        "value": 1,
-                        "min": 0,
-                        "max": 5
-                    },
-                    "Outdoorsman": {
-                        "value": 1,
-                        "min": 0,
-                        "max": 5
-                    },
                     "Animal Handling": {
                         "value": 0,
                         "min": 0,
@@ -382,6 +372,12 @@
                         "max": 5,
                         "extended": "colonist"
                     },
+                    "First Aid": {
+                        "value": 1,
+                        "min": 0,
+                        "max": 5,
+                        "tooltip": "Covers only the initial treatment. Any more extensive treatment typically requires the Medical skill which is not taught to common soldiers.\nExpertise: IV, Surgery, Toxicology, Infections, Dive Medicine, Aerospace Medicine, Altitude Medicine, Cold climate, Hot climate, CBRN Treatment, Autodoc"
+                    },
                     "Gambling": {
                         "value": 0,
                         "min": 0,
@@ -391,6 +387,12 @@
                         "value": 0,
                         "min": 0,
                         "max": 5
+                    },
+                    "Outdoorsman": {
+                        "value": 1,
+                        "min": 0,
+                        "max": 5,
+                        "tooltip": "Expertise: Bushcrafting, Chainsaw, Evasion, Fishing, Herbalism, Hunting, Rope Work, Skiing, Tracking, Trapping, Terrain"
                     },
                     "Streetwise": {
                         "value": 0,
