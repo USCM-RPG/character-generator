@@ -319,15 +319,17 @@
                     }
                 },
                 "Military Skills": {
-                    "Soldiering": {
+                    "Camouflage": {
                         "value": 1,
-                        "min": 1,
-                        "max": 1
+                        "min": 0,
+                        "max": 5,
+                        "tooltip": "Not just hiding from plain sight but also emission control for heat, sound and the EM spectrum."
                     },
                     "CBRN Warfare ": {
                         "value": 1,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Chemical/Biological/Radiological/Nuclear warfare. Use of protective equipment and directly employing CBRN for offensive use. Can be used for first aid on CBRN injuries.\nExpertise: CBRN Treatment, Environmental Suit, Nuclear Bomb"
                     },
                     "Demolition": {
                         "value": 1,
@@ -337,17 +339,19 @@
                     "Intelligence": {
                         "value": 1,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Intel gathering, analysis and use of specialized “spy” equipment.\nExpertise: Covert Sensors, Forgery, Interrogation, Photography, Sensor Networking, Shadowing, Starship Identification, Vehicle Identification"
                     },
                     "Mine Warfare ": {
                         "value": 1,
                         "min": 0,
                         "max": 5
                     },
-                    "Camouflage": {
+                    "Soldiering": {
                         "value": 1,
-                        "min": 0,
-                        "max": 5
+                        "min": 1,
+                        "max": 1,
+                        "tooltip": "Can be used for anything a soldier “should” know not covered by a separate skill.\nExpertise: Drill, Forward Observer, FAC, Infantry Tactics, Mobile Tactics, RTI Vehicle Identification"
                     }
                 },
                 "General Skills": {
