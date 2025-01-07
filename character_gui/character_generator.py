@@ -10,9 +10,14 @@ import os
 import sys
 import subprocess
 
+from extra_types import *
+
 
 class CharacterGenerator:
-    def __init__(self, character, create_mode, extend_character) -> None:
+    def __init__(self,
+                 character: CharacterDataType,
+                 create_mode: bool,
+                 extend_character: dict[str, bool]) -> None:
         self._imported_character = character
         self._extend_character = extend_character
         self._current_character = deepcopy(self._imported_character)
@@ -37,7 +42,7 @@ class CharacterGenerator:
 
         self._section_title_color = [150, 250, 150]
 
-        self._stats = {
+        self._stats: dict[str, ValueType] = {
             "Carry Capacity": {
                 "value": 55,
                 "tooltip": "Affected by Strength and various Traits.",
@@ -86,7 +91,7 @@ class CharacterGenerator:
             )
         )
 
-    def _serialize_properties(self, character):
+    def _serialize_properties(self, character: dict):
         properties = dict()
         for key, value in character.items():
             if "value" in character[key]:
@@ -105,7 +110,7 @@ class CharacterGenerator:
         return self._imported_character["Config"]["Starting Traits"]
 
     @staticmethod
-    def _get_total_knowledge_cost(skills: dict, default_cost: list) -> int:
+    def _get_total_knowledge_cost(skills: SkillGroupType, default_cost: list[int]) -> int:
         """
         Calulate the xp cost for either all skills.
         """
@@ -121,9 +126,7 @@ class CharacterGenerator:
 
     def _get_total_attribute_cost(self) -> int:
         sum_points = 0
-        for attribute in self._current_character["Character"]["Attributes"]["All"][
-            "Attribute"
-        ].values():
+        for attribute in self._current_character["Character"]["Attributes"]["All"]["Attribute"].values():
             sum_points = sum_points + attribute["value"]
         return sum_points
 
@@ -151,7 +154,7 @@ class CharacterGenerator:
         return sum_traits
 
     @staticmethod
-    def _get_total_property_cost(properties: dict) -> int:
+    def _get_total_property_cost(properties: TraitsType | ExpertisesType) -> int:
         """
         Calculate the total cost from boolean poperties .
         For example 'Advantages'.
@@ -166,7 +169,7 @@ class CharacterGenerator:
                             sum_cost = sum_cost + property["cost"]
         return sum_cost
 
-    def _get_allowed_min_value(self, item: dict) -> int:
+    def _get_allowed_min_value(self, item: MinMaxType) -> int:
         min = item["value"]
         if self._create_mode:
             min = item["min"]
@@ -200,7 +203,7 @@ class CharacterGenerator:
         self._update_combat_load()
         self._check_property_disable()
 
-    def _get_value_from_character_state(self, property_data: dict) -> int:
+    def _get_value_from_character_state(self, property_data: dict[str, str]) -> int:
         """
         Helper function to get a specific value.
         """
@@ -339,9 +342,7 @@ class CharacterGenerator:
         Must be called whenever a related value have been change.
         """
 
-        psycho_limit = self._current_character["Character"]["Attributes"]["All"][
-            "Attribute"
-        ]["Psyche"]["value"]
+        psycho_limit: int = self._current_character["Character"]["Attributes"]["All"]["Attribute"]["Psyche"]["value"]
         self._stats["Psycho Limit"]["value"] = psycho_limit
         dpg.set_value(
             item="Psycho Limit",
@@ -354,10 +355,8 @@ class CharacterGenerator:
         Must be called whenever a related value have been change.
         """
 
-        stress_limit = (
-            self._current_character["Character"]["Attributes"]["All"]["Attribute"][
-                "Psyche"
-            ]["value"]
+        stress_limit: int = (
+            self._current_character["Character"]["Attributes"]["All"]["Attribute"]["Psyche"]["value"]
             + 1
         )
         bonus_string = "".join(self._check_active_bonuses("Stress Limit"))
@@ -373,9 +372,7 @@ class CharacterGenerator:
         Must be called whenever a related value have been change.
         """
 
-        stunt_cap = self._current_character["Character"]["Attributes"]["All"][
-            "Attribute"
-        ]["Charisma"]["value"]
+        stunt_cap: int = self._current_character["Character"]["Attributes"]["All"]["Attribute"]["Charisma"]["value"]
         self._stats["Stunt Cap"]["value"] = stunt_cap
         dpg.set_value(
             item="Stunt Cap",
@@ -388,10 +385,8 @@ class CharacterGenerator:
         Must be called whenever a related value have been change.
         """
 
-        health = (
-            self._current_character["Character"]["Attributes"]["All"]["Attribute"][
-                "Endurance"
-            ]["value"]
+        health: int = (
+            self._current_character["Character"]["Attributes"]["All"]["Attribute"]["Endurance"]["value"]
             + 3
         )
         self._stats["Health"]["value"] = health
@@ -405,10 +400,8 @@ class CharacterGenerator:
         Update the printout of current carry capacity.
         Must be called whenever a related value have been change.
         """
-        carry_capacity = self._current_character["Config"]["Carry Capacity Table"][
-            self._current_character["Character"]["Attributes"]["All"]["Attribute"][
-                "Strength"
-            ]["value"]
+        carry_capacity: int = self._current_character["Config"]["Carry Capacity Table"][
+            self._current_character["Character"]["Attributes"]["All"]["Attribute"]["Strength"]["value"]
             - 1
         ]
         self._stats["Carry Capacity"]["value"] = carry_capacity
@@ -423,9 +416,7 @@ class CharacterGenerator:
         Must be called whenever a related value have been change.
         """
         combat_load = self._current_character["Config"]["Combat Load Table"][
-            self._current_character["Character"]["Attributes"]["All"]["Attribute"][
-                "Strength"
-            ]["value"]
+            self._current_character["Character"]["Attributes"]["All"]["Attribute"]["Strength"]["value"]
             - 1
         ]
         self._stats["Combat Load"]["value"] = combat_load
@@ -440,11 +431,9 @@ class CharacterGenerator:
         Must be called whenever a related value have been change.
         """
         rank_index = self._current_character["Player Info"]["Rank"]
-        leadership_points = (
+        leadership_points: int = (
             self._current_character["Config"]["Rank Bonus"][rank_index]
-            + self._current_character["Character"]["Attributes"]["All"]["Attribute"][
-                "Charisma"
-            ]["value"]
+            + self._current_character["Character"]["Attributes"]["All"]["Attribute"]["Charisma"]["value"]
         )
         self._stats["Leadership Points"]["value"] = leadership_points
         dpg.set_value(
@@ -480,10 +469,10 @@ class CharacterGenerator:
         dpg.set_value(item="Available Traits", value=remaining)
 
     def _update_overview(self):
-        overview_list = ""
+        overview_list: str = ""
         for property_key, property_value in self._serial_properties.items():
             if "cost" in property_value and property_value["value"]:
-                cost = property_value["cost"]
+                cost: int = property_value["cost"]
                 overview_list = overview_list + f"{property_key} ({cost})\n"
         dpg.set_value("overview_list", overview_list)
 
@@ -511,7 +500,7 @@ class CharacterGenerator:
             subprocess.call(["xdg-open", file_path])
 
     @staticmethod
-    def _split_dict(source, num_per_part, max_row_count=24):
+    def _split_dict(source: dict, num_per_part: int, max_row_count=24):
         """
         Helper function to dived a set of components into groups
         in order to control the number of items shown horisontally.
@@ -519,10 +508,10 @@ class CharacterGenerator:
         * Limit the amount traits/advantages/disadvantages for each column.
         " Limit the amount of skill sub categories for each column.
         """
-        split_items = []
+        split_items: list[dict] = []
         part = dict()
-        row_count = 0
-        category_count = 0
+        row_count: int = 0
+        category_count: int = 0
         for item_key, item_value in source.items():
             part[item_key] = item_value
             category_count = category_count + 1
@@ -951,7 +940,7 @@ class CharacterSelector:
         When False, XP can only be spend, not removed.
         This feature will be remove/hidden in the final version.
         """
-        self._create_mode = False
+        self._create_mode: bool = False
 
         self._extend_character = {"military": True, "navy": True, "colonist": True}
 
@@ -1107,7 +1096,7 @@ class CharacterImport:
     Handle import of character. Currenty only from json-file.
     """
 
-    def __init__(self, character):
+    def __init__(self, character: CharacterDataType):
         self._character = character
 
     @classmethod
@@ -1126,12 +1115,14 @@ class CharacterExport:
     Handle import of character. Currenty only from json-file.
     """
 
-    def __init__(self, character_path: Path, character):
+    def __init__(self, character_path: Path,
+                 character: CharacterDataType):
         self._character = deepcopy(character)
         self._character_path = character_path
 
     @classmethod
-    def to_json(cls, character_path: Path, character):
+    def to_json(cls, character_path: Path,
+                 character: CharacterDataType):
         character_out = deepcopy(character)
         # Convert from true/false to 1/0
         for tab_label in character_out["Character"]:
@@ -1156,7 +1147,9 @@ class CharacterExport:
 
 
 class CharacterToPdf:
-    def __init__(self, character, stats, out_file):
+    def __init__(self, character: CharacterDataType,
+                 stats: dict[str, ValueType],
+                 out_file):
         self._line_height = 15
         self._current_y = 820
         self._current_x = 20
@@ -1166,7 +1159,7 @@ class CharacterToPdf:
         self.out_file = str(out_file)
         self._canvas = canvas.Canvas(self.out_file, pagesize=(595, 842))
 
-    def _write_line(self, line, title=False):
+    def _write_line(self, line: str, title=False):
         if title:
             self._canvas.setFont("Helvetica-Bold", self._font_size)
         else:
@@ -1202,9 +1195,7 @@ class CharacterToPdf:
         self._write_line(" ")
 
         self._write_line("Attributes", title=True)
-        for attribute, content in self._character["Character"]["Attributes"]["All"][
-            "Attribute"
-        ].items():
+        for attribute, content in self._character["Character"]["Attributes"]["All"]["Attribute"].items():
             value = content["value"]
             self._write_line(f"{attribute}: {value}")
 
