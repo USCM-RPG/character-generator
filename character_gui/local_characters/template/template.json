@@ -1962,23 +1962,31 @@
                 "Science & Medicine": {
                     "Aerospace Medicine": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "extended": "navy"
                     },
                     "Autodoc": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Usable with Computer Systems, First Aid or Medical."
                     },
                     "CBRN Treatment": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 4,
+                        "tooltip": "Usable with CBRN Warfare, First Aid or Medical."
                     },
                     "Cryogenics": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 4
                     },
                     "Dive Medicine": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 3
+                    },
+                    "Forensics": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Used with Policework or Science Equipment skills."
                     },
                     "Infections": {
                         "value": 0,
@@ -1988,13 +1996,10 @@
                         "value": 0,
                         "cost": 3
                     },
-                    "Forensics": {
-                        "value": 0,
-                        "cost": 3
-                    },
                     "Laboratory equipment": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Qualifies you to assist someone who actually knows what they are doing in a lab."
                     },
                     "Meteorology": {
                         "value": 0,
@@ -2008,15 +2013,18 @@
                     },
                     "Surgery": {
                         "value": 0,
-                        "cost": 8
+                        "cost": 8,
+                        "tooltip": "If performed with First Aid it is limited to “Field Surgery” field surgery procedures, e.g. needle decompression."
                     },
                     "Toxicology": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Usable with First Aid, Medical or for identifying natural poisons Outdoorsman."
                     },
                     "Veterinary": {
                         "value": 0,
-                        "cost": 6
+                        "cost": 6,
+                        "tooltip": "Used with Animal Handling or Medical."
                     }
                 },
                 "Language": {
