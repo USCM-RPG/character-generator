@@ -2051,69 +2051,69 @@
                 },
                 "Creative": {
                     "Music": {
-                        "Value": 0,
-                        "Cost": 8,
+                        "value": 0,
+                        "cost": 8,
                         "extended": "colonist",
                         "tooltip": "You can read notes and compose music."
                     },
                     "Painting": {
-                        "Value": 0,
-                        "Cost": 8,
+                        "value": 0,
+                        "cost": 8,
                         "extended": "colonist"
                     },
                     "Party Tricks": {
-                        "Value": 0,
-                        "Cost": 3,
+                        "value": 0,
+                        "cost": 3,
                         "tooltip": "Small \"magic\" tricks or more risky ones like the \"knife thing\". Used with Sleight of Hand."
                     },
                     "Performance": {
-                        "Value": 0,
-                        "Cost": 8,
+                        "value": 0,
+                        "cost": 8,
                         "extended": "colonist"
                     },
                     "Singing": {
-                        "Value": 0,
-                        "Cost": 5,
+                        "value": 0,
+                        "cost": 5,
                         "extended": "colonist"
                     },
                     "Writing": {
-                        "Value": 0,
-                        "Cost": 8,
+                        "value": 0,
+                        "cost": 8,
                         "extended": "colonist"
                     },
                     "Guitar": {
-                        "Value": 0,
-                        "Cost": 3,
+                        "value": 0,
+                        "cost": 3,
                         "extended": "colonist",
                         "tooltip": "Uses Artistry or Sleight of Hand skill"
                     },
                     "Keyboard": {
-                        "Value": 0,
-                        "Cost": 3,
+                        "value": 0,
+                        "cost": 3,
                         "extended": "colonist",
                         "tooltip": "Uses Artistry or Sleight of Hand skill"
                     },
                     "Drums": {
-                        "Value": 0,
-                        "Cost": 3,
+                        "value": 0,
+                        "cost": 3,
                         "extended": "colonist",
                         "tooltip": "Uses Artistry skill"
                     },
                     "Harmonica": {
-                        "Value": 0,
-                        "Cost": 3,
+                        "value": 0,
+                        "cost": 3,
                         "extended": "colonist",
                         "tooltip": "Uses Artistry skill"
                     },
                     "Trumpet": {
-                        "Value": 0,
-                        "Cost": 3,
+                        "value": 0,
+                        "cost": 3,
                         "extended": "colonist",
                         "tooltip": "Uses Artistry skill"
                     },
                     "Violin": {
-                        "Value": 0,
-                        "Cost": 3,
+                        "value": 0,
+                        "cost": 3,
                         "extended": "colonist",
                         "tooltip": "Uses Artistry skill"
                     }
