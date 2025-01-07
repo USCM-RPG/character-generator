@@ -720,11 +720,19 @@ class CharacterGenerator:
                                                     ),
                                                 )
                                                 item_refs[property_key] = item_id
-                                                dpg.add_text(property_key)
+                                                dpg.add_text(property_key,
+                                                    tag="tooltip_" + property_key)
                                                 if show_cost:
                                                     dpg.add_text(
                                                         f"({property_value['cost']})"
                                                     )
+                                                if "tooltip" in property_value:
+                                                    with dpg.tooltip(
+                                                        "tooltip_" + property_key
+                                                    ):
+                                                        dpg.add_text(
+                                                            property_value["tooltip"]
+                                                        )
         return item_refs
 
     def _add_slider_input(
