@@ -517,7 +517,8 @@
                     "Convict": {
                         "value": 0,
                         "cost": 0,
-                        "tooltip": "Req: Background"
+                        "tooltip": "Req: Background",
+                        "background req": true
                     },
                     "Hamster": {
                         "value": 0,
@@ -611,6 +612,7 @@
                         "value": 0,
                         "cost": 0,
                         "tooltip": "Req: Background, Not Impressive stature or Strategic reserves",
+                        "background req": true,
                         "requirements": {
                             "Impressive Stature": {
                                 "type": "==",
@@ -645,6 +647,7 @@
                         "value": 0,
                         "cost": 0,
                         "tooltip": "Req: Background, Not Private who?",
+                        "background req": true,
                         "requirements": {
                             "Private who?": {
                                 "type": "==",
