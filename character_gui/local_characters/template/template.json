@@ -476,6 +476,7 @@
                     "ARM Sympathizer": {
                         "value": 0,
                         "cost": 0,
+                        "tooltip": "Req: Not Live long and prosper",
                         "requirements": {
                             "Live long and prosper": {
                                 "type": "==",
@@ -490,8 +491,13 @@
                     "Bloodthirst": {
                         "value": 0,
                         "cost": 0,
+                        "tooltip": "Req: Not Religious, Righteous or Soft hearted",
                         "requirements": {
-                            "Live long and prosper": {
+                            "Religious": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Soft hearted": {
                                 "type": "==",
                                 "value": 0
                             }
@@ -501,11 +507,6 @@
                                 "target": "Stress Limit",
                                 "type": "permanent",
                                 "value": 1
-                            },
-                            {
-                                "target": "Psycho Limit",
-                                "type": "permanent",
-                                "value": -1
                             }
                         ]
                     },
@@ -515,7 +516,8 @@
                     },
                     "Convict": {
                         "value": 0,
-                        "cost": 0
+                        "cost": 0,
+                        "tooltip": "Req: Background"
                     },
                     "Hamster": {
                         "value": 0,
@@ -523,11 +525,23 @@
                     },
                     "Jarhead": {
                         "value": 0,
-                        "cost": 0
+                        "cost": 0,
+                        "tooltip": "You lose this trait if you get promoted to Corporal (E4) or higher.\nReq: Not Quick Learner",
+                        "requirements": {
+                            "Quick Learner": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Rank": {
+                                "type": "<=",
+                                "value": 2
+                            }
+                        }
                     },
                     "Live long and prosper": {
                         "value": 0,
                         "cost": 0,
+                        "tooltip": "Req: Not ARM Sympathizer, Not Bloodthirst",
                         "requirements": {
                             "ARM Sympathizer": {
                                 "type": "==",
@@ -546,6 +560,7 @@
                     "Paranoid": {
                         "value": 0,
                         "cost": 0,
+                        "tooltip": "Req: 1 PP",
                         "requirements": {
                             "Psycho Points": {
                                 "type": ">=",
@@ -556,6 +571,7 @@
                     "Private who?": {
                         "value": 0,
                         "cost": 0,
+                        "tooltip": "Req: Max rank Private FC (E2), Cha <4, Not Canary, Impressive stature, Tacticool",
                         "requirements": {
                             "Rank": {
                                 "type": "<=",
@@ -563,7 +579,7 @@
                             },
                             "Charisma": {
                                 "type": "<=",
-                                "value": 4
+                                "value": 3
                             },
                             "Canary": {
                                 "type": "==",
@@ -587,9 +603,14 @@
                         "value": 0,
                         "cost": 0
                     },
+                    "Religious": {
+                        "value": 0,
+                        "cost": 0
+                    },
                     "Small frame": {
                         "value": 0,
                         "cost": 0,
+                        "tooltip": "Req: Background, Not Impressive stature or Strategic reserves",
                         "requirements": {
                             "Impressive Stature": {
                                 "type": "==",
@@ -604,6 +625,7 @@
                     "Strategic reserves": {
                         "value": 0,
                         "cost": 0,
+                        "tooltip": "Req: End <4, Not Tunnel Rat or Small frame",
                         "requirements": {
                             "Small frame": {
                                 "type": "==",
@@ -612,12 +634,17 @@
                             "Tunnel Rat": {
                                 "type": "==",
                                 "value": 0
+                            },
+                            "Endurance": {
+                                "type": "<=",
+                                "value": 3
                             }
                         }
                     },
                     "Tacticool": {
                         "value": 0,
                         "cost": 0,
+                        "tooltip": "Req: Background, Not Private who?",
                         "requirements": {
                             "Private who?": {
                                 "type": "==",
