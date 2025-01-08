@@ -287,8 +287,14 @@ class CharacterGenerator:
 
     def _check_property_disable(self):
         for property in self._serial_properties:
-            if "requirements" in self._serial_properties[property]:
-                enabled = True
+            enabled = True
+            if "background req" in self._serial_properties[property]:
+                if self._serial_properties[property]["background req"] and not self._create_mode:
+                    enabled = False
+            
+            if not enabled:
+                dpg.configure_item(property, enabled=False)
+            elif ("requirements" in self._serial_properties[property]):
                 for req_name, criterium in self._serial_properties[property][
                     "requirements"
                 ].items():
