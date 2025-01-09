@@ -683,6 +683,7 @@ class CharacterGenerator:
                                     or self._extend_character[
                                         property_value["extended"]
                                     ]
+                                    or bool(property_value["value"])
                                 ):
                                     with dpg.group(horizontal=True):
                                         with dpg.table(
@@ -768,6 +769,7 @@ class CharacterGenerator:
                                     or self._extend_character[
                                         property_value["extended"]
                                     ]
+                                    or bool(property_value["value"])
                                 ):
                                     with dpg.table(
                                         header_row=False,
