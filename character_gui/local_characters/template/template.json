@@ -518,7 +518,7 @@
                         "value": 0,
                         "cost": 0,
                         "tooltip": "Req: Background",
-                        "background req": true
+                        "extended": "background"
                     },
                     "Hamster": {
                         "value": 0,
@@ -612,7 +612,7 @@
                         "value": 0,
                         "cost": 0,
                         "tooltip": "Req: Background, Not Impressive stature or Strategic reserves",
-                        "background req": true,
+                        "extended": "background",
                         "requirements": {
                             "Impressive Stature": {
                                 "type": "==",
@@ -647,7 +647,7 @@
                         "value": 0,
                         "cost": 0,
                         "tooltip": "Req: Background, Not Private who?",
-                        "background req": true,
+                        "extended": "background",
                         "requirements": {
                             "Private who?": {
                                 "type": "==",
