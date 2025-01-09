@@ -39,6 +39,7 @@ class CharacterGenerator:
         self._rank_alternatives = self._current_character["Config"]["Rank Labels"]
 
         self._create_mode = create_mode
+        self._extend_character["background"] = create_mode
 
         self._section_title_color = [150, 250, 150]
 
@@ -287,14 +288,12 @@ class CharacterGenerator:
 
     def _check_property_disable(self):
         for property in self._serial_properties:
-            enabled = True
-            if "background req" in self._serial_properties[property]:
-                if self._serial_properties[property]["background req"] and not self._create_mode:
-                    enabled = False
-            
-            if not enabled:
-                dpg.configure_item(property, enabled=False)
-            elif ("requirements" in self._serial_properties[property]):
+            if ("requirements" in self._serial_properties[property]
+                and ("extended" not in self._serial_properties[property]
+                     or self._extend_character[
+                         self._serial_properties[property]["extended"]])
+                ):
+                enabled = True
                 for req_name, criterium in self._serial_properties[property][
                     "requirements"
                 ].items():
@@ -958,7 +957,7 @@ class CharacterSelector:
         """
         self._create_mode: bool = False
 
-        self._extend_character = {"military": True, "navy": True, "colonist": True}
+        self._extend_character = {"military": True, "navy": True, "colonist": True, "background": self._create_mode}
 
         for file in get_character_save_location().glob("*.json"):
             self._available_characters.append(
