@@ -211,7 +211,7 @@
                         "value": 0,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Can be used for a combined roll with any Tools skill to complete work faster."
+                        "tooltip": "Combined roll with any Tools skill to complete work faster."
                     },
                     "Zero-G ": {
                         "value": 2,
@@ -224,7 +224,7 @@
                         "value": 3,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Expertise on a vehicle and Driving >0 means you have a drivers license for it."
+                        "tooltip": "Expertise on a vehicle and Driving >0\nmeans you have a drivers license for it."
                     },
                     "Parachute": {
                         "value": 2,
@@ -240,7 +240,7 @@
                         "value": 0,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Flight in space including docking and landing where no atmosphere exist.\nFor flying large spacecraft your pilot die cannot be higher than your Space Crew die.\nExpertises: Starships and space-capable aircraft"
+                        "tooltip": "Space flight including docking and landing.\nExpertises: Starships and space-capable aircraft"
                     },
                     "Remote Piloting": {
                         "value": 0,
@@ -256,7 +256,7 @@
                         "value": 1,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "A key skill for many workers in space ports or colonies. Most equipment of this type is not mobile or has very limited mobility under own power. Example: Excavators, cranes, bulldozers, airlock umbilicals or industrial machinery.\nExpertise: Powerloader, Crane, Engineering machinery"
+                        "tooltip": "Large equipment such as excavators, cranes,\nbulldozers, airlock umbilicals or industrial machinery.\nExpertise: Powerloader, Crane, Engineering machinery"
                     }
                 },
                 "Technical Skills": {
@@ -270,7 +270,7 @@
                         "value": 1,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Knowing your way around a computer terminal.\nExpertise: Interface 2037, USCM Interface, USN Interface, Programming, Hacking, AI, Autodoc, Engineering machinery"
+                        "tooltip": "Knowing your way around a computer terminal.\nExpertise: Interface 2037, USCM Interface, USN Interface,\nProgramming, Hacking, AI, Autodoc, Engineering machinery"
                     },
                     "Electronic Tools": {
                         "value": 0,
@@ -282,7 +282,7 @@
                         "value": 1,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Skill with common tools found in a workshop.\nExpertise: Chainsaw, Power Tools, Lockpicking, Carpentry, Ordnance, Weaponsmith, Hotwiring"
+                        "tooltip": "Skill with common tools found in a workshop.\nExpertise: Chainsaw, Power Tools, Lockpicking,\nCarpentry, Ordnance, Weaponsmith, Hotwiring"
                     },
                     "Navigation": {
                         "value": 2,
@@ -293,7 +293,7 @@
                         "value": 1,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Using various sensors and reading their output right.\nExpertise: Covert Sensors, IR, Lidar, Motion Tracker, Photography, PUPS, Radar, Sensor Networking"
+                        "tooltip": "Using various sensors and reading their output right.\nExpertise: Covert Sensors, IR, Lidar, Motion Tracker,\nPhotography, PUPS, Radar, Sensor Networking"
                     },
                     "Science Equipment": {
                         "value": 0,
@@ -309,7 +309,7 @@
                         "value": 1,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Profession skill to fill a basic crew role on a spaceship or station. Covers operation and maintenance of things like airlocks, cryopods, suits or life support systems.\nExpertise: Starship, Damage Control, Starship Identification, Environmental Suit, Life Support"
+                        "tooltip": "Basic crew role on a spaceship or station.\nExpertise: Starship, Damage Control, Starship\nIdentification, Environmental Suit, Life Support"
                     },
                     "Starship Bridge": {
                         "value": 0,
@@ -323,13 +323,13 @@
                         "value": 1,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Not just hiding from plain sight but also emission control for heat, sound and the EM spectrum."
+                        "tooltip": "Hiding from plain sight and sensors."
                     },
                     "CBRN Warfare ": {
                         "value": 1,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Chemical/Biological/Radiological/Nuclear warfare. Use of protective equipment and directly employing CBRN for offensive use. Can be used for first aid on CBRN injuries.\nExpertise: CBRN Treatment, Environmental Suit, Nuclear Bomb"
+                        "tooltip": "Chemical/Biological/Radiological/Nuclear warfare.\nExpertise: CBRN Treatment, Environmental Suit, Nuclear Bomb"
                     },
                     "Demolition": {
                         "value": 1,
@@ -340,7 +340,7 @@
                         "value": 1,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Intel gathering, analysis and use of specialized “spy” equipment.\nExpertise: Covert Sensors, Forgery, Interrogation, Photography, Sensor Networking, Shadowing, Starship Identification, Vehicle Identification"
+                        "tooltip": "Intel gathering, analysis and use of “spy” equipment.\nExpertise: Covert Sensors, Forgery, Interrogation,\nPhotography, Sensor Networking, Shadowing,\nStarship Identification, Vehicle Identification"
                     },
                     "Mine Warfare ": {
                         "value": 1,
@@ -351,7 +351,7 @@
                         "value": 1,
                         "min": 1,
                         "max": 1,
-                        "tooltip": "Can be used for anything a soldier “should” know not covered by a separate skill.\nExpertise: Drill, Forward Observer, FAC, Infantry Tactics, Mobile Tactics, RTI Vehicle Identification"
+                        "tooltip": "Anything a soldier “should” know not covered by a separate skill.\nExpertise: Drill, Forward Observer, FAC, Infantry Tactics,\nMobile Tactics, RTI Vehicle Identification"
                     }
                 },
                 "General Skills": {
@@ -376,7 +376,7 @@
                         "value": 1,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Covers only the initial treatment. Any more extensive treatment typically requires the Medical skill which is not taught to common soldiers.\nExpertise: IV, Surgery, Toxicology, Infections, Dive Medicine, Aerospace Medicine, Altitude Medicine, Cold climate, Hot climate, CBRN Treatment, Autodoc"
+                        "tooltip": "Initial treatment. Extensive treatment requires the Medical skill.\nExpertise: IV, Surgery, Toxicology, Infections,\nDive Medicine, Aerospace Medicine, Altitude Medicine\nCold climate, Hot climate, CBRN Treatment, Autodoc"
                     },
                     "Gambling": {
                         "value": 0,
@@ -392,7 +392,7 @@
                         "value": 1,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Expertise: Bushcrafting, Chainsaw, Evasion, Fishing, Herbalism, Hunting, Rope Work, Skiing, Tracking, Trapping, Terrain"
+                        "tooltip": "Expertise: Bushcrafting, Chainsaw, Evasion,\nFishing, Herbalism, Hunting, Rope Work, Skiing,\nTracking, Trapping, Terrain"
                     },
                     "Streetwise": {
                         "value": 0,
@@ -406,7 +406,7 @@
                         "min": 0,
                         "max": 5,
                         "extended": "colonist",
-                        "tooltip": "Expertise: Forgery, Music, Painting, Singing, Performance, Writing"
+                        "tooltip": "Expertise: Forgery, Music, Painting,\nSinging, Performance, Writing"
                     },
                     "Commerce": {
                         "value": 0,
@@ -436,7 +436,7 @@
                         "value": 0,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Expertise: IV, Toxicology, Infections, Dive Medicine, Aerospace Medicine, Altitude Medicine, Cold climate, Herbalism, Hot climate, CBRN Treatment, Autodoc, Surgery."
+                        "tooltip": "Expertise: IV, Toxicology, Infections, Dive Medicine,\nAerospace Medicine, Altitude Medicine, Cold climate,\nHerbalism, Hot climate, CBRN Treatment, Autodoc, Surgery."
                     },
                     "Mining": {
                         "value": 0,
@@ -491,7 +491,7 @@
                     "Bloodthirst": {
                         "value": 0,
                         "cost": 0,
-                        "tooltip": "Req: Not Religious, Righteous or Soft hearted",
+                        "tooltip": "Req: Not Religious, Not Righteous, Not Soft hearted",
                         "requirements": {
                             "Religious": {
                                 "type": "==",
@@ -527,7 +527,7 @@
                     "Jarhead": {
                         "value": 0,
                         "cost": 0,
-                        "tooltip": "You lose this trait if you get promoted to Corporal (E4) or higher.\nReq: Not Quick Learner",
+                        "tooltip": "Req: Max Rank Lance Corporal (E3), Not Quick Learner",
                         "requirements": {
                             "Quick Learner": {
                                 "type": "==",
@@ -572,7 +572,7 @@
                     "Private who?": {
                         "value": 0,
                         "cost": 0,
-                        "tooltip": "Req: Max rank Private FC (E2), Cha <4, Not Canary, Impressive stature, Tacticool",
+                        "tooltip": "Req: Max rank Private FC (E2), Cha <4,\nNot Canary, Not Impressive stature, Not Tacticool",
                         "requirements": {
                             "Rank": {
                                 "type": "<=",
@@ -611,7 +611,7 @@
                     "Small frame": {
                         "value": 0,
                         "cost": 0,
-                        "tooltip": "Req: Background, Not Impressive stature or Strategic reserves",
+                        "tooltip": "Req: Background, Not Impressive stature, Not Strategic reserves",
                         "extended": "background",
                         "requirements": {
                             "Impressive Stature": {
@@ -627,7 +627,7 @@
                     "Strategic reserves": {
                         "value": 0,
                         "cost": 0,
-                        "tooltip": "Req: End <4, Not Tunnel Rat or Small frame",
+                        "tooltip": "Req: End <4, Not Tunnel Rat, Not Small frame",
                         "requirements": {
                             "Small frame": {
                                 "type": "==",
@@ -1274,7 +1274,7 @@
                     "PUPS": {
                         "value": 0,
                         "cost": 12,
-                        "tooltip": "Advanced antigrav spectrograh drone. Restricted WY technology not available in normal military training."
+                        "tooltip": "Advanced antigrav spectrograh drone.\nRestricted WY technology not available in normal military training."
                     }
                 },
                 "Land Vehicles": {
@@ -1317,7 +1317,7 @@
                     "CRRC": {
                         "value": 0,
                         "cost": 2,
-                        "tooltip": "Combat Rubber Reconnaissance Craft. Often used by marines and special forces."
+                        "tooltip": "Combat Rubber Reconnaissance Craft.\nOften used by marines and special forces."
                     },
                     "Kayak": {
                         "value": 0,
@@ -1327,7 +1327,7 @@
                     "Motorboat": {
                         "value": 0,
                         "cost": 3,
-                        "tooltip": "Motor powered solid hull boats up to class 3 (which would include coastal Fast Attack Crafts, FAC:s)."
+                        "tooltip": "Motor powered solid hull boats up to class 3\n(which would include coastal Fast Attack Crafts, FAC:s)."
                     },
                     "Sailing": {
                         "value": 0,
