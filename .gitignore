@@ -2,6 +2,8 @@ config.php
 .settings
 .buildpath
 .project
+.venv
+venv
 /character_gui/local_characters/*.pdf
 /character_gui/local_characters/*.json
 *.pyc
