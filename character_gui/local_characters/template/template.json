@@ -666,6 +666,7 @@
                     "2nd in Command": {
                         "value": 0,
                         "cost": 2,
+                        "tooltip": "Req: Infantry Tactics",
                         "requirements": {
                             "Infantry Tactics": {
                                 "type": "==",
@@ -676,24 +677,49 @@
                     "Access to the files": {
                         "value": 0,
                         "cost": 1,
+                        "tooltip": "Req: Computer Systems(USCM Interface ) 4, Not Watched, either Staff Sergeant (E6) or Hacking, ",
                         "requirements": {
                             "Computer Systems": {
                                 "type": ">=",
                                 "value": 4
                             },
+                            "USCM Interface": {
+                                "type": "==",
+                                "value": 1
+                            },
                             "Hacking": {
                                 "type": "==",
                                 "value": 1
+                            },
+                            "Watched": {
+                                "type": "==",
+                                "value": 0
                             }
                         }
                     },
                     "Alert": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Per 4, Soldiering 3, Not Catnapper",
+                        "requirements": {
+                            "Perception": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Soldiering": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Catnapper": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Amphibious": {
                         "value": 0,
                         "cost": 2,
+                        "tooltip": "Req: Terrain: Sea",
                         "requirements": {
                             "Sea": {
                                 "type": "==",
@@ -703,23 +729,66 @@
                     },
                     "Arctic Fox": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Skiing, Terrain: Arctic",
+                        "requirements": {
+                            "Skiing": {
+                                "type": "==",
+                                "value": 1
+                            },
+                            "Arctic": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
                     },
                     "Attractive": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Req: Charisma 4, Not Bad Aura, Not Bad Hygiene",
+                        "requirements": {
+                            "Charisma": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Bad aura": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Bad Hygiene": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Authority": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 4,
+                        "tooltip": "Req: Sergeant (E5), Glory 10",
+                        "requirements": {
+                            "Rank": {
+                                "type": ">=",
+                                "value": 4
+                            }
+                        },
+                        "bonus": [
+                            {
+                                "target": "Leadership Points",
+                                "type": "permanent",
+                                "value": 2
+                            }
+                        ]
                     },
                     "Baseball Player": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Req: Background",
+                        "extended": "background"
                     },
                     "Bilingual": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "extended": "background"
                     },
                     "Brown Noser ": {
                         "value": 0,
@@ -727,7 +796,26 @@
                     },
                     "Catnapper": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Req: Soldiering 3, Not Alert,\nNot Nightmares, Not Maintenance Fanatic",
+                        "requirements": {
+                            "Soldiering": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Alert": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Nightmares": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Maintenance Fanatic": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Cautious": {
                         "value": 0,
