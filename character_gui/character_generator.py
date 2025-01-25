@@ -441,10 +441,11 @@ class CharacterGenerator:
             self._current_character["Config"]["Rank Bonus"][rank_index]
             + self._current_character["Character"]["Attributes"]["All"]["Attribute"]["Charisma"]["value"]
         )
+        bonus_string = "".join(self._check_active_bonuses("Leadership Points"))
         self._stats["Leadership Points"]["value"] = leadership_points
         dpg.set_value(
             item="Leadership Points",
-            value=leadership_points,
+            value=f"{leadership_points} {bonus_string}",
         )
 
     def _update_ap_status(self):
