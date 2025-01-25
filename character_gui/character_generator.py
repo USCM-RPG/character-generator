@@ -297,6 +297,7 @@ class CharacterGenerator:
                 for req_name, criterium in self._serial_properties[property][
                     "requirements"
                 ].items():
+                    # An OR option would be useful but not trivial to include
                     if criterium["type"] == "==":
                         if (
                             not criterium["value"]
