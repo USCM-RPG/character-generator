@@ -370,7 +370,7 @@ class CharacterGenerator:
         """
 
         stress_limit: int = (self._current_character["Character"]["Attributes"]
-                             ["All"]["Attribute"]["Psyche"]["value"] + 1)
+                             ["All"]["Attribute"]["Psyche"]["value"] * 2)
         bonus_string = "".join(self._check_active_bonuses("Stress Limit"))
         self._stats["Stress Limit"]["value"] = stress_limit
         dpg.set_value(
