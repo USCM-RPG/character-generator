@@ -337,7 +337,7 @@
                         "max": 5
                     },
                     "Intelligence": {
-                        "value": 1,
+                        "value": 0,
                         "min": 0,
                         "max": 5,
                         "tooltip": "Intel gathering, analysis and use of “spy” equipment.\nExpertise: Covert Sensors, Forgery, Interrogation,\nPhotography, Sensor Networking, Shadowing,\nStarship Identification, Vehicle Identification"
