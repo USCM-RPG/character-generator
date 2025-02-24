@@ -10,7 +10,7 @@
         "Age": 21
     },
     "Config": {
-        "Starting XP": 128,
+        "Starting XP": 154,
         "Starting AP": 25,
         "Starting Traits": 8,
         "specialities": [
@@ -139,18 +139,18 @@
                 "Weapon Skills": {
                     "Shooting: Aimed": {
                         "value": 3,
-                        "min": 0,
+                        "min": 1,
                         "max": 5,
                         "tooltip": "Using sights/scope at long range also requires you to know your ammunition and account for target movement, wind speed etc."
                     },
                     "Shooting: Dynamic": {
                         "value": 3,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Shooting: Auto": {
                         "value": 3,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Indirect Fire": {
@@ -181,7 +181,7 @@
                 "Physical Skills": {
                     "Throwing": {
                         "value": 2,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Close Combat: Standup": {
@@ -215,7 +215,7 @@
                     },
                     "Zero-G ": {
                         "value": 2,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     }
                 },
@@ -249,7 +249,7 @@
                     },
                     "Seamanship": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Utility Equipment": {
@@ -333,7 +333,7 @@
                     },
                     "Demolition": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Intelligence": {
@@ -344,7 +344,7 @@
                     },
                     "Mine Warfare ": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Soldiering": {
@@ -2258,7 +2258,7 @@
                         "tooltip": "Used with Swimming."
                     },
                     "Environmental Suit": {
-                        "value": 0,
+                        "value": 1,
                         "cost": 3,
                         "tooltip": "Cover all types of basic suits like space, biohazard or high-pressure. Used with Zero-G or CBRN Warfare."
                     },
