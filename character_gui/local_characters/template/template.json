@@ -161,7 +161,7 @@
                     },
                     "Shoulder-launched": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5,
                         "tooltip": "Expertise: M5 RPG, M83 SADAR, M78 PIG, SIM-118"
                     },
@@ -186,7 +186,7 @@
                     },
                     "Close Combat: Standup": {
                         "value": 2,
-                        "min": 0,
+                        "min": 1,
                         "max": 5,
                         "tooltip": "Any kind of striking, kicking or using a melee weapon."
                     },
@@ -203,7 +203,7 @@
                     },
                     "Swimming": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5,
                         "tooltip": "At skill level 2 you can stay afloat in calm water (DL 2) without any dice rolls."
                     },
@@ -228,7 +228,7 @@
                     },
                     "Parachute": {
                         "value": 2,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Pilot: Atmospheric": {
@@ -262,13 +262,13 @@
                 "Technical Skills": {
                     "Comtech": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5,
                         "tooltip": "Expertise: Radio, EW, Morse, Tightbeam, FTL Communication"
                     },
                     "Computer Systems": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5,
                         "tooltip": "Knowing your way around a computer terminal.\nExpertise: Interface 2037, USCM Interface, USN Interface,\nProgramming, Hacking, AI, Autodoc, Engineering machinery"
                     },
@@ -286,7 +286,7 @@
                     },
                     "Navigation": {
                         "value": 2,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Sensor Systems": {
@@ -307,7 +307,7 @@
                     },
                     "Space Crew": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5,
                         "tooltip": "Basic crew role on a spaceship or station.\nExpertise: Starship, Damage Control, Starship\nIdentification, Environmental Suit, Life Support"
                     },
@@ -321,13 +321,13 @@
                 "Military Skills": {
                     "Camouflage": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5,
                         "tooltip": "Hiding from plain sight and sensors."
                     },
                     "CBRN Warfare ": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5,
                         "tooltip": "Chemical/Biological/Radiological/Nuclear warfare.\nExpertise: CBRN Treatment, Environmental Suit, Nuclear Bomb"
                     },
@@ -374,7 +374,7 @@
                     },
                     "First Aid": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5,
                         "tooltip": "Initial treatment. Extensive treatment requires the Medical skill.\nExpertise: IV, Surgery, Toxicology, Infections,\nDive Medicine, Aerospace Medicine, Altitude Medicine\nCold climate, Hot climate, CBRN Treatment, Autodoc"
                     },
@@ -390,7 +390,7 @@
                     },
                     "Outdoorsman": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5,
                         "tooltip": "Expertise: Bushcrafting, Chainsaw, Evasion,\nFishing, Herbalism, Hunting, Rope Work, Skiing,\nTracking, Trapping, Terrain"
                     },
