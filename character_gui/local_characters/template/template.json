@@ -10,7 +10,7 @@
         "Age": 21
     },
     "Config": {
-        "Starting XP": 128,
+        "Starting XP": 154,
         "Starting AP": 25,
         "Starting Traits": 8,
         "specialities": [
@@ -139,18 +139,18 @@
                 "Weapon Skills": {
                     "Shooting: Aimed": {
                         "value": 3,
-                        "min": 0,
+                        "min": 1,
                         "max": 5,
                         "tooltip": "Using sights/scope at long range also requires you to know your ammunition and account for target movement, wind speed etc."
                     },
                     "Shooting: Dynamic": {
                         "value": 3,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Shooting: Auto": {
                         "value": 3,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Indirect Fire": {
@@ -160,7 +160,7 @@
                     },
                     "Shoulder-launched": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Missile Weapons": {
@@ -177,12 +177,12 @@
                 "Physical Skills": {
                     "Throwing": {
                         "value": 2,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Close Combat: Standup": {
                         "value": 2,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Close Combat: Grappling": {
@@ -197,7 +197,7 @@
                     },
                     "Swimming": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Sleight of Hand": {
@@ -207,7 +207,7 @@
                     },
                     "Zero-G ": {
                         "value": 2,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     }
                 },
@@ -219,7 +219,7 @@
                     },
                     "Parachute": {
                         "value": 2,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Pilot: Atmospheric": {
@@ -240,7 +240,7 @@
                     },
                     "Seamanship": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Utility Equipment": {
@@ -252,17 +252,17 @@
                 "Technical Skills": {
                     "Navigation": {
                         "value": 2,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Comtech": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Computer Systems": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Sensor Systems": {
@@ -292,7 +292,7 @@
                     },
                     "Space Crew": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Starship Bridge": {
@@ -310,12 +310,12 @@
                     },
                     "CBRN Warfare ": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Demolition": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Intelligence": {
@@ -325,24 +325,24 @@
                     },
                     "Mine Warfare ": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Camouflage": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     }
                 },
                 "General Skills": {
                     "First Aid": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Outdoorsman": {
                         "value": 1,
-                        "min": 0,
+                        "min": 1,
                         "max": 5
                     },
                     "Animal Handling": {
@@ -1935,7 +1935,7 @@
                         "cost": 3
                     },
                     "Environmental Suit": {
-                        "value": 0,
+                        "value": 1,
                         "cost": 3
                     },
                     "Forgery": {
