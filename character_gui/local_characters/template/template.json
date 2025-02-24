@@ -319,7 +319,7 @@
                         "max": 5
                     },
                     "Intelligence": {
-                        "value": 1,
+                        "value": 0,
                         "min": 0,
                         "max": 5
                     },
