@@ -819,7 +819,26 @@
                     },
                     "Cautious": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Req: Not Jinxed, not Dapper Sapper, not any trait titled \"Reckless\".",
+                        "requirements": {
+                            "Jinxed": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Dapper Sapper": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Reckless Driver": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Reckless Pilot": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Coal Lungs": {
                         "value": 0,
@@ -827,11 +846,36 @@
                     },
                     "Combat Correspondent": {
                         "value": 0,
-                        "cost": 1
+                        "cost": 1,
+                        "tooltip": "Req: Charisma 3, Photography expertise",
+                        "requirements": {
+                            "Charisma": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Photography": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
                     },
                     "Combat Drop Wings": {
                         "value": 0,
-                        "cost": 1
+                        "cost": 1,
+                        "tooltip": "+1 bonus to Parachute and 1 Glory.\nParachute Wings and one combat drop (parachute, glider or pod)",
+                        "requirements": {
+                            "Parachute wings": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        },
+                        "bonus": [
+                            {
+                                "target": "Parachute",
+                                "type": "permanent",
+                                "value": 1
+                            }
+                        ]
                     },
                     "Cowboy": {
                         "value": 0,
@@ -843,7 +887,18 @@
                     },
                     "Dapper Sapper": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Req: Soldiering 4, Not Cautious",
+                        "requirements": {
+                            "Soldiering": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Cautious": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Die bastards!": {
                         "value": 0,
@@ -851,15 +906,49 @@
                     },
                     "Doubletap": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Req: Any Pistol expertise, Reaction 3",
+                        "requirements": {
+                            "Reaction": {
+                                "type": ">=",
+                                "value": 3
+                            }
+                        }
                     },
                     "Draw Stranger": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Background, Any Pistol expertise, Terrain: Desert",
+                        "extended": "background",
+                        "requirements": {
+                            "Desert": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
                     },
                     "Drill Instructor": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Sergeant (E5), Soldiering 4, Drill, Not Whisper-voiced",
+                        "requirements": {
+                            "Rank": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Soldiering": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Drill": {
+                                "type": "==",
+                                "value": 1
+                            },
+                            "Whisper-voiced": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Efficient Packing": {
                         "value": 0,
