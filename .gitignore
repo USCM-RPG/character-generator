@@ -6,3 +6,4 @@ config.php
 venv
 /character_gui/local_characters/*.pdf
 /character_gui/local_characters/*.json
+.vscode
