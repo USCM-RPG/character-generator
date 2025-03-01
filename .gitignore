@@ -7,3 +7,4 @@ venv
 /character_gui/local_characters/*.pdf
 /character_gui/local_characters/*.json
 *.pyc
+.vscode
