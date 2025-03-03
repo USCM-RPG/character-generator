@@ -1,3 +1,4 @@
 dearpygui
 pre-commit
 reportlab
+pyinstaller
