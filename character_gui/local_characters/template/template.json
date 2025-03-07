@@ -952,39 +952,146 @@
                     },
                     "Efficient Packing": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Soldiering 4",
+                        "requirements": {
+                            "Soldiering": {
+                                "type": ">=",
+                                "value": 4
+                            }
+                        },
+                        "bonus": [
+                            {
+                                "target": "Carry Capacity",
+                                "type": "permanent",
+                                "value": 5
+                            }
+                        ]
                     },
                     "Escape Artist": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Req: Dexterity 4, Lockpicking, Rope Work",
+                        "requirements": {
+                            "Dexterity": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Lockpicking": {
+                                "type": "==",
+                                "value": 1
+                            },
+                            "Rope Work": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
                     },
                     "Eye of the Tiger": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Ignore first stun each combat\nReq: Toughness 4, Not Glass Joe, Not I'm gonna die!!!",
+                        "requirements": {
+                            "Toughness": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Glass Joe": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "I'm gonna die!!!": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Farmer Family": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Req: Background, Terrain: Temperate or Desert",
+                        "extended": "background",
+                        "bonus": [
+                            {
+                                "target": "Farming",
+                                "type": "permanent",
+                                "value": 1
+                            },
+                            {
+                                "target": "Animal Handling",
+                                "type": "permanent",
+                                "value": 1
+                            }
+                        ]
                     },
                     "Fixer": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Req: Charisma 3, Not Loner, Not Mean Bastard",
+                        "requirements": {
+                            "Charisma": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Loner": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Mean Bastard": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Get to the choppa": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Strength 5, Not Whisper-voiced",
+                        "requirements": {
+                            "Strength": {
+                                "type": ">=",
+                                "value": 5
+                            },
+                            "Whisper-voiced": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Gun Nut": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Expertise for 3 different small arms (using Shooting skill)."
                     },
                     "Gung Ho": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Req: Not Cautious, Not Combat Shakes, Not Sleepyhead",
+                        "requirements": {
+                            "Cautious": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Combat Shakes": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Sleepyhead": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Hardened Veteran": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 4,
+                        "tooltip": "Req: 10 missions, Soldiering 5",
+                        "requirements": {
+                            "Soldiering": {
+                                "type": ">=",
+                                "value": 3
+                            }
+                        }
                     }
                 },
                 "  ": {
@@ -994,11 +1101,45 @@
                     },
                     "Impressive Stature": {
                         "value": 0,
-                        "cost": 1
+                        "cost": 1,
+                        "tooltip": "Req: Str 4, Tou 4, Not Ninja, Not Private who?, Not Small frame, Not Victim",
+                        "requirements": {
+                            "Strength": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Toughness": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Ninja": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Private who?": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Small frame": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Victim": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Instructor": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Charisma 4",
+                        "requirements": {
+                            "Charisma": {
+                                "type": ">=",
+                                "value": 4
+                            }
+                        }
                     },
                     "Iron-fist": {
                         "value": 0,
@@ -1006,19 +1147,51 @@
                     },
                     "I've been through worse": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Purple Heart, Not I'm gonna die!!!",
+                        "requirements": {
+                            "I'm gonna die!!!": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Jungle Jim": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Outdoorsman 3, Terrain: Jungle",
+                        "requirements": {
+                            "Outdoorsman": {
+                                "type": ">=",
+                                "value": 3
+                            }
+                        }
                     },
                     "Kendoka": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Expertise Sword",
+                        "requirements": {
+                            "Sword": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
                     },
                     "Leading from the front": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 4,
+                        "tooltip": "Req: Sergeant (E5), Soldiering 3",
+                        "requirements": {
+                            "Rank": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Soldiering": {
+                                "type": ">=",
+                                "value": 3
+                            }
+                        }
                     },
                     "Let's Rock!": {
                         "value": 0,
@@ -1026,137 +1199,435 @@
                     },
                     "Life of the party": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 4,
+                        "tooltip": "Req: Charisma 4, No anti-social traits",
+                        "requirements": {
+                            "Charisma": {
+                                "type": ">=",
+                                "value": 4
+                            }
+                        }
                     },
                     "Lucky Bastard": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 4,
+                        "tooltip": "Req: Not Purple Heart"
                     },
                     "Machete": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Req: Knife",
+                        "requirements": {
+                            "Knife": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
                     },
                     "Maintenance Fanatic": {
                         "value": 0,
-                        "cost": 1
+                        "cost": 1,
+                        "tooltip": "Req: Not Catnapper",
+                        "requirements": {
+                            "Catnapper": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Martial Artist: Grappler": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Req: Close Combat (Grappling) 4, Strength 3, Endurance 3",
+                        "requirements": {
+                            "Close Combat: Grappling": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Strength": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Endurance": {
+                                "type": ">=",
+                                "value": 3
+                            }
+                        }
                     },
                     "Martial Artist: Striker": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Req: Close Combat (Standup) 4, Strength 3, Endurance 3",
+                        "requirements": {
+                            "Close Combat: Standup": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Dexterity": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Endurance": {
+                                "type": ">=",
+                                "value": 3
+                            }
+                        }
                     },
                     "Mountaineer": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Outdoorsman 3, Terrain: Mountain",
+                        "requirements": {
+                            "Outdoorsman": {
+                                "type": ">=",
+                                "value": 3
+                            }
+                        }
                     },
                     "Mule": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Req: Endurance 4, Psyche 4",
+                        "requirements": {
+                            "Endurance": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Psyche": {
+                                "type": ">=",
+                                "value": 4
+                            }
+                        },
+                        "bonus": [
+                            {
+                                "target": "Carry Capacity",
+                                "type": "permanent",
+                                "value": 5
+                            },
+                            {
+                                "target": "Combat Load",
+                                "type": "permanent",
+                                "value": 1
+                            }
+                        ]
                     },
                     "Neon Tan": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Terrain: Urban"
                     },
                     "Ninja": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Req: Close Combat (Standup) 3, Throwing 3, Not Fear of the dark, Not Impressive Stature",
+                        "requirements": {
+                            "Close Combat: Standup": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Throwing": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Fear of the dark": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Impressive Stature": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Nintendo Kid": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Req: Background, Reaction 4",
+                        "extended": "background",
+                        "requirements": {
+                            "Reaction": {
+                                "type": ">=",
+                                "value": 4
+                            }
+                        }
                     },
                     "Offhand Shooter": {
                         "value": 0,
-                        "cost": 1
+                        "cost": 1,
+                        "tooltip": "Req: Dexterity 4",
+                        "requirements": {
+                            "Dexterity": {
+                                "type": ">=",
+                                "value": 4
+                            }
+                        }
                     },
                     "Quick Learner": {
                         "value": 0,
-                        "cost": 1
+                        "cost": 1,
+                        "tooltip": "Req: Charisma 3, Not Jarhead, Not Thick-skulled",
+                        "requirements": {
+                            "Charisma": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Jarhead": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Thick-skulled": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Rise and shine ": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 1
                     },
                     "Scarred Veteran": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: 10 missions, Purple Heart"
                     },
                     "Sea legs": {
                         "value": 0,
-                        "cost": 1
+                        "cost": 1,
+                        "tooltip": "Req: Seamanship 3, Terrain: Sea",
+                        "requirements": {
+                            "Seamanship": {
+                                "type": ">=",
+                                "value": 3
+                            }
+                        }
                     },
                     "Secondary Weapon": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Req: Reaction 4",
+                        "requirements": {
+                            "Reaction": {
+                                "type": ">=",
+                                "value": 4
+                            }
+                        }
                     },
                     "Shake n' Bake Colonist ": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Req: Background, Terrain: Barren, Colonist 2",
+                        "extended": "background",
+                        "requirements": {
+                            "Colonist": {
+                                "type": ">=",
+                                "value": 2
+                            }
+                        }
                     }
                 },
                 "   ": {
                     "Shellback": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: 10 missions, Space Crew 4, Terrain: Space",
+                        "requirements": {
+                            "Space Crew": {
+                                "type": ">=",
+                                "value": 4
+                            }
+                        }
                     },
                     "Smuggler Tricks": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Criminal 1, Terrain: Space",
+                        "requirements": {
+                            "Criminal": {
+                                "type": ">=",
+                                "value": 1
+                            }
+                        }
                     },
                     "Snake-eater": {
                         "value": 0,
-                        "cost": 1
+                        "cost": 1,
+                        "tooltip": "Req: Outdoorsman 3, Terrain: Jungle",
+                        "requirements": {
+                            "Outdoorsman": {
+                                "type": ">=",
+                                "value": 3
+                            }
+                        }
                     },
                     "Spacer": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Background, Space Crew 1, Terrain: Space",
+                        "extended": "background",
+                        "requirements": {
+                            "Space Crew": {
+                                "type": ">=",
+                                "value": 1
+                            }
+                        }
                     },
                     "Spotter": {
                         "value": 0,
-                        "cost": 1
+                        "cost": 1,
+                        "tooltip": "Req: Shooting: Aimed 3, Soldiering 2, Any sniper/scoped rifle expertise",
+                        "requirements": {
+                            "Shooting: Aimed": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Soldiering": {
+                                "type": ">=",
+                                "value": 3
+                            }
+                        }
                     },
                     "Squad Leader": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 4,
+                        "tooltip": "Made Lance Corporal (E3) at boot camp.\nReq: Background, Cha 3, Infantry Tactics, Not Scapegoat",
+                        "extended": "background",
+                        "requirements": {
+                            "Charisma": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Infantry Tactics": {
+                                "type": "==",
+                                "value": 1
+                            },
+                            "Scapegoat": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Stiff upper lip": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Corporal (E4), Not life of the party, Not Bad Hygiene",
+                        "requirements": {
+                            "Rank": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Life of the party": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Bad Hygiene": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Streetfighter": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Background",
+                        "extended": "background"
                     },
                     "Swamp Rat": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Outdoorsman 3, Terrain: Swamp",
+                        "requirements": {
+                            "Outdoorsman": {
+                                "type": ">=",
+                                "value": 3
+                            }
+                        }
                     },
                     "The Big Five ": {
                         "value": 0,
-                        "cost": 1
+                        "cost": 1,
+                        "tooltip": "Req: You must have met all five during missions"
                     },
                     "Thick-skulled": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Psy < 3, Not Glass Joe, Not Quick Learner",
+                        "requirements": {
+                            "Psy": {
+                                "type": "<=",
+                                "value": 2
+                            },
+                            "Glass Joe": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Quick Learner": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Tough": {
                         "value": 0,
-                        "cost": 6
+                        "cost": 6,
+                        "tooltip": "Get one more box in your Health bar"
                     },
                     "Tunnel Rat": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Take no stress from enclosed spaces.\nReq: Background, Dex 3, Str < 4, Not Strategic reserves",
+                        "extended": "background",
+                        "requirements": {
+                            "Dexterity": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Strength": {
+                                "type": "<=",
+                                "value": 3
+                            },
+                            "Strategic reserves": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Trusted Leader": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Sergeant (E5), Psyche 3, Soldiering 3, Infantry Tactics",
+                        "requirements": {
+                            "Rank": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Psyche": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Soldiering": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Infantry Tactics": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
                     },
                     "Ultimate Badass ": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Req: Master Sergeant (E8), Soldiering 5",
+                        "requirements": {
+                            "Rank": {
+                                "type": ">=",
+                                "value": 7
+                            },
+                            "Soldiering": {
+                                "type": ">=",
+                                "value": 5
+                            }
+                        }
                     }
                 }
             },
