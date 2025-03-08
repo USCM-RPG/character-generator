@@ -284,11 +284,6 @@
                         "max": 5,
                         "tooltip": "Skill with common tools found in a workshop.\nExpertise: Chainsaw, Power Tools, Lockpicking,\nCarpentry, Ordnance, Weaponsmith, Hotwiring"
                     },
-                    "Navigation": {
-                        "value": 2,
-                        "min": 1,
-                        "max": 5
-                    },
                     "Sensor Systems": {
                         "value": 1,
                         "min": 0,
@@ -388,6 +383,11 @@
                         "min": 0,
                         "max": 5
                     },
+                    "Navigation": {
+                        "value": 2,
+                        "min": 1,
+                        "max": 5
+                    },
                     "Outdoorsman": {
                         "value": 1,
                         "min": 1,
@@ -470,6 +470,1000 @@
                 }
             }
         },
+        "Expertise": {
+            "Vehicles": {
+                "Aircraft": {
+                    "Shuttle": {
+                        "value": 0,
+                        "cost": 5,
+                        "tooltip": "Includes the CS-14 Briaeros."
+                    },
+                    "Gliderplane": {
+                        "value": 0,
+                        "cost": 3
+                    },
+                    "Rotorcraft": {
+                        "value": 0,
+                        "cost": 5
+                    },
+                    "Cargo Platform": {
+                        "value": 0,
+                        "cost": 5,
+                        "extended": "colonist"
+                    },
+                    "COTS Drone": {
+                        "value": 0,
+                        "cost": 2
+                    },
+                    "UD4 Dropship": {
+                        "value": 0,
+                        "cost": 12
+                    },
+                    "M421 Firefly": {
+                        "value": 0,
+                        "cost": 5
+                    },
+                    "M86 UAV": {
+                        "value": 0,
+                        "cost": 4
+                    },
+                    "PUPS": {
+                        "value": 0,
+                        "cost": 12,
+                        "tooltip": "Advanced antigrav spectrograh drone.\nRestricted WY technology not available in normal military training."
+                    }
+                },
+                "Land Vehicles": {
+                    "Car": {
+                        "value": 0,
+                        "cost": 2
+                    },
+                    "ATVL": {
+                        "value": 0,
+                        "cost": 2
+                    },
+                    "Motorcycle": {
+                        "value": 0,
+                        "cost": 2
+                    },
+                    "Hoverbike": {
+                        "value": 0,
+                        "cost": 4
+                    },
+                    "Tractor": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist"
+                    },
+                    "Truck": {
+                        "value": 0,
+                        "cost": 3
+                    },
+                    "M57 APC": {
+                        "value": 0,
+                        "cost": 6
+                    },
+                    "M292 Artillery": {
+                        "value": 0,
+                        "cost": 5,
+                        "tooltip": "Firing it is done with the Indirect Fire skill and requires the Artillery expertise."
+                    }
+                },
+                "Sea Vehicles": {
+                    "CRRC": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Combat Rubber Reconnaissance Craft.\nOften used by marines and special forces."
+                    },
+                    "Kayak": {
+                        "value": 0,
+                        "cost": 2,
+                        "extended": "colonist"
+                    },
+                    "Motorboat": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Motor powered solid hull boats up to class 3\n(which would include coastal Fast Attack Crafts, FAC:s)."
+                    },
+                    "Sailing": {
+                        "value": 0,
+                        "cost": 5,
+                        "extended": "colonist",
+                        "tooltip": "Any boat or larger ship as long as it is mainly sail-powered."
+                    }
+                },
+                "Starship": {
+                    "Freighter": {
+                        "value": 0,
+                        "cost": 15,
+                        "extended": "navy"
+                    },
+                    "Colony Ship": {
+                        "value": 0,
+                        "cost": 15,
+                        "extended": "navy"
+                    },
+                    "Salvage Vessel": {
+                        "value": 0,
+                        "cost": 15,
+                        "extended": "navy"
+                    },
+                    "Survey Ship": {
+                        "value": 0,
+                        "cost": 15,
+                        "extended": "navy"
+                    },
+                    "Tanker": {
+                        "value": 0,
+                        "cost": 15,
+                        "extended": "navy"
+                    },
+                    "Conestoga Frigate": {
+                        "value": 0,
+                        "cost": 15,
+                        "extended": "navy"
+                    },
+                    "Bougainville Attack Transport": {
+                        "value": 0,
+                        "cost": 15,
+                        "extended": "navy"
+                    },
+                    "Tientsin Assault Ship": {
+                        "value": 0,
+                        "cost": 15,
+                        "extended": "navy"
+                    },
+                    "Valley Forge Class": {
+                        "value": 0,
+                        "cost": 15,
+                        "extended": "navy"
+                    },
+                    "Henderson Field Transport": {
+                        "value": 0,
+                        "cost": 15,
+                        "extended": "navy"
+                    },
+                    "Okinawa Assault Carrier": {
+                        "value": 0,
+                        "cost": 15,
+                        "extended": "navy"
+                    }
+                }
+            },
+            "Weapons": {
+                "US military small arms": {
+                    "M41 Pulse Rifle": {
+                        "value": 0,
+                        "cost": 5,
+                        "tooltip": "Also covers the built-in U1 grenade launcher and variants like the M41AE2 AR."
+                    },
+                    "M39 SMG": {
+                        "value": 0,
+                        "cost": 3
+                    },
+                    "VP55 LR Pistol": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Low-recoil pistol specialized for use aboard spacecraft."
+                    },
+                    "M42 Sniper Rifle": {
+                        "value": 0,
+                        "cost": 8
+                    },
+                    "M240 Flamer": {
+                        "value": 0,
+                        "cost": 3
+                    },
+                    "M56 Smartgun": {
+                        "value": 0,
+                        "cost": 8
+                    },
+                    "Morita I AR": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "military",
+                        "tooltip": "Used mainly by mobile infantry."
+                    }
+                },
+                "Generic": {
+                    "Pistol": {
+                        "value": 0,
+                        "cost": 2
+                    },
+                    "Shotgun": {
+                        "value": 0,
+                        "cost": 2
+                    },
+                    "Deer Rifle": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist"
+                    },
+                    "Hand Grenade": {
+                        "value": 0,
+                        "cost": 3
+                    },
+                    "Dartgun": {
+                        "value": 0,
+                        "cost": 3
+                    },
+                    "Harpoon": {
+                        "value": 0,
+                        "cost": 3
+                    },
+                    "Mortar": {
+                        "value": 0,
+                        "cost": 3
+                    },
+                    "Artillery": {
+                        "value": 0,
+                        "cost": 5
+                    }
+                },
+                "Other military small arms": {
+                    "F44AA Pulse Rifle": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "military",
+                        "tooltip": "Old experimental PR with aim assist that predated the M41 & M56 designs."
+                    },
+                    "Harrington AR": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "military",
+                        "tooltip": "Older precursor to the US pulse rifle that has now been phased out of active use."
+                    },
+                    "SK813 PR": {
+                        "value": 0,
+                        "cost": 5,
+                        "extended": "military",
+                        "tooltip": "Chinese made pulse rifle."
+                    },
+                    "NSG23 AR": {
+                        "value": 0,
+                        "cost": 5,
+                        "extended": "military",
+                        "tooltip": "German made assault rifle."
+                    },
+                    "Weyland Storm Rifle": {
+                        "value": 0,
+                        "cost": 5,
+                        "extended": "military",
+                        "tooltip": "Older assault rifle model manufactured by Weyland Corp."
+                    },
+                    "X-9 AR": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "military",
+                        "tooltip": "Older model that is actually a carbine since there is no built-in grenade launcher."
+                    }
+                },
+                "Fixed/Mounted Weapons": {
+                    "HMG": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Heavy Machine Gun up to 30mm, anything bigger counts as cannon. Uses Shooting: Auto."
+                    },
+                    "Ballistic": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Ballistic cannons like the ones mounted on an Infantry Fighting Vehicle (IFV) or Main Battle Tank (MBT)."
+                    },
+                    "Laser": {
+                        "value": 0,
+                        "cost": 5
+                    },
+                    "Railgun": {
+                        "value": 0,
+                        "cost": 5
+                    },
+                    "Particle Beam": {
+                        "value": 0,
+                        "cost": 5,
+                        "tooltip": "Good at destroying electronics, mounted on vehicles or starships."
+                    },
+                    "Plasma": {
+                        "value": 0,
+                        "cost": 6,
+                        "tooltip": "Plasma punches through almost anything. This represents general training on plasma technology applicable both for mounted weapons or other uses like welding."
+                    },
+                    "Flamer": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Vehicle mounted flamethrowers. Uses Shooting: Auto."
+                    }
+                },
+                "Support Weapons": {
+                    "M112 HIMAT": {
+                        "value": 0,
+                        "cost": 5,
+                        "tooltip": "Portable anti-tank missile system used by infantry squads. Uses Missile skill."
+                    },
+                    "M5 RPG": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Reloadable rocket weapon. Uses Shoulder-launched."
+                    },
+                    "M78 PIG": {
+                        "value": 0,
+                        "cost": 8,
+                        "tooltip": "Portable plasma gun, uses Shoulder-launched."
+                    },
+                    "M790 Grenade Launcher": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Handheld launcher for 40mm grenades, very simple but effective design. Uses Indirect Fire."
+                    },
+                    "M83 SADAR": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Disposable anti-tank rocket, uses Shoulder-launched."
+                    },
+                    "SIM-118": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Manpad anti-air missile. Uses Missile Weapons or Shoulder-launched."
+                    }
+                },
+                "Missile Weapons": {
+                    "AAM": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Air-air missile like the AIM-90E Headlock. Fired from an aircraft against other aircraft."
+                    },
+                    "ABM": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Anti-ballistic missile. Intended to intercept another projectile in space or atmosphere."
+                    },
+                    "ASAT": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "navy",
+                        "tooltip": "Anti-satellite missile. Fired against targets in orbit or deep space."
+                    },
+                    "ASM": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Air-surface missile. Also applies for orbit-surface. Includes dropship armament like the AGM-220C, Mk.88 SGW, Mk.10 ZEUS and Banshee 70."
+                    },
+                    "SAM": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Surface-air missile like the LIM-417 Phalanx primarily used by colonial marine forces."
+                    }
+                },
+                "Close Combat Weapons": {
+                    "Baton": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Baton fighting technique typically taught to police or security guards. Also applicable to tonfa, tire iron or a short metal pipe (but not a baseball bat)."
+                    },
+                    "Bayonet": {
+                        "value": 0,
+                        "cost": 1,
+                        "tooltip": "Part of basic infantry training since ancient times and provides +1 Close Combat: Standup bonus with a bayonet mounted on your weapon."
+                    },
+                    "Handcuffs": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Techniques to handcuff an unwilling target."
+                    },
+                    "Knife": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "From improvised shank to specialized combat or throwing knifes."
+                    },
+                    "Sword": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "A machete, katana or the traditional marine corps saber all count as sword."
+                    }
+                }
+            },
+            "Misc.": {
+                "Terrain": {
+                    "Urban": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Barren": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Temperate": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Jungle": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Swamp": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Arctic": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Mountain": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Sea": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Desert": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Space": {
+                        "value": 0,
+                        "cost": 0
+                    }
+                },
+                "Engineering": {
+                    "Building demolition": {
+                        "value": 0,
+                        "cost": 3
+                    },
+                    "Carpentry": {
+                        "value": 0,
+                        "cost": 4,
+                        "extended": "colonist"
+                    },
+                    "Chainsaw": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist",
+                        "tooltip": "Can be used with Mechanic Tools or Outdoorsman."
+                    },
+                    "Damage Control": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Used with Space Crew or Seamanship."
+                    },
+                    "Electricity": {
+                        "value": 0,
+                        "cost": 15,
+                        "extended": "colonist",
+                        "tooltip": "Professional knowledge of electric cabling, power generators, batteries and safety near high voltage lines. Used with Electronics Tools."
+                    },
+                    "Engineering machinery": {
+                        "value": 0,
+                        "cost": 15,
+                        "extended": "colonist",
+                        "tooltip": "Operating industrial machines like CNC milling or lathe machines. Used with Utility Equipment for direct operation, Computer Systems for programming them or Engineering for creating a new design. Large military starships will have this type of machinery in their workshop to assist with repairs or manufacturing of spare parts."
+                    },
+                    "EOD": {
+                        "value": 0,
+                        "cost": 5,
+                        "tooltip": "Explosive Ordnance Disposal. Training in how to find, expose and remove explosive devices as well as using specialized equipment for this. The disposal part usually means safely detonating them. Actually disarming while keeping ordnance intact requires Ordnance. Used with Mine Warfare."
+                    },
+                    "Hotwiring": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Start a vehicle without the key. For simpler low-tech vehicles it may be enough with some know-how and a skill like Sleight of Hand, Criminal or Mechanic Tools, for ones with better anti-theft protection you need more advanced equipment and the Electronic Tools skill."
+                    },
+                    "Hyperbaric": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Work in elevated pressures. Typically used for hull work like underwater welding on wet navy ships, but would also apply for setting explosive charges in a liquid medium and understanding how shockwaves propagate. Uses Welding or Demolition."
+                    },
+                    "IED": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Improvised Explosive Device. Knowledge how to create improvised mines or explosive charges. Used with Demolition or Mine Warfare."
+                    },
+                    "Lockpicking": {
+                        "value": 0,
+                        "cost": 7,
+                        "tooltip": "Low-tech locks may be possible to defeat with a pin and the Sleight of Hand or Criminal skill. More advanced locks require Mechanic Tools or Electronics Tools skills to run a bypass."
+                    },
+                    "Power Tools": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Hand-held powered tools like saws, hammer-drills, grinders etc. Does not include chainsaw which is a separate expertise. Uses Mechanic Tools."
+                    },
+                    "Weaponsmith": {
+                        "value": 0,
+                        "cost": 5,
+                        "tooltip": "Allows you to modify firearms or create crude ones given the right tools and materials. Uses Mechanic Tools skill."
+                    }
+                },
+                "Military Training": {
+                    "Airforce Tactics": {
+                        "value": 0,
+                        "cost": 5,
+                        "tooltip": "Used with Piloting: Atmospheric."
+                    },
+                    "Drill": {
+                        "value": 0,
+                        "cost": 1,
+                        "tooltip": "Wear a dress uniform correctly, march in formation, perform formal drills and ceremonies. Uses Soldiering or Space Crew."
+                    },
+                    "FAC": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Forward Air Controller. To call in and direct close air support (CAS) or missiles. Includes using target marking equipment for laser guidance. Uses the Soldiering skill."
+                    },
+                    "Forced Entry": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Kick in doors, break them with a ram or budge the frame with a crowbar for a quick entry. Also applies to windows or other entrances (if there is no atmosphere you need Hull breaching). Usable with Criminal, Policework, Strength or Demolition (if using explosives)."
+                    },
+                    "Forward Observer": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "To call in and adjust artillery fire. Uses Indirect Fire or Soldiering skill. If using a drone to observe it will be a combined roll with Remote Piloting."
+                    },
+                    "Hull breaching": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "How to forcibly breach through a ships hull to allow entrance. Usable with Demolition or Welding skill, the latter will likely also require plasma expertise."
+                    },
+                    "Infantry Tactics": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Small unit tactics during combat or movement. Used with Soldiering."
+                    },
+                    "Interrogation": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Techniques & tactics to get more information out of someone in your custody. Used with Policework, Intelligence, Intimidation, Streetwise or Charisma depending on situation."
+                    },
+                    "Mobile Tactics": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Mobile and armored warfare. Includes vehicle combat and how to operate tactically during traveling and escort duty. Used with Soldiering or Driving."
+                    },
+                    "Naval Tactics": {
+                        "value": 0,
+                        "cost": 5,
+                        "tooltip": "Wet navy tactics, on or below the surface. How to operate in combat or as part of a formation. Used with Seamanship."
+                    },
+                    "Nuclear Bomb": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Handle nuclear explosive devices. Used with CBRN Warfare or Demolition."
+                    },
+                    "Ordnance": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Knowledge of ammunition, grenades, artillery shells etc. Required to safely modify or disarm ammunition. Allows setting shell fuzes. Used with Utility Equipment to rearm a dropship, with Mechanic Tools to safely cut a shell open or with Mine Warfare to dismantle a mine into components."
+                    },
+                    "Parachute wings": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Training badge for completing basic Parachute training."
+                    },
+                    "RTI": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Resistance to interrogation training prepares a soldier in case they are captured. Provides bonus to Psy or Tou to resist interrogation and torture. Can also be used with Soldiering or Criminal"
+                    },
+                    "Space Tactics": {
+                        "value": 0,
+                        "cost": 5,
+                        "extended": "navy",
+                        "tooltip": "Tactics for ship combat in deep space or orbit. Used with Starship Bridge or for smaller ships with Space Crew."
+                    },
+                    "Starship Identification": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "navy",
+                        "tooltip": "Knowledge of basic facts about starships used by various foreign powers and how to tell them apart based on passive visual/EM signatures or discovered capabilities like profiles for active sensors or acceleration. Used with Space Crew or Starship Bridge."
+                    },
+                    "Vehicle Identification": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Knowledge of basic facts about vehicles used by various foreign powers and how to tell them apart based on visual, audible or EM signatures. Used with Soldiering or Intelligence."
+                    }
+                },
+                "Sensors & IT": {
+                    "Covert Sensors": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Used with Intelligence or Sensor Systems. Camouflage may be used for hiding them."
+                    },
+                    "EW": {
+                        "value": 0,
+                        "cost": 8,
+                        "tooltip": "Electronic Warfare. Used with the Comtech skill."
+                    },
+                    "FTL Communication": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "navy"
+                    },
+                    "Hacking": {
+                        "value": 0,
+                        "cost": 6,
+                        "tooltip": "Used with Computer Systems."
+                    },
+                    "Interface 2037": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Basic reliable interface to the main computer/AI used on many civilian starships."
+                    },
+                    "IR": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Infra-Red light not visible to the human eye. Used both with personal equipment and vehicle/starship sensors. Uses Sensor Systems skill or alternatively Perception for personal equipment like night vision goggles."
+                    },
+                    "Lidar": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Pulsed laser to measure and map objects. Common on starships, but also available as a sensor on many military vehicles. Uses Sensor Systems skill."
+                    },
+                    "Motion Tracker": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Used with Sensor Systems skill."
+                    },
+                    "Morse": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Uses Comtech skill."
+                    },
+                    "Photography": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "You know how to properly use a camera or a video camera, for artistic or documentation purposes. Used with Perception, Sensor Systems or Intelligence."
+                    },
+                    "Programming": {
+                        "value": 0,
+                        "cost": 8,
+                        "tooltip": "Used with Computer Systems."
+                    },
+                    "Radar": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Used with Sensor Systems skill. To operate a counter-battery radar the Artillery expertise is also required."
+                    },
+                    "Radio": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "You are trained in radio communication and know how to work with any type of common radio transmitter/receiver. Uses Comtech skill."
+                    },
+                    "Sensor Networking": {
+                        "value": 0,
+                        "cost": 3
+                    },
+                    "Tightbeam": {
+                        "value": 0,
+                        "cost": 4,
+                        "extended": "navy",
+                        "tooltip": "Operation of tightbeam communication systems which will typically use lasers. Uses Comtech skill."
+                    },
+                    "USCM Interface ": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "The marine corps have their own computer interface used on starships, bases and some advanced equipment. Typically used with Computer Systems, but also with Mine Warfare to configure the UA571 Sentry Gun."
+                    },
+                    "USN Interface": {
+                        "value": 0,
+                        "cost": 2,
+                        "extended": "navy"
+                    }
+                },
+                "Nature & Animals": {
+                    "Bushcrafting": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist",
+                        "tooltip": "Uses Outdoorsman."
+                    },
+                    "Evasion": {
+                        "value": 0,
+                        "cost": 5,
+                        "tooltip": "Advanced training to hide tracks while moving through terrain and strategies to confuse pursuers, dogs or sensors. Used with Outdoorsman or Camouflage."
+                    },
+                    "Fishing": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist"
+                    },
+                    "Herbalism": {
+                        "value": 0,
+                        "cost": 5,
+                        "extended": "colonist",
+                        "tooltip": "Knowledge of plants with medicinal effects. To find such plants the current terrain is also a required expertise. Used with Outdoorsman or Medical skill."
+                    },
+                    "Herding": {
+                        "value": 0,
+                        "cost": 4,
+                        "extended": "colonist"
+                    },
+                    "Hunting": {
+                        "value": 0,
+                        "cost": 5,
+                        "tooltip": "You know where to find game, how to get close and how to skin and butcher them after the shot. Used with Outdoorsman and terrain expertise."
+                    },
+                    "K9": {
+                        "value": 0,
+                        "cost": 8,
+                        "tooltip": "You have specialist K9 training to work with dogs for for searching, guarding etc. Your squad will benefit from the senses of your dog for detection purposes (combined roll using dog perception + your Animal Handling which in practice means your skill is used since it will be lower)."
+                    },
+                    "Riding": {
+                        "value": 0,
+                        "cost": 4
+                    },
+                    "Skiing": {
+                        "value": 0,
+                        "cost": 3
+                    },
+                    "Tracking": {
+                        "value": 0,
+                        "cost": 5,
+                        "tooltip": "Read tracks to uncover the story they tell, in what direction, how many, how fast they were moving etc. Used with Outdoorsman. If tracking a vehicle and you also have Vehicle Identification it allows you to identify the model instead of only the general type as wheeled, tracked."
+                    },
+                    "Trapping": {
+                        "value": 0,
+                        "cost": 4
+                    }
+                },
+                "Navigation": {
+                    "Interplanetary": {
+                        "value": 0,
+                        "cost": 6
+                    },
+                    "Interstellar": {
+                        "value": 0,
+                        "cost": 10,
+                        "extended": "navy"
+                    },
+                    "Orienteering": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Provides bonus to navigation over land regardless of terrain."
+                    },
+                    "Nautical Charts": {
+                        "value": 0,
+                        "cost": 3
+                    }
+                },
+                "Science & Medicine": {
+                    "Aerospace Medicine": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "navy"
+                    },
+                    "Autodoc": {
+                        "value": 0,
+                        "cost": 5,
+                        "tooltip": "Usable with Computer Systems, First Aid or Medical."
+                    },
+                    "CBRN Treatment": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Usable with CBRN Warfare, First Aid or Medical."
+                    },
+                    "Cryogenics": {
+                        "value": 0,
+                        "cost": 4
+                    },
+                    "Dive Medicine": {
+                        "value": 0,
+                        "cost": 3
+                    },
+                    "Forensics": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Used with Policework or Science Equipment skills."
+                    },
+                    "Infections": {
+                        "value": 0,
+                        "cost": 4
+                    },
+                    "IV": {
+                        "value": 0,
+                        "cost": 3
+                    },
+                    "Laboratory equipment": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Qualifies you to assist someone who actually knows what they are doing in a lab."
+                    },
+                    "Meteorology": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist"
+                    },
+                    "Oceanography": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist"
+                    },
+                    "Surgery": {
+                        "value": 0,
+                        "cost": 8,
+                        "tooltip": "If performed with First Aid it is limited to “Field Surgery” field surgery procedures, e.g. needle decompression."
+                    },
+                    "Toxicology": {
+                        "value": 0,
+                        "cost": 5,
+                        "tooltip": "Usable with First Aid, Medical or for identifying natural poisons Outdoorsman."
+                    },
+                    "Veterinary": {
+                        "value": 0,
+                        "cost": 6,
+                        "tooltip": "Used with Animal Handling or Medical."
+                    }
+                },
+                "Language": {
+                    "Chinese": {
+                        "value": 0,
+                        "cost": 3
+                    },
+                    "English": {
+                        "value": 1,
+                        "cost": 3
+                    },
+                    "Japanese": {
+                        "value": 0,
+                        "cost": 3
+                    },
+                    "Russian": {
+                        "value": 0,
+                        "cost": 3
+                    },
+                    "Spanish": {
+                        "value": 0,
+                        "cost": 3
+                    }
+                },
+                "Creative": {
+                    "Music": {
+                        "value": 0,
+                        "cost": 8,
+                        "extended": "colonist",
+                        "tooltip": "You can read notes and compose music."
+                    },
+                    "Painting": {
+                        "value": 0,
+                        "cost": 8,
+                        "extended": "colonist"
+                    },
+                    "Party Tricks": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Small \"magic\" tricks or more risky ones like the \"knife thing\". Used with Sleight of Hand."
+                    },
+                    "Performance": {
+                        "value": 0,
+                        "cost": 8,
+                        "extended": "colonist"
+                    },
+                    "Singing": {
+                        "value": 0,
+                        "cost": 5,
+                        "extended": "colonist"
+                    },
+                    "Writing": {
+                        "value": 0,
+                        "cost": 8,
+                        "extended": "colonist"
+                    },
+                    "Guitar": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist",
+                        "tooltip": "Uses Artistry or Sleight of Hand skill"
+                    },
+                    "Keyboard": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist",
+                        "tooltip": "Uses Artistry or Sleight of Hand skill"
+                    },
+                    "Drums": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist",
+                        "tooltip": "Uses Artistry skill"
+                    },
+                    "Harmonica": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist",
+                        "tooltip": "Uses Artistry skill"
+                    },
+                    "Trumpet": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist",
+                        "tooltip": "Uses Artistry skill"
+                    },
+                    "Violin": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist",
+                        "tooltip": "Uses Artistry skill"
+                    }
+                },
+                "Other": {
+                    "Acrobatics": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Provides bonus when jumping, balancing or falling and allows you to do maneuvers that would be impossible without training, like a free handstand. Used with Dexterity."
+                    },
+                    "Card Cheating": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Used with Gambling or Sleight of Hand."
+                    },
+                    "Crane": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Operation of large cranes. Used with Utility Equipment."
+                    },
+                    "Diving equipment": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Used with Swimming."
+                    },
+                    "Environmental Suit": {
+                        "value": 1,
+                        "cost": 3,
+                        "tooltip": "Cover all types of basic suits like space, biohazard or high-pressure. Used with Zero-G or CBRN Warfare."
+                    },
+                    "Forgery": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Used with Criminal or Intelligence, Computer Systems for digital forgeries or Artistry for valuable objects."
+                    },
+                    "Parkour": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Used with Dexterity."
+                    },
+                    "Pickpocketing": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Used with Sleight of Hand vs Perception."
+                    },
+                    "Powerloader": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Exoskeleton powerloader Class II license. Used with Utility Equipment."
+                    },
+                    "Law": {
+                        "value": 0,
+                        "cost": 8,
+                        "extended": "colonist",
+                        "tooltip": "Usable with Policework, Commerce for trade laws."
+                    },
+                    "Life Support": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Space Crew or Colonist to operate and service. Mechanic or Electronics Tools for more extensive repairs or modifications."
+                    },
+                    "Rope Work": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Used with Seamanship, Sleight of Hand or Outdoorsman to tie knots or make rope ladders. With Dexterity for rappelling. With Animal Handling to improvise a harness & leash."
+                    },
+                    "Scaling": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Trained to use professional climbing equipment. Used with Dexterity."
+                    },
+                    "Shadowing": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Opposed roll vs targets Streetwise. Used with Intelligence, Policework, Streetwise or Remote Piloting (if using a drone)."
+                    },
+                    "Thrusterpack": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Operate spacesuit thrusters with the Zero-G skill."
+                    }
+                }
+            }
+        },
         "Traits": {
             "Neutral": {
                 " ": {
@@ -494,6 +1488,10 @@
                         "tooltip": "Req: Not Religious, Not Righteous, Not Soft hearted",
                         "requirements": {
                             "Religious": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Righteous": {
                                 "type": "==",
                                 "value": 0
                             },
@@ -2215,1000 +3213,6 @@
                     "Hook Hand": {
                         "value": 0,
                         "cost": 0
-                    }
-                }
-            }
-        },
-        "Expertise": {
-            "Vehicles": {
-                "Aircrafts": {
-                    "Shuttle": {
-                        "value": 0,
-                        "cost": 5,
-                        "tooltip": "Includes the CS-14 Briaeros."
-                    },
-                    "Gliderplane": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Rotorcraft": {
-                        "value": 0,
-                        "cost": 5
-                    },
-                    "Cargo Platform": {
-                        "value": 0,
-                        "cost": 5,
-                        "extended": "colonist"
-                    },
-                    "COTS Drone": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "UD4 Dropship": {
-                        "value": 0,
-                        "cost": 12
-                    },
-                    "M421 Firefly": {
-                        "value": 0,
-                        "cost": 5
-                    },
-                    "M86 UAV": {
-                        "value": 0,
-                        "cost": 4
-                    },
-                    "PUPS": {
-                        "value": 0,
-                        "cost": 12,
-                        "tooltip": "Advanced antigrav spectrograh drone.\nRestricted WY technology not available in normal military training."
-                    }
-                },
-                "Land Vehicles": {
-                    "Car": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "ATVL": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Motorcycle": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Hoverbike": {
-                        "value": 0,
-                        "cost": 4
-                    },
-                    "Tractor": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "colonist"
-                    },
-                    "Truck": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "M57 APC": {
-                        "value": 0,
-                        "cost": 6
-                    },
-                    "M292 Artillery": {
-                        "value": 0,
-                        "cost": 5,
-                        "tooltip": "Firing it is done with the Indirect Fire skill and requires the Artillery expertise."
-                    }
-                },
-                "Sea Vehicles": {
-                    "CRRC": {
-                        "value": 0,
-                        "cost": 2,
-                        "tooltip": "Combat Rubber Reconnaissance Craft.\nOften used by marines and special forces."
-                    },
-                    "Kayak": {
-                        "value": 0,
-                        "cost": 2,
-                        "extended": "colonist"
-                    },
-                    "Motorboat": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Motor powered solid hull boats up to class 3\n(which would include coastal Fast Attack Crafts, FAC:s)."
-                    },
-                    "Sailing": {
-                        "value": 0,
-                        "cost": 5,
-                        "extended": "colonist",
-                        "tooltip": "Any boat or larger ship as long as it is mainly sail-powered."
-                    }
-                },
-                "Starship": {
-                    "Freighter": {
-                        "value": 0,
-                        "cost": 15,
-                        "extended": "navy"
-                    },
-                    "Colony Ship": {
-                        "value": 0,
-                        "cost": 15,
-                        "extended": "navy"
-                    },
-                    "Salvage Vessel": {
-                        "value": 0,
-                        "cost": 15,
-                        "extended": "navy"
-                    },
-                    "Survey Ship": {
-                        "value": 0,
-                        "cost": 15,
-                        "extended": "navy"
-                    },
-                    "Tanker": {
-                        "value": 0,
-                        "cost": 15,
-                        "extended": "navy"
-                    },
-                    "Conestoga Frigate": {
-                        "value": 0,
-                        "cost": 15,
-                        "extended": "navy"
-                    },
-                    "Bougainville Attack Transport": {
-                        "value": 0,
-                        "cost": 15,
-                        "extended": "navy"
-                    },
-                    "Tientsin Assault Ship": {
-                        "value": 0,
-                        "cost": 15,
-                        "extended": "navy"
-                    },
-                    "Valley Forge Class": {
-                        "value": 0,
-                        "cost": 15,
-                        "extended": "navy"
-                    },
-                    "Henderson Field Transport": {
-                        "value": 0,
-                        "cost": 15,
-                        "extended": "navy"
-                    },
-                    "Okinawa Assault Carrier": {
-                        "value": 0,
-                        "cost": 15,
-                        "extended": "navy"
-                    }
-                }
-            },
-            "Weapons": {
-                "US military small arms": {
-                    "M41 Pulse Rifle": {
-                        "value": 0,
-                        "cost": 5,
-                        "tooltip": "Also covers the built-in U1 grenade launcher and variants like the M41AE2 AR."
-                    },
-                    "M39 SMG": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "VP55 LR Pistol": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Low-recoil pistol specialized for use aboard spacecraft."
-                    },
-                    "M42 Sniper Rifle": {
-                        "value": 0,
-                        "cost": 8
-                    },
-                    "M240 Flamer": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "M56 Smartgun": {
-                        "value": 0,
-                        "cost": 8
-                    },
-                    "Morita I AR": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "military",
-                        "tooltip": "Used mainly by mobile infantry."
-                    }
-                },
-                "Generic": {
-                    "Pistol": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Shotgun": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Deer Rifle": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "colonist"
-                    },
-                    "Hand Grenade": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Dartgun": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Harpoon": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Mortar": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Artillery": {
-                        "value": 0,
-                        "cost": 5
-                    }
-                },
-                "Other military small arms": {
-                    "F44AA Pulse Rifle": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "military",
-                        "tooltip": "Old experimental PR with aim assist that predated the M41 & M56 designs."
-                    },
-                    "Harrington AR": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "military",
-                        "tooltip": "Older precursor to the US pulse rifle that has now been phased out of active use."
-                    },
-                    "SK813 PR": {
-                        "value": 0,
-                        "cost": 5,
-                        "extended": "military",
-                        "tooltip": "Chinese made pulse rifle."
-                    },
-                    "NSG23 AR": {
-                        "value": 0,
-                        "cost": 5,
-                        "extended": "military",
-                        "tooltip": "German made assault rifle."
-                    },
-                    "Weyland Storm Rifle": {
-                        "value": 0,
-                        "cost": 5,
-                        "extended": "military",
-                        "tooltip": "Older assault rifle model manufactured by Weyland Corp."
-                    },
-                    "X-9 AR": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "military",
-                        "tooltip": "Older model that is actually a carbine since there is no built-in grenade launcher."
-                    }
-                },
-                "Fixed/Mounted Weapons": {
-                    "HMG": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Heavy Machine Gun up to 30mm, anything bigger counts as cannon. Uses Shooting: Auto."
-                    },
-                    "Ballistic": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Ballistic cannons like the ones mounted on an Infantry Fighting Vehicle (IFV) or Main Battle Tank (MBT)."
-                    },
-                    "Laser": {
-                        "value": 0,
-                        "cost": 5
-                    },
-                    "Railgun": {
-                        "value": 0,
-                        "cost": 5
-                    },
-                    "Particle Beam": {
-                        "value": 0,
-                        "cost": 5,
-                        "tooltip": "Good at destroying electronics, mounted on vehicles or starships."
-                    },
-                    "Plasma": {
-                        "value": 0,
-                        "cost": 6,
-                        "tooltip": "Plasma punches through almost anything. This represents general training on plasma technology applicable both for mounted weapons or other uses like welding."
-                    },
-                    "Flamer": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Vehicle mounted flamethrowers. Uses Shooting: Auto."
-                    }
-                },
-                "Support Weapons": {
-                    "M112 HIMAT": {
-                        "value": 0,
-                        "cost": 5,
-                        "tooltip": "Portable anti-tank missile system used by infantry squads. Uses Missile skill."
-                    },
-                    "M5 RPG": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Reloadable rocket weapon. Uses Shoulder-launched."
-                    },
-                    "M78 PIG": {
-                        "value": 0,
-                        "cost": 8,
-                        "tooltip": "Portable plasma gun, uses Shoulder-launched."
-                    },
-                    "M790 Grenade Launcher": {
-                        "value": 0,
-                        "cost": 2,
-                        "tooltip": "Handheld launcher for 40mm grenades, very simple but effective design. Uses Indirect Fire."
-                    },
-                    "M83 SADAR": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Disposable anti-tank rocket, uses Shoulder-launched."
-                    },
-                    "SIM-118": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Manpad anti-air missile. Uses Missile Weapons or Shoulder-launched."
-                    }
-                },
-                "Missile Weapons": {
-                    "AAM": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Air-air missile like the AIM-90E Headlock. Fired from an aircraft against other aircraft."
-                    },
-                    "ABM": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Anti-ballistic missile. Intended to intercept another projectile in space or atmosphere."
-                    },
-                    "ASAT": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "navy",
-                        "tooltip": "Anti-satellite missile. Fired against targets in orbit or deep space."
-                    },
-                    "ASM": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Air-surface missile. Also applies for orbit-surface. Includes dropship armament like the AGM-220C, Mk.88 SGW, Mk.10 ZEUS and Banshee 70."
-                    },
-                    "SAM": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Surface-air missile like the LIM-417 Phalanx primarily used by colonial marine forces."
-                    }
-                },
-                "Close Combat Weapons": {
-                    "Baton": {
-                        "value": 0,
-                        "cost": 2,
-                        "tooltip": "Baton fighting technique typically taught to police or security guards. Also applicable to tonfa, tire iron or a short metal pipe (but not a baseball bat)."
-                    },
-                    "Bayonet": {
-                        "value": 0,
-                        "cost": 1,
-                        "tooltip": "Part of basic infantry training since ancient times and provides +1 Close Combat: Standup bonus with a bayonet mounted on your weapon."
-                    },
-                    "Handcuffs": {
-                        "value": 0,
-                        "cost": 2,
-                        "tooltip": "Techniques to handcuff an unwilling target."
-                    },
-                    "Knife": {
-                        "value": 0,
-                        "cost": 2,
-                        "tooltip": "From improvised shank to specialized combat or throwing knifes."
-                    },
-                    "Sword": {
-                        "value": 0,
-                        "cost": 4,
-                        "tooltip": "A machete, katana or the traditional marine corps saber all count as sword."
-                    }
-                }
-            },
-            "Misc.": {
-                "Terrain": {
-                    "Urban": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Barren": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Temperate": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Jungle": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Swamp": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Arctic": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Mountain": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Sea": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Desert": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Space": {
-                        "value": 0,
-                        "cost": 0
-                    }
-                },
-                "Engineering": {
-                    "Building demolition": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Carpentry": {
-                        "value": 0,
-                        "cost": 4,
-                        "extended": "colonist"
-                    },
-                    "Chainsaw": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "colonist",
-                        "tooltip": "Can be used with Mechanic Tools or Outdoorsman."
-                    },
-                    "Damage Control": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Used with Space Crew or Seamanship."
-                    },
-                    "Electricity": {
-                        "value": 0,
-                        "cost": 15,
-                        "extended": "colonist",
-                        "tooltip": "Professional knowledge of electric cabling, power generators, batteries and safety near high voltage lines. Used with Electronics Tools."
-                    },
-                    "Engineering machinery": {
-                        "value": 0,
-                        "cost": 15,
-                        "extended": "colonist",
-                        "tooltip": "Operating industrial machines like CNC milling or lathe machines. Used with Utility Equipment for direct operation, Computer Systems for programming them or Engineering for creating a new design. Large military starships will have this type of machinery in their workshop to assist with repairs or manufacturing of spare parts."
-                    },
-                    "EOD": {
-                        "value": 0,
-                        "cost": 5,
-                        "tooltip": "Explosive Ordnance Disposal. Training in how to find, expose and remove explosive devices as well as using specialized equipment for this. The disposal part usually means safely detonating them. Actually disarming while keeping ordnance intact requires Ordnance. Used with Mine Warfare."
-                    },
-                    "Hotwiring": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Start a vehicle without the key. For simpler low-tech vehicles it may be enough with some know-how and a skill like Sleight of Hand, Criminal or Mechanic Tools, for ones with better anti-theft protection you need more advanced equipment and the Electronic Tools skill."
-                    },
-                    "Hyperbaric": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Work in elevated pressures. Typically used for hull work like underwater welding on wet navy ships, but would also apply for setting explosive charges in a liquid medium and understanding how shockwaves propagate. Uses Welding or Demolition."
-                    },
-                    "IED": {
-                        "value": 0,
-                        "cost": 4,
-                        "tooltip": "Improvised Explosive Device. Knowledge how to create improvised mines or explosive charges. Used with Demolition or Mine Warfare."
-                    },
-                    "Lockpicking": {
-                        "value": 0,
-                        "cost": 7,
-                        "tooltip": "Low-tech locks may be possible to defeat with a pin and the Sleight of Hand or Criminal skill. More advanced locks require Mechanic Tools or Electronics Tools skills to run a bypass."
-                    },
-                    "Power Tools": {
-                        "value": 0,
-                        "cost": 2,
-                        "tooltip": "Hand-held powered tools like saws, hammer-drills, grinders etc. Does not include chainsaw which is a separate expertise. Uses Mechanic Tools."
-                    },
-                    "Weaponsmith": {
-                        "value": 0,
-                        "cost": 5,
-                        "tooltip": "Allows you to modify firearms or create crude ones given the right tools and materials. Uses Mechanic Tools skill."
-                    }
-                },
-                "Military Training": {
-                    "Airforce Tactics": {
-                        "value": 0,
-                        "cost": 5,
-                        "tooltip": "Used with Piloting: Atmospheric."
-                    },
-                    "Drill": {
-                        "value": 0,
-                        "cost": 1,
-                        "tooltip": "Wear a dress uniform correctly, march in formation, perform formal drills and ceremonies. Uses Soldiering or Space Crew."
-                    },
-                    "FAC": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Forward Air Controller. To call in and direct close air support (CAS) or missiles. Includes using target marking equipment for laser guidance. Uses the Soldiering skill."
-                    },
-                    "Forced Entry": {
-                        "value": 0,
-                        "cost": 2,
-                        "tooltip": "Kick in doors, break them with a ram or budge the frame with a crowbar for a quick entry. Also applies to windows or other entrances (if there is no atmosphere you need Hull breaching). Usable with Criminal, Policework, Strength or Demolition (if using explosives)."
-                    },
-                    "Forward Observer": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "To call in and adjust artillery fire. Uses Indirect Fire or Soldiering skill. If using a drone to observe it will be a combined roll with Remote Piloting."
-                    },
-                    "Hull breaching": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "How to forcibly breach through a ships hull to allow entrance. Usable with Demolition or Welding skill, the latter will likely also require plasma expertise."
-                    },
-                    "Infantry Tactics": {
-                        "value": 0,
-                        "cost": 4,
-                        "tooltip": "Small unit tactics during combat or movement. Used with Soldiering."
-                    },
-                    "Interrogation": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Techniques & tactics to get more information out of someone in your custody. Used with Policework, Intelligence, Intimidation, Streetwise or Charisma depending on situation."
-                    },
-                    "Mobile Tactics": {
-                        "value": 0,
-                        "cost": 4,
-                        "tooltip": "Mobile and armored warfare. Includes vehicle combat and how to operate tactically during traveling and escort duty. Used with Soldiering or Driving."
-                    },
-                    "Naval Tactics": {
-                        "value": 0,
-                        "cost": 5,
-                        "tooltip": "Wet navy tactics, on or below the surface. How to operate in combat or as part of a formation. Used with Seamanship."
-                    },
-                    "Nuclear Bomb": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Handle nuclear explosive devices. Used with CBRN Warfare or Demolition."
-                    },
-                    "Ordnance": {
-                        "value": 0,
-                        "cost": 4,
-                        "tooltip": "Knowledge of ammunition, grenades, artillery shells etc. Required to safely modify or disarm ammunition. Allows setting shell fuzes. Used with Utility Equipment to rearm a dropship, with Mechanic Tools to safely cut a shell open or with Mine Warfare to dismantle a mine into components."
-                    },
-                    "Parachute wings": {
-                        "value": 0,
-                        "cost": 2,
-                        "tooltip": "Training badge for completing basic Parachute training."
-                    },
-                    "RTI": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Resistance to interrogation training prepares a soldier in case they are captured. Provides bonus to Psy or Tou to resist interrogation and torture. Can also be used with Soldiering or Criminal"
-                    },
-                    "Space Tactics": {
-                        "value": 0,
-                        "cost": 5,
-                        "extended": "navy",
-                        "tooltip": "Tactics for ship combat in deep space or orbit. Used with Starship Bridge or for smaller ships with Space Crew."
-                    },
-                    "Starship Identification": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "navy",
-                        "tooltip": "Knowledge of basic facts about starships used by various foreign powers and how to tell them apart based on passive visual/EM signatures or discovered capabilities like profiles for active sensors or acceleration. Used with Space Crew or Starship Bridge."
-                    },
-                    "Vehicle Identification": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Knowledge of basic facts about vehicles used by various foreign powers and how to tell them apart based on visual, audible or EM signatures. Used with Soldiering or Intelligence."
-                    }
-                },
-                "Sensors & IT": {
-                    "Covert Sensors": {
-                        "value": 0,
-                        "cost": 4,
-                        "tooltip": "Used with Intelligence or Sensor Systems. Camouflage may be used for hiding them."
-                    },
-                    "EW": {
-                        "value": 0,
-                        "cost": 8,
-                        "tooltip": "Electronic Warfare. Used with the Comtech skill."
-                    },
-                    "FTL Communication": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "navy"
-                    },
-                    "Hacking": {
-                        "value": 0,
-                        "cost": 6,
-                        "tooltip": "Used with Computer Systems."
-                    },
-                    "Interface 2037": {
-                        "value": 0,
-                        "cost": 2,
-                        "tooltip": "Basic reliable interface to the main computer/AI used on many civilian starships."
-                    },
-                    "IR": {
-                        "value": 0,
-                        "cost": 2,
-                        "tooltip": "Infra-Red light not visible to the human eye. Used both with personal equipment and vehicle/starship sensors. Uses Sensor Systems skill or alternatively Perception for personal equipment like night vision goggles."
-                    },
-                    "Lidar": {
-                        "value": 0,
-                        "cost": 4,
-                        "tooltip": "Pulsed laser to measure and map objects. Common on starships, but also available as a sensor on many military vehicles. Uses Sensor Systems skill."
-                    },
-                    "Motion Tracker": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Used with Sensor Systems skill."
-                    },
-                    "Morse": {
-                        "value": 0,
-                        "cost": 2,
-                        "tooltip": "Uses Comtech skill."
-                    },
-                    "Photography": {
-                        "value": 0,
-                        "cost": 2,
-                        "tooltip": "You know how to properly use a camera or a video camera, for artistic or documentation purposes. Used with Perception, Sensor Systems or Intelligence."
-                    },
-                    "Programming": {
-                        "value": 0,
-                        "cost": 8,
-                        "tooltip": "Used with Computer Systems."
-                    },
-                    "Radar": {
-                        "value": 0,
-                        "cost": 4,
-                        "tooltip": "Used with Sensor Systems skill. To operate a counter-battery radar the Artillery expertise is also required."
-                    },
-                    "Radio": {
-                        "value": 0,
-                        "cost": 2,
-                        "tooltip": "You are trained in radio communication and know how to work with any type of common radio transmitter/receiver. Uses Comtech skill."
-                    },
-                    "Sensor Networking": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Tightbeam": {
-                        "value": 0,
-                        "cost": 4,
-                        "extended": "navy",
-                        "tooltip": "Operation of tightbeam communication systems which will typically use lasers. Uses Comtech skill."
-                    },
-                    "USCM Interface ": {
-                        "value": 0,
-                        "cost": 2,
-                        "tooltip": "The marine corps have their own computer interface used on starships, bases and some advanced equipment. Typically used with Computer Systems, but also with Mine Warfare to configure the UA571 Sentry Gun."
-                    },
-                    "USN Interface": {
-                        "value": 0,
-                        "cost": 2,
-                        "extended": "navy"
-                    }
-                },
-                "Nature & Animals": {
-                    "Bushcrafting": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "colonist",
-                        "tooltip": "Uses Outdoorsman."
-                    },
-                    "Evasion": {
-                        "value": 0,
-                        "cost": 5,
-                        "tooltip": "Advanced training to hide tracks while moving through terrain and strategies to confuse pursuers, dogs or sensors. Used with Outdoorsman or Camouflage."
-                    },
-                    "Fishing": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "colonist"
-                    },
-                    "Herbalism": {
-                        "value": 0,
-                        "cost": 5,
-                        "extended": "colonist",
-                        "tooltip": "Knowledge of plants with medicinal effects. To find such plants the current terrain is also a required expertise. Used with Outdoorsman or Medical skill."
-                    },
-                    "Herding": {
-                        "value": 0,
-                        "cost": 4,
-                        "extended": "colonist"
-                    },
-                    "Hunting": {
-                        "value": 0,
-                        "cost": 5,
-                        "tooltip": "You know where to find game, how to get close and how to skin and butcher them after the shot. Used with Outdoorsman and terrain expertise."
-                    },
-                    "K9": {
-                        "value": 0,
-                        "cost": 8,
-                        "tooltip": "You have specialist K9 training to work with dogs for for searching, guarding etc. Your squad will benefit from the senses of your dog for detection purposes (combined roll using dog perception + your Animal Handling which in practice means your skill is used since it will be lower)."
-                    },
-                    "Riding": {
-                        "value": 0,
-                        "cost": 4
-                    },
-                    "Skiing": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Tracking": {
-                        "value": 0,
-                        "cost": 5,
-                        "tooltip": "Read tracks to uncover the story they tell, in what direction, how many, how fast they were moving etc. Used with Outdoorsman. If tracking a vehicle and you also have Vehicle Identification it allows you to identify the model instead of only the general type as wheeled, tracked."
-                    },
-                    "Trapping": {
-                        "value": 0,
-                        "cost": 4
-                    }
-                },
-                "Navigation": {
-                    "Interplanetary": {
-                        "value": 0,
-                        "cost": 6
-                    },
-                    "Interstellar": {
-                        "value": 0,
-                        "cost": 10,
-                        "extended": "navy"
-                    },
-                    "Orienteering": {
-                        "value": 0,
-                        "cost": 2,
-                        "tooltip": "Provides bonus to navigation over land regardless of terrain."
-                    },
-                    "Nautical Charts": {
-                        "value": 0,
-                        "cost": 3
-                    }
-                },
-                "Science & Medicine": {
-                    "Aerospace Medicine": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "navy"
-                    },
-                    "Autodoc": {
-                        "value": 0,
-                        "cost": 5,
-                        "tooltip": "Usable with Computer Systems, First Aid or Medical."
-                    },
-                    "CBRN Treatment": {
-                        "value": 0,
-                        "cost": 4,
-                        "tooltip": "Usable with CBRN Warfare, First Aid or Medical."
-                    },
-                    "Cryogenics": {
-                        "value": 0,
-                        "cost": 4
-                    },
-                    "Dive Medicine": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Forensics": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Used with Policework or Science Equipment skills."
-                    },
-                    "Infections": {
-                        "value": 0,
-                        "cost": 4
-                    },
-                    "IV": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Laboratory equipment": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Qualifies you to assist someone who actually knows what they are doing in a lab."
-                    },
-                    "Meteorology": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "colonist"
-                    },
-                    "Oceanography": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "colonist"
-                    },
-                    "Surgery": {
-                        "value": 0,
-                        "cost": 8,
-                        "tooltip": "If performed with First Aid it is limited to “Field Surgery” field surgery procedures, e.g. needle decompression."
-                    },
-                    "Toxicology": {
-                        "value": 0,
-                        "cost": 5,
-                        "tooltip": "Usable with First Aid, Medical or for identifying natural poisons Outdoorsman."
-                    },
-                    "Veterinary": {
-                        "value": 0,
-                        "cost": 6,
-                        "tooltip": "Used with Animal Handling or Medical."
-                    }
-                },
-                "Language": {
-                    "Chinese": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "English": {
-                        "value": 1,
-                        "cost": 3
-                    },
-                    "Japanese": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Russian": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Spanish": {
-                        "value": 0,
-                        "cost": 3
-                    }
-                },
-                "Creative": {
-                    "Music": {
-                        "value": 0,
-                        "cost": 8,
-                        "extended": "colonist",
-                        "tooltip": "You can read notes and compose music."
-                    },
-                    "Painting": {
-                        "value": 0,
-                        "cost": 8,
-                        "extended": "colonist"
-                    },
-                    "Party Tricks": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Small \"magic\" tricks or more risky ones like the \"knife thing\". Used with Sleight of Hand."
-                    },
-                    "Performance": {
-                        "value": 0,
-                        "cost": 8,
-                        "extended": "colonist"
-                    },
-                    "Singing": {
-                        "value": 0,
-                        "cost": 5,
-                        "extended": "colonist"
-                    },
-                    "Writing": {
-                        "value": 0,
-                        "cost": 8,
-                        "extended": "colonist"
-                    },
-                    "Guitar": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "colonist",
-                        "tooltip": "Uses Artistry or Sleight of Hand skill"
-                    },
-                    "Keyboard": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "colonist",
-                        "tooltip": "Uses Artistry or Sleight of Hand skill"
-                    },
-                    "Drums": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "colonist",
-                        "tooltip": "Uses Artistry skill"
-                    },
-                    "Harmonica": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "colonist",
-                        "tooltip": "Uses Artistry skill"
-                    },
-                    "Trumpet": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "colonist",
-                        "tooltip": "Uses Artistry skill"
-                    },
-                    "Violin": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "colonist",
-                        "tooltip": "Uses Artistry skill"
-                    }
-                },
-                "Other": {
-                    "Acrobatics": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Provides bonus when jumping, balancing or falling and allows you to do maneuvers that would be impossible without training, like a free handstand. Used with Dexterity."
-                    },
-                    "Card Cheating": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Used with Gambling or Sleight of Hand."
-                    },
-                    "Crane": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Operation of large cranes. Used with Utility Equipment."
-                    },
-                    "Diving equipment": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Used with Swimming."
-                    },
-                    "Environmental Suit": {
-                        "value": 1,
-                        "cost": 3,
-                        "tooltip": "Cover all types of basic suits like space, biohazard or high-pressure. Used with Zero-G or CBRN Warfare."
-                    },
-                    "Forgery": {
-                        "value": 0,
-                        "cost": 4,
-                        "tooltip": "Used with Criminal or Intelligence, Computer Systems for digital forgeries or Artistry for valuable objects."
-                    },
-                    "Parkour": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Used with Dexterity."
-                    },
-                    "Pickpocketing": {
-                        "value": 0,
-                        "cost": 4,
-                        "tooltip": "Used with Sleight of Hand vs Perception."
-                    },
-                    "Powerloader": {
-                        "value": 0,
-                        "cost": 4,
-                        "tooltip": "Exoskeleton powerloader Class II license. Used with Utility Equipment."
-                    },
-                    "Law": {
-                        "value": 0,
-                        "cost": 8,
-                        "extended": "colonist",
-                        "tooltip": "Usable with Policework, Commerce for trade laws."
-                    },
-                    "Life Support": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Space Crew or Colonist to operate and service. Mechanic or Electronics Tools for more extensive repairs or modifications."
-                    },
-                    "Rope Work": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Used with Seamanship, Sleight of Hand or Outdoorsman to tie knots or make rope ladders. With Dexterity for rappelling. With Animal Handling to improvise a harness & leash."
-                    },
-                    "Scaling": {
-                        "value": 0,
-                        "cost": 4,
-                        "tooltip": "Trained to use professional climbing equipment. Used with Dexterity."
-                    },
-                    "Shadowing": {
-                        "value": 0,
-                        "cost": 4,
-                        "tooltip": "Opposed roll vs targets Streetwise. Used with Intelligence, Policework, Streetwise or Remote Piloting (if using a drone)."
-                    },
-                    "Thrusterpack": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Operate spacesuit thrusters with the Zero-G skill."
                     }
                 }
             }
