@@ -2032,7 +2032,14 @@
                     },
                     "Alcoholic": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Req: Not Low Tolerance",
+                        "requirements": {
+                            "Low Tolerance": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Anger issues": {
                         "value": 0,
@@ -2052,11 +2059,37 @@
                     },
                     "Killer": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Req: Not Soft hearted",
+                        "requirements": {
+                            "Soft hearted": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Loner": {
                         "value": 0,
-                        "cost": 1
+                        "cost": 1,
+                        "tooltip": "Req: Not Fixer, Not Monophobia, Not Life of the party, Not Neon Tan",
+                        "requirements": {
+                            "Fixer": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Monophobia": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Life of the party": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Neon Tan": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Lunatic": {
                         "value": 0,
@@ -2064,11 +2097,29 @@
                     },
                     "Monophobia": {
                         "value": 0,
-                        "cost": 1
+                        "cost": 1,
+                        "tooltip": "Req: Not Loner, Not Nosy",
+                        "requirements": {
+                            "Loner": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Nosy": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Nightmares": {
                         "value": 0,
-                        "cost": 1
+                        "cost": 1,
+                        "tooltip": "Req: Not Catnapper",
+                        "requirements": {
+                            "Catnapper": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Post-Combat shakes": {
                         "value": 0,
@@ -2083,6 +2134,10 @@
                         "cost": 2
                     },
                     "Twisted Thoughts": {
+                        "value": 0,
+                        "cost": 1
+                    },
+                    "Whiskey Tango Foxtrot": {
                         "value": 0,
                         "cost": 1
                     }
@@ -2112,7 +2167,8 @@
                     },
                     "Gun Hand": {
                         "value": 0,
-                        "cost": 0
+                        "cost": 0,
+                        "tooltip": "Illegal and impossible to get via normally available surgery.\nReq: Cybernetic Hand/Arm"
                     },
                     "Hook Hand": {
                         "value": 0,
