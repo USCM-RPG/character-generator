@@ -1675,17 +1675,13 @@
                     "Access to the files": {
                         "value": 0,
                         "cost": 1,
-                        "tooltip": "Req: Computer Systems(USCM Interface ) 4, Not Watched, either Staff Sergeant (E6) or Hacking, ",
+                        "tooltip": "Req: Computer Systems (USCM Interface) 4, Not Watched, either Staff Sergeant (E6) or Hacking, ",
                         "requirements": {
                             "Computer Systems": {
                                 "type": ">=",
                                 "value": 4
                             },
                             "USCM Interface": {
-                                "type": "==",
-                                "value": 1
-                            },
-                            "Hacking": {
                                 "type": "==",
                                 "value": 1
                             },
@@ -1786,6 +1782,7 @@
                     "Bilingual": {
                         "value": 0,
                         "cost": 3,
+                        "tooltip": "Req: Background, Language expertise",
                         "extended": "background"
                     },
                     "Brown Noser ": {
@@ -2430,7 +2427,7 @@
                     },
                     "Shake n' Bake Colonist ": {
                         "value": 0,
-                        "cost": 3,
+                        "cost": 2,
                         "tooltip": "Req: Background, Terrain: Barren, Colonist 2",
                         "extended": "background",
                         "requirements": {
