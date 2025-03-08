@@ -1164,6 +1164,10 @@
                             "Outdoorsman": {
                                 "type": ">=",
                                 "value": 3
+                            },
+                            "Jungle": {
+                                "type": "==",
+                                "value": 1
                             }
                         }
                     },
@@ -1281,6 +1285,10 @@
                             "Outdoorsman": {
                                 "type": ">=",
                                 "value": 3
+                            },
+                            "Mountain": {
+                                "type": "==",
+                                "value": 1
                             }
                         }
                     },
@@ -1314,7 +1322,13 @@
                     "Neon Tan": {
                         "value": 0,
                         "cost": 2,
-                        "tooltip": "Req: Terrain: Urban"
+                        "tooltip": "Req: Terrain: Urban",
+                        "requirements": {
+                            "Urban": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
                     },
                     "Ninja": {
                         "value": 0,
@@ -1398,6 +1412,10 @@
                             "Seamanship": {
                                 "type": ">=",
                                 "value": 3
+                            },
+                            "Sea": {
+                                "type": "==",
+                                "value": 1
                             }
                         }
                     },
@@ -1421,6 +1439,10 @@
                             "Colonist": {
                                 "type": ">=",
                                 "value": 2
+                            },
+                            "Barren": {
+                                "type": "==",
+                                "value": 1
                             }
                         }
                     }
@@ -1434,6 +1456,10 @@
                             "Space Crew": {
                                 "type": ">=",
                                 "value": 4
+                            },
+                            "Space": {
+                                "type": "==",
+                                "value": 1
                             }
                         }
                     },
@@ -1444,6 +1470,10 @@
                         "requirements": {
                             "Criminal": {
                                 "type": ">=",
+                                "value": 1
+                            },
+                            "Space": {
+                                "type": "==",
                                 "value": 1
                             }
                         }
@@ -1456,6 +1486,10 @@
                             "Outdoorsman": {
                                 "type": ">=",
                                 "value": 3
+                            },
+                            "Jungle": {
+                                "type": "==",
+                                "value": 1
                             }
                         }
                     },
@@ -1467,6 +1501,10 @@
                         "requirements": {
                             "Space Crew": {
                                 "type": ">=",
+                                "value": 1
+                            },
+                            "Space": {
+                                "type": "==",
                                 "value": 1
                             }
                         }
@@ -1539,6 +1577,10 @@
                             "Outdoorsman": {
                                 "type": ">=",
                                 "value": 3
+                            },
+                            "Swamp": {
+                                "type": "==",
+                                "value": 1
                             }
                         }
                     },
