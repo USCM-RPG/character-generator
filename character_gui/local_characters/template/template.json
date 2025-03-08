@@ -1639,7 +1639,22 @@
                     },
                     "All out of bubble gum": {
                         "value": 0,
-                        "cost": -3
+                        "cost": -3,
+                        "tooltip": "Req: Not Private who?, Not Impressive Stature, Not Victim",
+                        "requirements": {
+                            "Private who?": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Impressive Stature": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Victim": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Apricot Eater": {
                         "value": 0,
@@ -1647,15 +1662,44 @@
                     },
                     "Bad aura": {
                         "value": 0,
-                        "cost": -2
+                        "cost": -2,
+                        "tooltip": "Req: Not Attractive, Not Life of the party, Not Private who?",
+                        "requirements": {
+                            "Private who?": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Life of the party": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Attractive": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Bad Hygiene": {
                         "value": 0,
-                        "cost": -1
+                        "cost": -1,
+                        "tooltip": "Req: Not Stiff upper lip",
+                        "requirements": {
+                            "Stiff upper lip": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Blabbermouth": {
                         "value": 0,
-                        "cost": -1
+                        "cost": -1,
+                        "tooltip": "Req: Charisma 3",
+                        "requirements": {
+                            "Charisma": {
+                                "type": ">=",
+                                "value": 3
+                            }
+                        }
                     },
                     "Canary": {
                         "value": 0,
@@ -1663,11 +1707,26 @@
                     },
                     "Combat Shakes": {
                         "value": 0,
-                        "cost": -1
+                        "cost": -1,
+                        "tooltip": "Req: Background, Not Gung Ho",
+                        "extended": "background",
+                        "requirements": {
+                            "Gung Ho": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Compulsive Gambler": {
                         "value": 0,
-                        "cost": -4
+                        "cost": -4,
+                        "tooltip": "Req: Gambling 1",
+                        "requirements": {
+                            "Gambling 1": {
+                                "type": ">=",
+                                "value": 1
+                            }
+                        }
                     },
                     "Debt to the Mafia": {
                         "value": 0,
@@ -1679,19 +1738,52 @@
                     },
                     "Fear of the dark": {
                         "value": 0,
-                        "cost": -3
+                        "cost": -3,
+                        "tooltip": "Req: Not Ninja",
+                        "requirements": {
+                            "Ninja": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Fire in the hole!": {
                         "value": 0,
-                        "cost": -2
+                        "cost": -2,
+                        "tooltip": "Req: Demolition 3, Not Cautious",
+                        "requirements": {
+                            "Demolition": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Cautious": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Former Alcoholic": {
                         "value": 0,
-                        "cost": -3
+                        "cost": -3,
+                        "tooltip": "Req: Background, Not Low Tolerance",
+                        "extended": "background",
+                        "requirements": {
+                            "Low Tolerance": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Glass Joe": {
                         "value": 0,
-                        "cost": -2
+                        "cost": -2,
+                        "tooltip": "Req: Not Thick-skulled",
+                        "requirements": {
+                            "Thick-skulled": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Heart Issue": {
                         "value": 0,
@@ -1699,7 +1791,23 @@
                     },
                     "I'm gonna die!!!": {
                         "value": 0,
-                        "cost": -2
+                        "cost": -2,
+                        "tooltip": "Req: Background, Not Gung Ho, Not Tough, Not Just a flesh wound",
+                        "extended": "background",
+                        "requirements": {
+                            "Gung Ho": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Tough": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Just a flesh wound": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Inflated Ego": {
                         "value": 0,
@@ -1711,15 +1819,37 @@
                     },
                     "Just a flesh wound": {
                         "value": 0,
-                        "cost": -2
+                        "cost": -2,
+                        "tooltip": "Req: Not I'm gonna die!!!",
+                        "requirements": {
+                            "I'm gonna die!!!": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Kleptomaniac": {
                         "value": 0,
-                        "cost": -2
+                        "cost": -2,
+                        "tooltip": "Req: Not Righteous",
+                        "requirements": {
+                            "Righteous": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Low Tolerance": {
                         "value": 0,
-                        "cost": -1
+                        "cost": -1,
+                        "tooltip": "Req: Background, Not Former Alcoholic",
+                        "extended": "background",
+                        "requirements": {
+                            "Former Alcoholic": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Lucky Charm": {
                         "value": 0,
@@ -1727,7 +1857,34 @@
                     },
                     "Mean Bastard": {
                         "value": 0,
-                        "cost": -4
+                        "cost": -4,
+                        "tooltip": "Intimidation 2, Not Fixer, Not Whipped, Not Soft Hearted, Not Life of the party, Not Victim",
+                        "requirements": {
+                            "Intimidation": {
+                                "type": ">=",
+                                "value": 2
+                            },
+                            "Fixer": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Whipped": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Soft Hearted": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Life of the party": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Victim": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Mentally unstable": {
                         "value": 0,
@@ -1739,11 +1896,12 @@
                     },
                     "Not one step back": {
                         "value": 0,
-                        "cost": -1
+                        "cost": -4
                     },
                     "Psychic powers": {
                         "value": 0,
-                        "cost": -1
+                        "cost": -1,
+                        "tooltip": "Req: Psi value unknown"
                     },
                     "Rival": {
                         "value": 0,
@@ -1753,19 +1911,76 @@
                 "  ": {
                     "Scapegoat": {
                         "value": 0,
-                        "cost": -2
+                        "cost": -2,
+                        "tooltip": "Req: Background, Not Righteous, Not Squad Leader",
+                        "extended": "background",
+                        "requirements": {
+                            "Righteous": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Squad Leader": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Sleepyhead": {
                         "value": 0,
-                        "cost": -2
+                        "cost": -2,
+                        "tooltip": "Req: Not Alert, Not Gung Ho, Not Rise and shine",
+                        "requirements": {
+                            "Alert": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Gung Ho": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Rise and shine": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Soft hearted": {
                         "value": 0,
-                        "cost": -3
+                        "cost": -3,
+                        "tooltip": "Req: Not Bloodthirst, Not Mean Bastard, Not Killer",
+                        "requirements": {
+                            "Bloodthirst": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Mean Bastard": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Killer": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Victim": {
                         "value": 0,
-                        "cost": -1
+                        "cost": -1,
+                        "tooltip": "Req: Str < 4, Cha < 4, Not Mean Bastard",
+                        "requirements": {
+                            "Strength": {
+                                "type": "<=",
+                                "value": 3
+                            },
+                            "Charisma": {
+                                "type": "<=",
+                                "value": 3
+                            },
+                            "Mean Bastard": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     },
                     "Voodoo curse": {
                         "value": 0,
@@ -1773,15 +1988,39 @@
                     },
                     "Wanted": {
                         "value": 0,
-                        "cost": -4
+                        "cost": -4,
+                        "tooltip": "Req: Background, Convict",
+                        "extended": "background",
+                        "requirements": {
+                            "Convict": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
                     },
                     "Watched": {
                         "value": 0,
-                        "cost": 0
+                        "cost": 0,
+                        "tooltip": "Req: Can not be chosen, given out by the GM if appropriate"
                     },
                     "Whisper-voiced": {
                         "value": 0,
-                        "cost": -3
+                        "cost": -3,
+                        "tooltip": "Req: Not Life of the party, Not Mean Bastard, Not Drill Instructor",
+                        "requirements": {
+                            "Life of the party": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Mean Bastard": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Drill Instructor": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
                     }
                 }
             },
