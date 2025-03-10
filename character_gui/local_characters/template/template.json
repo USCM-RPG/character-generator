@@ -156,22 +156,26 @@
                     "Indirect Fire": {
                         "value": 1,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Expertise: Forward Observer, M41 Pulse Rifle, M790 Grenade Launcher, Mortar, Artillery"
                     },
                     "Shoulder-launched": {
                         "value": 1,
                         "min": 1,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Expertise: M5 RPG, M83 SADAR, M78 PIG, SIM-118"
                     },
                     "Missile Weapons": {
                         "value": 0,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "This skill is mainly for launching missiles from a vehicle/starship.\nExpertise: SIM-118, M112 HIMAT, ASAT, ABM, AAM, ASM, SAM"
                     },
                     "Heavy Cannon": {
                         "value": 0,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Direct fire with a cannon heavier than a HMG, mounted on a vehicle or building.\nExpertise: Ballistic, Laser, Railgun, Particle Beam, Plasma"
                     }
                 },
                 "Physical Skills": {
@@ -183,12 +187,14 @@
                     "Close Combat: Standup": {
                         "value": 2,
                         "min": 1,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Any kind of striking, kicking or using a melee weapon."
                     },
                     "Close Combat: Grappling": {
                         "value": 1,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Wrestling and fighting on the ground."
                     },
                     "Stealth": {
                         "value": 2,
@@ -198,14 +204,16 @@
                     "Swimming": {
                         "value": 1,
                         "min": 1,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "At skill level 2 you can stay afloat in calm water\n(DL 2) without any dice rolls."
                     },
                     "Sleight of Hand": {
                         "value": 0,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Combined roll with any Tools skill to complete work faster."
                     },
-                    "Zero-G ": {
+                    "Zero-G": {
                         "value": 2,
                         "min": 1,
                         "max": 5
@@ -215,7 +223,8 @@
                     "Driving": {
                         "value": 3,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Expertise on a vehicle and Driving >0\nmeans you have a drivers license for it."
                     },
                     "Parachute": {
                         "value": 2,
@@ -231,7 +240,7 @@
                         "value": 0,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Flight in space including docking and landing where no atmosphere exist.\nFor flying large spacecraft your pilot die cannot be higher than your Space Crew die.\nExpertises: Starships and space-capable aircraft"
+                        "tooltip": "Space flight including docking and landing.\nExpertises: Starships and space-capable aircraft"
                     },
                     "Remote Piloting": {
                         "value": 0,
@@ -246,42 +255,43 @@
                     "Utility Equipment": {
                         "value": 1,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Large equipment such as excavators, cranes,\nbulldozers, airlock umbilicals or industrial machinery.\nExpertise: Powerloader, Crane, Engineering machinery"
                     }
                 },
                 "Technical Skills": {
-                    "Navigation": {
-                        "value": 2,
-                        "min": 1,
-                        "max": 5
-                    },
                     "Comtech": {
                         "value": 1,
                         "min": 1,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Expertise: Radio, EW, Morse, Tightbeam, FTL Communication"
                     },
                     "Computer Systems": {
                         "value": 1,
                         "min": 1,
-                        "max": 5
-                    },
-                    "Sensor Systems": {
-                        "value": 1,
-                        "min": 0,
-                        "max": 5
-                    },
-                    "Science Equipment": {
-                        "value": 0,
-                        "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Knowing your way around a computer terminal.\nExpertise: Interface 2037, USCM Interface, USN Interface,\nProgramming, Hacking, AI, Autodoc, Engineering machinery"
                     },
                     "Electronic Tools": {
                         "value": 0,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Tools for working with electronic components and wiring.\nExpertise: Lockpicking, Electricity, Hotwiring"
                     },
                     "Mechanic Tools": {
                         "value": 1,
+                        "min": 0,
+                        "max": 5,
+                        "tooltip": "Skill with common tools found in a workshop.\nExpertise: Chainsaw, Power Tools, Lockpicking,\nCarpentry, Ordnance, Weaponsmith, Hotwiring"
+                    },
+                    "Sensor Systems": {
+                        "value": 1,
+                        "min": 0,
+                        "max": 5,
+                        "tooltip": "Using various sensors and reading their output right.\nExpertise: Covert Sensors, IR, Lidar, Motion Tracker,\nPhotography, PUPS, Radar, Sensor Networking"
+                    },
+                    "Science Equipment": {
+                        "value": 0,
                         "min": 0,
                         "max": 5
                     },
@@ -293,7 +303,8 @@
                     "Space Crew": {
                         "value": 1,
                         "min": 1,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Basic crew role on a spaceship or station.\nExpertise: Starship, Damage Control, Starship\nIdentification, Environmental Suit, Life Support"
                     },
                     "Starship Bridge": {
                         "value": 0,
@@ -303,15 +314,17 @@
                     }
                 },
                 "Military Skills": {
-                    "Soldiering": {
+                    "Camouflage": {
                         "value": 1,
                         "min": 1,
-                        "max": 1
+                        "max": 5,
+                        "tooltip": "Hiding from plain sight and sensors."
                     },
-                    "CBRN Warfare ": {
+                    "CBRN Warfare": {
                         "value": 1,
                         "min": 1,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Chemical/Biological/Radiological/Nuclear warfare.\nExpertise: CBRN Treatment, Environmental Suit, Nuclear Bomb"
                     },
                     "Demolition": {
                         "value": 1,
@@ -321,30 +334,22 @@
                     "Intelligence": {
                         "value": 0,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Intel gathering, analysis and use of \"spy\" equipment.\nExpertise: Covert Sensors, Forgery, Interrogation,\nPhotography, Sensor Networking, Shadowing,\nStarship Identification, Vehicle Identification"
                     },
-                    "Mine Warfare ": {
+                    "Mine Warfare": {
                         "value": 1,
                         "min": 1,
                         "max": 5
                     },
-                    "Camouflage": {
+                    "Soldiering": {
                         "value": 1,
                         "min": 1,
-                        "max": 5
+                        "max": 1,
+                        "tooltip": "Anything a soldier \"should\" know not covered by a separate skill.\nExpertise: Drill, Forward Observer, FAC, Infantry Tactics,\nMobile Tactics, RTI Vehicle Identification"
                     }
                 },
                 "General Skills": {
-                    "First Aid": {
-                        "value": 1,
-                        "min": 1,
-                        "max": 5
-                    },
-                    "Outdoorsman": {
-                        "value": 1,
-                        "min": 1,
-                        "max": 5
-                    },
                     "Animal Handling": {
                         "value": 0,
                         "min": 0,
@@ -362,6 +367,12 @@
                         "max": 5,
                         "extended": "colonist"
                     },
+                    "First Aid": {
+                        "value": 1,
+                        "min": 1,
+                        "max": 5,
+                        "tooltip": "Initial treatment. Extensive treatment requires the Medical skill.\nExpertise: IV, Surgery, Toxicology, Infections,\nDive Medicine, Aerospace Medicine, Altitude Medicine\nCold climate, Hot climate, CBRN Treatment, Autodoc"
+                    },
                     "Gambling": {
                         "value": 0,
                         "min": 0,
@@ -372,6 +383,17 @@
                         "min": 0,
                         "max": 5
                     },
+                    "Navigation": {
+                        "value": 2,
+                        "min": 1,
+                        "max": 5
+                    },
+                    "Outdoorsman": {
+                        "value": 1,
+                        "min": 1,
+                        "max": 5,
+                        "tooltip": "Expertise: Bushcrafting, Chainsaw, Evasion,\nFishing, Herbalism, Hunting, Rope Work, Skiing,\nTracking, Trapping, Terrain"
+                    },
                     "Streetwise": {
                         "value": 0,
                         "min": 0,
@@ -379,6 +401,13 @@
                     }
                 },
                 "Expert Skills": {
+                    "Artistry": {
+                        "value": 0,
+                        "min": 0,
+                        "max": 5,
+                        "extended": "colonist",
+                        "tooltip": "Expertise: Forgery, Music, Painting,\nSinging, Performance, Writing"
+                    },
                     "Commerce": {
                         "value": 0,
                         "min": 0,
@@ -406,7 +435,8 @@
                     "Medical": {
                         "value": 0,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Expertise: IV, Toxicology, Infections, Dive Medicine,\nAerospace Medicine, Altitude Medicine, Cold climate,\nHerbalism, Hot climate, CBRN Treatment, Autodoc, Surgery."
                     },
                     "Mining": {
                         "value": 0,
@@ -440,746 +470,13 @@
                 }
             }
         },
-        "Traits": {
-            "Neutral": {
-                " ": {
-                    "ARM Sympathizer": {
-                        "value": 0,
-                        "cost": 0,
-                        "requirements": {
-                            "Live long and prosper": {
-                                "type": "==",
-                                "value": 0
-                            }
-                        }
-                    },
-                    "Beer Smuggler": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Bloodthirst": {
-                        "value": 0,
-                        "cost": 0,
-                        "requirements": {
-                            "Live long and prosper": {
-                                "type": "==",
-                                "value": 0
-                            }
-                        },
-                        "bonus": [
-                            {
-                                "target": "Stress Limit",
-                                "type": "permanent",
-                                "value": 1
-                            },
-                            {
-                                "target": "Psycho Limit",
-                                "type": "permanent",
-                                "value": -1
-                            }
-                        ]
-                    },
-                    "Collector": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Convict": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Hamster": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Jarhead": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Live long and prosper": {
-                        "value": 0,
-                        "cost": 0,
-                        "requirements": {
-                            "ARM Sympathizer": {
-                                "type": "==",
-                                "value": 0
-                            },
-                            "Bloodthirst": {
-                                "type": "==",
-                                "value": 0
-                            }
-                        }
-                    },
-                    "Nosy": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Paranoid": {
-                        "value": 0,
-                        "cost": 0,
-                        "requirements": {
-                            "Psycho Points": {
-                                "type": ">=",
-                                "value": 1
-                            }
-                        }
-                    },
-                    "Private who?": {
-                        "value": 0,
-                        "cost": 0,
-                        "requirements": {
-                            "Rank": {
-                                "type": "<=",
-                                "value": 1
-                            },
-                            "Charisma": {
-                                "type": "<=",
-                                "value": 4
-                            },
-                            "Canary": {
-                                "type": "==",
-                                "value": 0
-                            },
-                            "Impressive Stature": {
-                                "type": "==",
-                                "value": 0
-                            },
-                            "Tacticool": {
-                                "type": "==",
-                                "value": 0
-                            }
-                        }
-                    },
-                    "Reckless Driver": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Reckless Pilot": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Small frame": {
-                        "value": 0,
-                        "cost": 0,
-                        "requirements": {
-                            "Impressive Stature": {
-                                "type": "==",
-                                "value": 0
-                            },
-                            "Strategic reserves": {
-                                "type": "==",
-                                "value": 0
-                            }
-                        }
-                    },
-                    "Strategic reserves": {
-                        "value": 0,
-                        "cost": 0,
-                        "requirements": {
-                            "Small frame": {
-                                "type": "==",
-                                "value": 0
-                            },
-                            "Tunnel Rat": {
-                                "type": "==",
-                                "value": 0
-                            }
-                        }
-                    },
-                    "Tacticool": {
-                        "value": 0,
-                        "cost": 0,
-                        "requirements": {
-                            "Private who?": {
-                                "type": "==",
-                                "value": 0
-                            }
-                        }
-                    },
-                    "Trigger-happy": {
-                        "value": 0,
-                        "cost": 0
-                    }
-                }
-            },
-            "Advantages": {
-                " ": {
-                    "2nd in Command": {
-                        "value": 0,
-                        "cost": 2,
-                        "requirements": {
-                            "Infantry Tactics": {
-                                "type": "==",
-                                "value": 1
-                            }
-                        }
-                    },
-                    "Access to the files": {
-                        "value": 0,
-                        "cost": 1,
-                        "requirements": {
-                            "Computer Systems": {
-                                "type": ">=",
-                                "value": 4
-                            },
-                            "Hacking": {
-                                "type": "==",
-                                "value": 1
-                            }
-                        }
-                    },
-                    "Alert": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Amphibious": {
-                        "value": 0,
-                        "cost": 2,
-                        "requirements": {
-                            "Sea": {
-                                "type": "==",
-                                "value": 1
-                            }
-                        }
-                    },
-                    "Arctic Fox": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Attractive": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Authority": {
-                        "value": 0,
-                        "cost": 4
-                    },
-                    "Baseball Player": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Bilingual": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Brown Noser ": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Catnapper": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Cautious": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Coal Lungs": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Combat Correspondent": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Combat Drop Wings": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Cowboy": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Cross Country Driver": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Dapper Sapper": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Die bastards!": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Doubletap": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Draw Stranger": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Drill Instructor": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Efficient Packing": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Escape Artist": {
-                        "value": 0,
-                        "cost": 5
-                    },
-                    "Eye of the Tiger": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Farmer Family": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Fixer": {
-                        "value": 0,
-                        "cost": 5
-                    },
-                    "Get to the choppa": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Gun Nut": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Gung Ho": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Hardened Veteran": {
-                        "value": 0,
-                        "cost": 4
-                    }
-                },
-                "  ": {
-                    "HEMA Fighter": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Impressive Stature": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Instructor": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Iron-fist": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "I've been through worse": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Jungle Jim": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Kendoka": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Leading from the front": {
-                        "value": 0,
-                        "cost": 4
-                    },
-                    "Let's Rock!": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Life of the party": {
-                        "value": 0,
-                        "cost": 4
-                    },
-                    "Lucky Bastard": {
-                        "value": 0,
-                        "cost": 4
-                    },
-                    "Machete": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Maintenance Fanatic": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Martial Artist: Grappler": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Martial Artist: Striker": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Mountaineer": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Mule": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Neon Tan": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Ninja": {
-                        "value": 0,
-                        "cost": 5
-                    },
-                    "Nintendo Kid": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Offhand Shooter": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Quick Learner": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Rise and shine ": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Scarred Veteran": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Sea legs": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Secondary Weapon": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Shake n' Bake Colonist ": {
-                        "value": 0,
-                        "cost": 3
-                    }
-                },
-                "   ": {
-                    "Shellback": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Smuggler Tricks": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Snake-eater": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Spacer": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Spotter": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Squad Leader": {
-                        "value": 0,
-                        "cost": 4
-                    },
-                    "Stiff upper lip": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Streetfighter": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Swamp Rat": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "The Big Five ": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Thick-skulled": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Tough": {
-                        "value": 0,
-                        "cost": 6
-                    },
-                    "Tunnel Rat": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Trusted Leader": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Ultimate Badass ": {
-                        "value": 0,
-                        "cost": 3
-                    }
-                }
-            },
-            "Disadvantages": {
-                " ": {
-                    "Absent-minded": {
-                        "value": 0,
-                        "cost": -4
-                    },
-                    "All out of bubble gum": {
-                        "value": 0,
-                        "cost": -3
-                    },
-                    "Apricot Eater": {
-                        "value": 0,
-                        "cost": -2
-                    },
-                    "Bad aura": {
-                        "value": 0,
-                        "cost": -2
-                    },
-                    "Bad Hygiene": {
-                        "value": 0,
-                        "cost": -1
-                    },
-                    "Blabbermouth": {
-                        "value": 0,
-                        "cost": -1
-                    },
-                    "Canary": {
-                        "value": 0,
-                        "cost": -1
-                    },
-                    "Combat Shakes": {
-                        "value": 0,
-                        "cost": -1
-                    },
-                    "Compulsive Gambler": {
-                        "value": 0,
-                        "cost": -4
-                    },
-                    "Debt to the Mafia": {
-                        "value": 0,
-                        "cost": -4
-                    },
-                    "Dislike androids": {
-                        "value": 0,
-                        "cost": -1
-                    },
-                    "Fear of the dark": {
-                        "value": 0,
-                        "cost": -3
-                    },
-                    "Fire in the hole!": {
-                        "value": 0,
-                        "cost": -2
-                    },
-                    "Former Alcoholic": {
-                        "value": 0,
-                        "cost": -3
-                    },
-                    "Glass Joe": {
-                        "value": 0,
-                        "cost": -2
-                    },
-                    "Heart Issue": {
-                        "value": 0,
-                        "cost": -2
-                    },
-                    "I'm gonna die!!!": {
-                        "value": 0,
-                        "cost": -2
-                    },
-                    "Inflated Ego": {
-                        "value": 0,
-                        "cost": -2
-                    },
-                    "Jinxed": {
-                        "value": 0,
-                        "cost": -4
-                    },
-                    "Just a flesh wound": {
-                        "value": 0,
-                        "cost": -2
-                    },
-                    "Kleptomaniac": {
-                        "value": 0,
-                        "cost": -2
-                    },
-                    "Low Tolerance": {
-                        "value": 0,
-                        "cost": -1
-                    },
-                    "Lucky Charm": {
-                        "value": 0,
-                        "cost": -2
-                    },
-                    "Mean Bastard": {
-                        "value": 0,
-                        "cost": -4
-                    },
-                    "Mentally unstable": {
-                        "value": 0,
-                        "cost": -2
-                    },
-                    "Nervous": {
-                        "value": 0,
-                        "cost": -1
-                    },
-                    "Not one step back": {
-                        "value": 0,
-                        "cost": -1
-                    },
-                    "Psychic powers": {
-                        "value": 0,
-                        "cost": -1
-                    },
-                    "Rival": {
-                        "value": 0,
-                        "cost": -1
-                    }
-                },
-                "  ": {
-                    "Scapegoat": {
-                        "value": 0,
-                        "cost": -2
-                    },
-                    "Sleepyhead": {
-                        "value": 0,
-                        "cost": -2
-                    },
-                    "Soft hearted": {
-                        "value": 0,
-                        "cost": -3
-                    },
-                    "Victim": {
-                        "value": 0,
-                        "cost": -1
-                    },
-                    "Voodoo curse": {
-                        "value": 0,
-                        "cost": -2
-                    },
-                    "Wanted": {
-                        "value": 0,
-                        "cost": -4
-                    },
-                    "Watched": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Whisper-voiced": {
-                        "value": 0,
-                        "cost": -3
-                    }
-                }
-            },
-            "Psychotic Disadvantages": {
-                " ": {
-                    "3rd Deck Dive Team": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Alcoholic": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Anger issues": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Confusion": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Flashbacks": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Freezes": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Killer": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Loner": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Lunatic": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Monophobia": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Nightmares": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Post-Combat shakes": {
-                        "value": 0,
-                        "cost": 1
-                    },
-                    "Psychiatric care": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Pyromaniac": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Twisted Thoughts": {
-                        "value": 0,
-                        "cost": 1
-                    }
-                }
-            },
-            "Cybernetics": {
-                " ": {
-                    "Left arm": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Right arm": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Left leg": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Right leg": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Vitals": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Gun Hand": {
-                        "value": 0,
-                        "cost": 0
-                    },
-                    "Hook Hand": {
-                        "value": 0,
-                        "cost": 0
-                    }
-                }
-            }
-        },
         "Expertise": {
             "Vehicles": {
-                "Aircrafts": {
+                "Aircraft": {
                     "Shuttle": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Includes the CS-14 Briaeros."
                     },
                     "Gliderplane": {
                         "value": 0,
@@ -1212,7 +509,8 @@
                     },
                     "PUPS": {
                         "value": 0,
-                        "cost": 12
+                        "cost": 12,
+                        "tooltip": "Advanced antigrav spectrograh drone.\nRestricted WY technology not available in normal military training."
                     }
                 },
                 "Land Vehicles": {
@@ -1247,13 +545,15 @@
                     },
                     "M292 Artillery": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Firing it is done with the Indirect Fire skill\nand requires the Artillery expertise."
                     }
                 },
                 "Sea Vehicles": {
                     "CRRC": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Combat Rubber Reconnaissance Craft.\nOften used by marines and special forces."
                     },
                     "Kayak": {
                         "value": 0,
@@ -1262,12 +562,14 @@
                     },
                     "Motorboat": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Motor powered solid hull boats up to class 3\n(which would include coastal Fast Attack Crafts, FAC:s)."
                     },
                     "Sailing": {
                         "value": 0,
                         "cost": 5,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Any boat or larger ship as long as it is mainly sail-powered."
                     }
                 },
                 "Starship": {
@@ -1332,7 +634,8 @@
                 "US military small arms": {
                     "M41 Pulse Rifle": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Also covers the built-in U1 grenade launcher\nand variants like the M41AE2 AR."
                     },
                     "M39 SMG": {
                         "value": 0,
@@ -1340,7 +643,8 @@
                     },
                     "VP55 LR Pistol": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Low-recoil pistol specialized for use aboard spacecraft."
                     },
                     "M42 Sniper Rifle": {
                         "value": 0,
@@ -1354,15 +658,11 @@
                         "value": 0,
                         "cost": 8
                     },
-                    "Harrington AR": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "military"
-                    },
                     "Morita I AR": {
                         "value": 0,
                         "cost": 3,
-                        "extended": "military"
+                        "extended": "military",
+                        "tooltip": "Used mainly by mobile infantry."
                     }
                 },
                 "Generic": {
@@ -1401,35 +701,53 @@
                     }
                 },
                 "Other military small arms": {
+                    "F44AA Pulse Rifle": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "military",
+                        "tooltip": "Old experimental PR with aim assist that predated the M41 & M56 designs."
+                    },
+                    "Harrington AR": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "military",
+                        "tooltip": "Older precursor to the US pulse rifle that has now\nbeen phased out of active use."
+                    },
                     "SK813 PR": {
                         "value": 0,
                         "cost": 5,
-                        "extended": "military"
+                        "extended": "military",
+                        "tooltip": "Chinese made pulse rifle."
                     },
                     "NSG23 AR": {
                         "value": 0,
                         "cost": 5,
-                        "extended": "military"
+                        "extended": "military",
+                        "tooltip": "German made assault rifle."
                     },
                     "Weyland Storm Rifle": {
                         "value": 0,
                         "cost": 5,
-                        "extended": "military"
+                        "extended": "military",
+                        "tooltip": "Older assault rifle model manufactured by Weyland Corp."
                     },
                     "X-9 AR": {
                         "value": 0,
                         "cost": 3,
-                        "extended": "military"
+                        "extended": "military",
+                        "tooltip": "Older model that is actually a carbine since there is no built-in grenade launcher."
                     }
                 },
                 "Fixed/Mounted Weapons": {
                     "HMG": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Heavy Machine Gun up to 30mm, anything bigger counts\nas cannon. Uses Shooting: Auto."
                     },
                     "Ballistic": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Ballistic cannons like the ones mounted on an\nInfantry Fighting Vehicle (IFV) or Main Battle Tank (MBT)."
                     },
                     "Laser": {
                         "value": 0,
@@ -1441,86 +759,105 @@
                     },
                     "Particle Beam": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Good at destroying electronics, mounted on vehicles or starships."
                     },
                     "Plasma": {
                         "value": 0,
-                        "cost": 6
+                        "cost": 6,
+                        "tooltip": "Represents general training on plasma technology\napplicable both for mounted weapons or other uses like welding."
                     },
                     "Flamer": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Vehicle mounted flamethrowers. Uses Shooting: Auto."
                     }
                 },
                 "Support Weapons": {
                     "M112 HIMAT": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Portable anti-tank missile system used by infantry squads. Uses Missile skill."
                     },
                     "M5 RPG": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Reloadable rocket weapon. Uses Shoulder-launched."
                     },
                     "M78 PIG": {
                         "value": 0,
-                        "cost": 8
+                        "cost": 8,
+                        "tooltip": "Portable plasma gun, uses Shoulder-launched."
                     },
                     "M790 Grenade Launcher": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Handheld launcher for 40mm grenades, very simple but\neffective design. Uses Indirect Fire."
                     },
                     "M83 SADAR": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Disposable anti-tank rocket, uses Shoulder-launched."
                     },
                     "SIM-118": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Manpad anti-air missile. Uses Missile Weapons or Shoulder-launched."
                     }
                 },
                 "Missile Weapons": {
                     "AAM": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Air-air missile like the AIM-90E Headlock.\nFired from an aircraft against other aircraft."
                     },
                     "ABM": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Anti-ballistic missile. Intended to intercept another projectile in space or atmosphere."
                     },
                     "ASAT": {
                         "value": 0,
                         "cost": 3,
-                        "extended": "navy"
+                        "extended": "navy",
+                        "tooltip": "Anti-satellite missile. Fired against targets in orbit or deep space."
                     },
                     "ASM": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Air-surface missile. Also applies for orbit-surface. \nIncludes dropship armament like the AGM-220C, Mk.88 SGW, \nMk.10 ZEUS and Banshee 70."
                     },
                     "SAM": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Surface-air missile like the LIM-417 Phalanx \nprimarily used by colonial marine forces."
                     }
                 },
                 "Close Combat Weapons": {
                     "Baton": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Baton fighting technique typically taught to police \nor security guards. Also applicable to tonfa, tire iron or a \nshort metal pipe (but not a baseball bat)."
                     },
                     "Bayonet": {
                         "value": 0,
-                        "cost": 1
+                        "cost": 1,
+                        "tooltip": "Part of basic infantry training since ancient times \nand provides +1 Close Combat: Standup bonus with a bayonet \nmounted on your weapon."
                     },
                     "Handcuffs": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Techniques to handcuff an unwilling target."
                     },
                     "Knife": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 2,
+                        "tooltip": "From improvised shank to specialized combat or throwing knifes."
                     },
                     "Sword": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 4,
+                        "tooltip": "A machete, katana or the traditional marine corps \nsaber all count as sword."
                     }
                 }
             },
@@ -1580,201 +917,249 @@
                     "Chainsaw": {
                         "value": 0,
                         "cost": 3,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Can be used with Mechanic Tools or Outdoorsman."
                     },
                     "Damage Control": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Used with Space Crew or Seamanship."
                     },
                     "Electricity": {
                         "value": 0,
                         "cost": 15,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Professional knowledge of electric cabling, power \ngenerators, batteries and safety near high voltage lines. Used \nwith Electronics Tools."
                     },
                     "Engineering machinery": {
                         "value": 0,
-                        "cost": 3,
-                        "extended": "colonist"
+                        "cost": 15,
+                        "extended": "colonist",
+                        "tooltip": "Used with Utility Equipment for direct operation, \nComputer Systems for programming them or Engineering for \ncreating a new design."
                     },
                     "EOD": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Explosive Ordnance Disposal. Training in how to find, \nexpose and remove explosive devices. Disarming while keeping \nordnance intact requires Ordnance. Used with Mine Warfare."
                     },
                     "Hotwiring": {
                         "value": 0,
-                        "cost": 3
-                    },
-                    "IED": {
-                        "value": 0,
-                        "cost": 4
-                    },
-                    "Lockpicking": {
-                        "value": 0,
-                        "cost": 7
-                    },
-                    "Power Tools": {
-                        "value": 0,
-                        "cost": 2
+                        "cost": 3,
+                        "tooltip": "Start a vehicle without the key. \nLow-tech vehicles: some know-how and a skill like Sleight of Hand, Criminal or Mechanic Tools. \nVehicles with better anti-theft protection: more advanced equipment and the Electronic Tools skill."
                     },
                     "Hyperbaric": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Work in elevated pressures. Typically used for hull \nwork like underwater welding on wet navy ships, but would also \napply for setting explosive charges in a liquid medium and \nunderstanding how shockwaves propagate. \nUses Welding or Demolition."
+                    },
+                    "IED": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Improvised Explosive Device. Knowledge how to create \nimprovised mines or explosive charges. Used with Demolition or \nMine Warfare."
+                    },
+                    "Lockpicking": {
+                        "value": 0,
+                        "cost": 7,
+                        "tooltip": "Low-tech locks may be possible to defeat with a pin \nand the Sleight of Hand or Criminal skill. More advanced locks \nrequire Mechanic Tools or Electronics Tools skills to run a \nbypass."
+                    },
+                    "Power Tools": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Hand-held powered tools like saws, hammer-drills, \ngrinders etc. Does not include chainsaw which is a separate \nexpertise. Uses Mechanic Tools."
                     },
                     "Weaponsmith": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Allows you to modify firearms or create crude ones \ngiven the right tools and materials. Uses Mechanic Tools skill."
                     }
                 },
                 "Military Training": {
+                    "Airforce Tactics": {
+                        "value": 0,
+                        "cost": 5,
+                        "tooltip": "Used with Piloting: Atmospheric."
+                    },
                     "Drill": {
                         "value": 0,
-                        "cost": 1
+                        "cost": 1,
+                        "tooltip": "Wear a dress uniform correctly, march in formation, \nperform formal drills and ceremonies. \nUses Soldiering or Space Crew."
                     },
-                    "Infantry Tactics": {
+                    "FAC": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 3,
+                        "tooltip": "Forward Air Controller. To call in and direct close \nair support (CAS) or missiles. Includes using target marking \nequipment for laser guidance. Uses the Soldiering skill."
+                    },
+                    "Forced Entry": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Kick in doors, break them with a ram or budge the \nframe with a crowbar for a quick entry. Also applies to windows \nor other entrances (if there is no atmosphere you need Hull \nbreaching). Usable with Criminal, Policework, Strength or \nDemolition (if using explosives)."
+                    },
+                    "Forward Observer": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "To call in and adjust artillery fire. \nUses Indirect Fire or Soldiering skill. If using a drone to observe it will be \na combined roll with Remote Piloting."
                     },
                     "Hull breaching": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "How to forcibly breach through a ships hull to allow \nentrance. Usable with Demolition or Welding skill, the latter \nwill likely also require plasma expertise."
+                    },
+                    "Infantry Tactics": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Small unit tactics during combat or movement. \nUsed with Soldiering."
+                    },
+                    "Interrogation": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Used with Policework, Intelligence, Intimidation,\nStreetwise or Charisma depending on situation."
                     },
                     "Mobile Tactics": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 4,
+                        "tooltip": "Mobile and armored warfare.\nIncludes vehicle combat and how to operate tactically during traveling\nand escort duty. Used with Soldiering or Driving."
                     },
-                    "Airforce Tactics": {
+                    "Naval Tactics": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Wet navy tactics, on or below the surface. Used with Seamanship."
+                    },
+                    "Nuclear Bomb": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Handle nuclear explosive devices.\nUsed with CBRN Warfare or Demolition."
+                    },
+                    "Ordnance": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Used with Utility Equipment to rearm a dropship,\nwith Mechanic Tools to safely cut a shell open or\nwith Mine Warfare to dismantle a mine into components."
+                    },
+                    "Parachute wings": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Training badge for completing basic Parachute training."
+                    },
+                    "RTI": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Resistance to interrogation training.\nProvides bonus to Psy or Tou to resist interrogation and torture.\nCan also be used with Soldiering or Criminal"
                     },
                     "Space Tactics": {
                         "value": 0,
                         "cost": 5,
-                        "extended": "navy"
-                    },
-                    "Naval Tactics": {
-                        "value": 0,
-                        "cost": 5
-                    },
-                    "Ordnance": {
-                        "value": 0,
-                        "cost": 5
-                    },
-                    "Forced Entry": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "Forward Observer": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "FAC": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Interrogation": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Parachute wings": {
-                        "value": 0,
-                        "cost": 2
-                    },
-                    "RTI": {
-                        "value": 0,
-                        "cost": 3
+                        "extended": "navy",
+                        "tooltip": "Tactics for ship combat in deep space or orbit.\nUsed with Starship Bridge or for smaller ships with Space Crew."
                     },
                     "Starship Identification": {
                         "value": 0,
                         "cost": 3,
-                        "extended": "navy"
+                        "extended": "navy",
+                        "tooltip": "Used with Space Crew or Starship Bridge."
                     },
                     "Vehicle Identification": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Used with Soldiering or Intelligence."
                     }
                 },
                 "Sensors & IT": {
-                    "IR": {
+                    "Covert Sensors": {
                         "value": 0,
-                        "cost": 2
-                    },
-                    "Lidar": {
-                        "value": 0,
-                        "cost": 4
-                    },
-                    "Life Support": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Motion Tracker": {
-                        "value": 0,
-                        "cost": 3
+                        "cost": 4,
+                        "tooltip": "Used with Intelligence or Sensor Systems.\nCamouflage may be used for hiding them."
                     },
                     "EW": {
                         "value": 0,
-                        "cost": 8
+                        "cost": 8,
+                        "tooltip": "Electronic Warfare. Used with the Comtech skill."
                     },
                     "FTL Communication": {
                         "value": 0,
                         "cost": 3,
                         "extended": "navy"
                     },
+                    "Hacking": {
+                        "value": 0,
+                        "cost": 6,
+                        "tooltip": "Used with Computer Systems."
+                    },
+                    "Interface 2037": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Basic reliable interface to the main computer/AI\nused on many civilian starships."
+                    },
+                    "IR": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Uses Sensor Systems skill. Can use Perception for\npersonal equipment like night vision goggles."
+                    },
+                    "Lidar": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Pulsed laser to measure and map objects. Uses Sensor Systems skill."
+                    },
+                    "Motion Tracker": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Used with Sensor Systems skill."
+                    },
                     "Morse": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Uses Comtech skill."
+                    },
+                    "Photography": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Used with Perception, Sensor Systems or Intelligence."
+                    },
+                    "Programming": {
+                        "value": 0,
+                        "cost": 8,
+                        "tooltip": "Used with Computer Systems."
                     },
                     "Radar": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 4,
+                        "tooltip": "Used with Sensor Systems skill. Also Artillery for counter-battery."
                     },
                     "Radio": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Know how to work with common radios. Uses Comtech skill."
                     },
                     "Sensor Networking": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Covert Sensors": {
                         "value": 0,
                         "cost": 3
                     },
                     "Tightbeam": {
                         "value": 0,
                         "cost": 4,
-                        "extended": "navy"
+                        "extended": "navy",
+                        "tooltip": "Operation of tightbeam communication systems which \nwill typically use lasers. Uses Comtech skill."
                     },
-                    "Interface 2037": {
+                    "USCM Interface": {
                         "value": 0,
-                        "cost": 2
-                    },
-                    "USCM Interface ": {
-                        "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Used with Computer Systems. Used with Mine Warfare for the UA571 Sentry Gun."
                     },
                     "USN Interface": {
                         "value": 0,
                         "cost": 2,
                         "extended": "navy"
-                    },
-                    "Hacking": {
-                        "value": 0,
-                        "cost": 6
-                    },
-                    "Programming": {
-                        "value": 0,
-                        "cost": 8
                     }
                 },
                 "Nature & Animals": {
                     "Bushcrafting": {
                         "value": 0,
                         "cost": 3,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Uses Outdoorsman."
                     },
                     "Evasion": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Advanced training to hide tracks while moving through \nterrain and strategies to confuse pursuers, dogs or sensors. \nUsed with Outdoorsman or Camouflage."
                     },
                     "Fishing": {
                         "value": 0,
@@ -1784,7 +1169,8 @@
                     "Herbalism": {
                         "value": 0,
                         "cost": 5,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Knowledge of plants with medicinal effects. To find \nsuch plants the current terrain is also a required expertise. \nUsed with Outdoorsman or Medical skill."
                     },
                     "Herding": {
                         "value": 0,
@@ -1793,11 +1179,13 @@
                     },
                     "Hunting": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "You know where to find game, how to get close and how \nto skin and butcher them after the shot. Used with Outdoorsman \nand terrain expertise."
                     },
                     "K9": {
                         "value": 0,
-                        "cost": 8
+                        "cost": 8,
+                        "tooltip": "You have specialist K9 training to work with dogs for \nfor searching, guarding etc. Your squad will benefit from the \nsenses of your dog for detection purposes (combined roll using \ndog perception + your Animal Handling which in practice means \nyour skill is used since it will be lower)."
                     },
                     "Riding": {
                         "value": 0,
@@ -1809,7 +1197,8 @@
                     },
                     "Tracking": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Read tracks to uncover the story they tell, in what \ndirection, how many, how fast they were moving etc. Used with \nOutdoorsman. If tracking a vehicle and you also have Vehicle \nIdentification it allows you to identify the model instead of \nonly the general type as wheeled, tracked."
                     },
                     "Trapping": {
                         "value": 0,
@@ -1817,10 +1206,6 @@
                     }
                 },
                 "Navigation": {
-                    "Orienteering": {
-                        "value": 0,
-                        "cost": 2
-                    },
                     "Interplanetary": {
                         "value": 0,
                         "cost": 6
@@ -1830,6 +1215,11 @@
                         "cost": 10,
                         "extended": "navy"
                     },
+                    "Orienteering": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Provides bonus to navigation over land regardless of terrain."
+                    },
                     "Nautical Charts": {
                         "value": 0,
                         "cost": 3
@@ -1838,23 +1228,31 @@
                 "Science & Medicine": {
                     "Aerospace Medicine": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "extended": "navy"
                     },
                     "Autodoc": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Usable with Computer Systems, First Aid or Medical."
                     },
                     "CBRN Treatment": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 4,
+                        "tooltip": "Usable with CBRN Warfare, First Aid or Medical."
                     },
                     "Cryogenics": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 4
                     },
                     "Dive Medicine": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 3
+                    },
+                    "Forensics": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Used with Policework or Science Equipment skills."
                     },
                     "Infections": {
                         "value": 0,
@@ -1864,13 +1262,10 @@
                         "value": 0,
                         "cost": 3
                     },
-                    "Forensics": {
-                        "value": 0,
-                        "cost": 3
-                    },
                     "Laboratory equipment": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Qualifies you to assist someone who actually knows what they are doing in a lab."
                     },
                     "Meteorology": {
                         "value": 0,
@@ -1884,15 +1279,18 @@
                     },
                     "Surgery": {
                         "value": 0,
-                        "cost": 8
+                        "cost": 8,
+                        "tooltip": "If performed with First Aid it is limited to \"Field \nSurgery\" field surgery procedures, e.g. needle decompression."
                     },
                     "Toxicology": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Usable with First Aid, Medical or for identifying \nnatural poisons Outdoorsman."
                     },
                     "Veterinary": {
                         "value": 0,
-                        "cost": 6
+                        "cost": 6,
+                        "tooltip": "Used with Animal Handling or Medical."
                     }
                 },
                 "Language": {
@@ -1917,66 +1315,1883 @@
                         "cost": 3
                     }
                 },
-                "Other": {
-                    "Acrobatics": {
+                "Creative": {
+                    "Music": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 8,
+                        "extended": "colonist",
+                        "tooltip": "You can read notes and compose music."
                     },
-                    "Card Cheating": {
+                    "Painting": {
                         "value": 0,
-                        "cost": 3
-                    },
-                    "Crane": {
-                        "value": 0,
-                        "cost": 8
-                    },
-                    "Diving equipment": {
-                        "value": 0,
-                        "cost": 3
-                    },
-                    "Environmental Suit": {
-                        "value": 1,
-                        "cost": 3
-                    },
-                    "Forgery": {
-                        "value": 0,
-                        "cost": 4
-                    },
-                    "Parkour": {
-                        "value": 0,
-                        "cost": 3
+                        "cost": 8,
+                        "extended": "colonist"
                     },
                     "Party Tricks": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Small \"magic\" tricks or more risky ones like the \"knife thing\". Used with Sleight of Hand."
+                    },
+                    "Performance": {
+                        "value": 0,
+                        "cost": 8,
+                        "extended": "colonist"
+                    },
+                    "Singing": {
+                        "value": 0,
+                        "cost": 5,
+                        "extended": "colonist"
+                    },
+                    "Writing": {
+                        "value": 0,
+                        "cost": 8,
+                        "extended": "colonist"
+                    },
+                    "Guitar": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist",
+                        "tooltip": "Uses Artistry or Sleight of Hand skill"
+                    },
+                    "Keyboard": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist",
+                        "tooltip": "Uses Artistry or Sleight of Hand skill"
+                    },
+                    "Drums": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist",
+                        "tooltip": "Uses Artistry skill"
+                    },
+                    "Harmonica": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist",
+                        "tooltip": "Uses Artistry skill"
+                    },
+                    "Trumpet": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist",
+                        "tooltip": "Uses Artistry skill"
+                    },
+                    "Violin": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist",
+                        "tooltip": "Uses Artistry skill"
+                    }
+                },
+                "Other": {
+                    "Acrobatics": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Provides bonus when jumping, balancing or falling and \nallows you to do maneuvers that would be impossible without \ntraining, like a free handstand. Used with Dexterity."
+                    },
+                    "Card Cheating": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Used with Gambling or Sleight of Hand."
+                    },
+                    "Crane": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Operation of large cranes. Used with Utility Equipment."
+                    },
+                    "Diving equipment": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Used with Swimming."
+                    },
+                    "Environmental Suit": {
+                        "value": 1,
+                        "cost": 3,
+                        "tooltip": "Cover all types of basic suits like space, biohazard \nor high-pressure. Used with Zero-G or CBRN Warfare."
+                    },
+                    "Forgery": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Used with Criminal or Intelligence, Computer Systems \nfor digital forgeries or Artistry for valuable objects."
+                    },
+                    "Parkour": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Used with Dexterity."
                     },
                     "Pickpocketing": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 4,
+                        "tooltip": "Used with Sleight of Hand vs Perception."
                     },
                     "Powerloader": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 4,
+                        "tooltip": "Exoskeleton powerloader Class II license. \nUsed with Utility Equipment."
                     },
                     "Law": {
                         "value": 0,
-                        "cost": 8
+                        "cost": 8,
+                        "extended": "colonist",
+                        "tooltip": "Usable with Policework, Commerce for trade laws."
+                    },
+                    "Life Support": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Space Crew or Colonist to operate and service. \nMechanic or Electronics Tools for more extensive repairs or \nmodifications."
                     },
                     "Rope Work": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Used with Seamanship, Sleight of Hand or Outdoorsman \nto tie knots or make rope ladders. With Dexterity for \nrappelling. With Animal Handling to improvise a harness & leash."
                     },
                     "Scaling": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 4,
+                        "tooltip": "Trained to use professional climbing equipment. \nUsed with Dexterity."
                     },
                     "Shadowing": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 4,
+                        "tooltip": "Opposed roll vs targets Streetwise. \nUsed with Intelligence, Policework, Streetwise or \nRemote Piloting (if using a drone)."
                     },
                     "Thrusterpack": {
                         "value": 0,
+                        "cost": 3,
+                        "tooltip": "Operate spacesuit thrusters with the Zero-G skill."
+                    }
+                }
+            }
+        },
+        "Traits": {
+            "Neutral": {
+                " ": {
+                    "ARM Sympathizer": {
+                        "value": 0,
+                        "cost": 0,
+                        "tooltip": "Req: Not Live long and prosper",
+                        "requirements": {
+                            "Live long and prosper": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Beer Smuggler": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Bloodthirst": {
+                        "value": 0,
+                        "cost": 0,
+                        "tooltip": "Req: Not Religious, Not Righteous, Not Soft hearted",
+                        "requirements": {
+                            "Religious": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Soft hearted": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        },
+                        "bonus": [
+                            {
+                                "target": "Stress Limit",
+                                "type": "permanent",
+                                "value": 1
+                            }
+                        ]
+                    },
+                    "Collector": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Convict": {
+                        "value": 0,
+                        "cost": 0,
+                        "tooltip": "Req: Background",
+                        "extended": "background"
+                    },
+                    "Hamster": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Jarhead": {
+                        "value": 0,
+                        "cost": 0,
+                        "tooltip": "Req: Max Rank Lance Corporal (E3), Not Quick Learner",
+                        "requirements": {
+                            "Quick Learner": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Rank": {
+                                "type": "<=",
+                                "value": 2
+                            }
+                        }
+                    },
+                    "Live long and prosper": {
+                        "value": 0,
+                        "cost": 0,
+                        "tooltip": "Req: Not ARM Sympathizer, Not Bloodthirst",
+                        "requirements": {
+                            "ARM Sympathizer": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Bloodthirst": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Nosy": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Paranoid": {
+                        "value": 0,
+                        "cost": 0,
+                        "tooltip": "Req: 1 PP",
+                        "requirements": {
+                            "Psycho Points": {
+                                "type": ">=",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "Private who?": {
+                        "value": 0,
+                        "cost": 0,
+                        "tooltip": "Req: Max rank Private FC (E2), Cha <4,\nNot Canary, Not Impressive stature, Not Tacticool",
+                        "requirements": {
+                            "Rank": {
+                                "type": "<=",
+                                "value": 1
+                            },
+                            "Charisma": {
+                                "type": "<=",
+                                "value": 3
+                            },
+                            "Canary": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Impressive Stature": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Tacticool": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Reckless Driver": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Reckless Pilot": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Religious": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Small frame": {
+                        "value": 0,
+                        "cost": 0,
+                        "tooltip": "Req: Background, Not Impressive stature, Not Strategic reserves",
+                        "extended": "background",
+                        "requirements": {
+                            "Impressive Stature": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Strategic reserves": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Strategic reserves": {
+                        "value": 0,
+                        "cost": 0,
+                        "tooltip": "Req: End <4, Not Tunnel Rat, Not Small frame",
+                        "requirements": {
+                            "Small frame": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Tunnel Rat": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Endurance": {
+                                "type": "<=",
+                                "value": 3
+                            }
+                        }
+                    },
+                    "Tacticool": {
+                        "value": 0,
+                        "cost": 0,
+                        "tooltip": "Req: Background, Not Private who?",
+                        "extended": "background",
+                        "requirements": {
+                            "Private who?": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Trigger-happy": {
+                        "value": 0,
+                        "cost": 0
+                    }
+                }
+            },
+            "Advantages": {
+                " ": {
+                    "2nd in Command": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Infantry Tactics",
+                        "requirements": {
+                            "Infantry Tactics": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "Access to the files": {
+                        "value": 0,
+                        "cost": 1,
+                        "tooltip": "Req: Computer Systems (USCM Interface) 4, \nNot Watched, either Staff Sergeant (E6) or Hacking, ",
+                        "requirements": {
+                            "Computer Systems": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "USCM Interface": {
+                                "type": "==",
+                                "value": 1
+                            },
+                            "Watched": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Alert": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Per 4, Soldiering 3, Not Catnapper",
+                        "requirements": {
+                            "Perception": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Soldiering": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Catnapper": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Amphibious": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Terrain: Sea",
+                        "requirements": {
+                            "Sea": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "Arctic Fox": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Skiing, Terrain: Arctic",
+                        "requirements": {
+                            "Skiing": {
+                                "type": "==",
+                                "value": 1
+                            },
+                            "Arctic": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "Attractive": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Req: Charisma 4, Not Bad Aura, Not Bad Hygiene",
+                        "requirements": {
+                            "Charisma": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Bad aura": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Bad Hygiene": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Authority": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Req: Sergeant (E5), Glory 10",
+                        "requirements": {
+                            "Rank": {
+                                "type": ">=",
+                                "value": 4
+                            }
+                        },
+                        "bonus": [
+                            {
+                                "target": "Leadership Points",
+                                "type": "permanent",
+                                "value": 2
+                            }
+                        ]
+                    },
+                    "Baseball Player": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Req: Background",
+                        "extended": "background"
+                    },
+                    "Bilingual": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Req: Background, Language expertise",
+                        "extended": "background"
+                    },
+                    "Brown Noser": {
+                        "value": 0,
+                        "cost": 2
+                    },
+                    "Catnapper": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Req: Soldiering 3, Not Alert,\nNot Nightmares, Not Maintenance Fanatic",
+                        "requirements": {
+                            "Soldiering": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Alert": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Nightmares": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Maintenance Fanatic": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Cautious": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Req: Not Jinxed, not Dapper Sapper, \nnot any trait titled \"Reckless\".",
+                        "requirements": {
+                            "Jinxed": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Dapper Sapper": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Reckless Driver": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Reckless Pilot": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Coal Lungs": {
+                        "value": 0,
+                        "cost": 1
+                    },
+                    "Combat Correspondent": {
+                        "value": 0,
+                        "cost": 1,
+                        "tooltip": "Req: Charisma 3, Photography expertise",
+                        "requirements": {
+                            "Charisma": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Photography": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "Combat Drop Wings": {
+                        "value": 0,
+                        "cost": 1,
+                        "tooltip": "+1 bonus to Parachute and 1 Glory.\nParachute Wings and one combat drop (parachute, glider or pod)",
+                        "requirements": {
+                            "Parachute wings": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        },
+                        "bonus": [
+                            {
+                                "target": "Parachute",
+                                "type": "permanent",
+                                "value": 1
+                            }
+                        ]
+                    },
+                    "Cowboy": {
+                        "value": 0,
+                        "cost": 1
+                    },
+                    "Cross Country Driver": {
+                        "value": 0,
                         "cost": 3
+                    },
+                    "Dapper Sapper": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Req: Soldiering 4, Not Cautious",
+                        "requirements": {
+                            "Soldiering": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Cautious": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Die bastards!": {
+                        "value": 0,
+                        "cost": 2
+                    },
+                    "Doubletap": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Req: Any Pistol expertise, Reaction 3",
+                        "requirements": {
+                            "Reaction": {
+                                "type": ">=",
+                                "value": 3
+                            }
+                        }
+                    },
+                    "Draw Stranger": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Background, Any Pistol expertise, Terrain: Desert",
+                        "extended": "background",
+                        "requirements": {
+                            "Desert": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "Drill Instructor": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Sergeant (E5), Soldiering 4, Drill, \nNot Whisper-voiced",
+                        "requirements": {
+                            "Rank": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Soldiering": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Drill": {
+                                "type": "==",
+                                "value": 1
+                            },
+                            "Whisper-voiced": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Efficient Packing": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Soldiering 4",
+                        "requirements": {
+                            "Soldiering": {
+                                "type": ">=",
+                                "value": 4
+                            }
+                        },
+                        "bonus": [
+                            {
+                                "target": "Carry Capacity",
+                                "type": "permanent",
+                                "value": 5
+                            }
+                        ]
+                    },
+                    "Escape Artist": {
+                        "value": 0,
+                        "cost": 5,
+                        "tooltip": "Req: Dexterity 4, Lockpicking, Rope Work",
+                        "requirements": {
+                            "Dexterity": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Lockpicking": {
+                                "type": "==",
+                                "value": 1
+                            },
+                            "Rope Work": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "Eye of the Tiger": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Ignore first stun each combat\nReq: Toughness 4, \nNot Glass Joe, Not I'm gonna die!!!",
+                        "requirements": {
+                            "Toughness": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Glass Joe": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "I'm gonna die!!!": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Farmer Family": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Req: Background, Terrain: Temperate or Desert",
+                        "extended": "background",
+                        "bonus": [
+                            {
+                                "target": "Farming",
+                                "type": "permanent",
+                                "value": 1
+                            },
+                            {
+                                "target": "Animal Handling",
+                                "type": "permanent",
+                                "value": 1
+                            }
+                        ]
+                    },
+                    "Fixer": {
+                        "value": 0,
+                        "cost": 5,
+                        "tooltip": "Req: Charisma 3, Not Loner, Not Mean Bastard",
+                        "requirements": {
+                            "Charisma": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Loner": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Mean Bastard": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Get to the choppa": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Strength 5, Not Whisper-voiced",
+                        "requirements": {
+                            "Strength": {
+                                "type": ">=",
+                                "value": 5
+                            },
+                            "Whisper-voiced": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Gun Nut": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Expertise for 3 different small arms \n(using Shooting skill)."
+                    },
+                    "Gung Ho": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Req: Not Cautious, Not Combat Shakes, Not Sleepyhead",
+                        "requirements": {
+                            "Cautious": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Combat Shakes": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Sleepyhead": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Hardened Veteran": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Req: 10 missions, Soldiering 5",
+                        "requirements": {
+                            "Soldiering": {
+                                "type": ">=",
+                                "value": 3
+                            }
+                        }
+                    }
+                },
+                "  ": {
+                    "HEMA Fighter": {
+                        "value": 0,
+                        "cost": 3
+                    },
+                    "Impressive Stature": {
+                        "value": 0,
+                        "cost": 1,
+                        "tooltip": "Req: Str 4, Tou 4, Not Ninja, Not Private who?, \nNot Small frame, Not Victim",
+                        "requirements": {
+                            "Strength": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Toughness": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Ninja": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Private who?": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Small frame": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Victim": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Instructor": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Charisma 4",
+                        "requirements": {
+                            "Charisma": {
+                                "type": ">=",
+                                "value": 4
+                            }
+                        }
+                    },
+                    "Iron-fist": {
+                        "value": 0,
+                        "cost": 2
+                    },
+                    "I've been through worse": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Purple Heart, Not I'm gonna die!!!",
+                        "requirements": {
+                            "I'm gonna die!!!": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Jungle Jim": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Outdoorsman 3, Terrain: Jungle",
+                        "requirements": {
+                            "Outdoorsman": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Jungle": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "Kendoka": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Expertise Sword",
+                        "requirements": {
+                            "Sword": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "Leading from the front": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Req: Sergeant (E5), Soldiering 3",
+                        "requirements": {
+                            "Rank": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Soldiering": {
+                                "type": ">=",
+                                "value": 3
+                            }
+                        }
+                    },
+                    "Let's Rock!": {
+                        "value": 0,
+                        "cost": 1
+                    },
+                    "Life of the party": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Req: Charisma 4, No anti-social traits",
+                        "requirements": {
+                            "Charisma": {
+                                "type": ">=",
+                                "value": 4
+                            }
+                        }
+                    },
+                    "Lucky Bastard": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Req: Not Purple Heart"
+                    },
+                    "Machete": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Req: Knife",
+                        "requirements": {
+                            "Knife": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "Maintenance Fanatic": {
+                        "value": 0,
+                        "cost": 1,
+                        "tooltip": "Req: Not Catnapper",
+                        "requirements": {
+                            "Catnapper": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Martial Artist: Grappler": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Req: Close Combat (Grappling) 4, Strength 3, Endurance 3",
+                        "requirements": {
+                            "Close Combat: Grappling": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Strength": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Endurance": {
+                                "type": ">=",
+                                "value": 3
+                            }
+                        }
+                    },
+                    "Martial Artist: Striker": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Req: Close Combat (Standup) 4, Strength 3, Endurance 3",
+                        "requirements": {
+                            "Close Combat: Standup": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Dexterity": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Endurance": {
+                                "type": ">=",
+                                "value": 3
+                            }
+                        }
+                    },
+                    "Mountaineer": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Outdoorsman 3, Terrain: Mountain",
+                        "requirements": {
+                            "Outdoorsman": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Mountain": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "Mule": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Req: Endurance 4, Psyche 4",
+                        "requirements": {
+                            "Endurance": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Psyche": {
+                                "type": ">=",
+                                "value": 4
+                            }
+                        },
+                        "bonus": [
+                            {
+                                "target": "Carry Capacity",
+                                "type": "permanent",
+                                "value": 5
+                            },
+                            {
+                                "target": "Combat Load",
+                                "type": "permanent",
+                                "value": 1
+                            }
+                        ]
+                    },
+                    "Neon Tan": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Terrain: Urban",
+                        "requirements": {
+                            "Urban": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "Ninja": {
+                        "value": 0,
+                        "cost": 5,
+                        "tooltip": "Req: Close Combat (Standup) 3, Throwing 3, \nNot Fear of the dark, Not Impressive Stature",
+                        "requirements": {
+                            "Close Combat: Standup": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Throwing": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Fear of the dark": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Impressive Stature": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Nintendo Kid": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Req: Background, Reaction 4",
+                        "extended": "background",
+                        "requirements": {
+                            "Reaction": {
+                                "type": ">=",
+                                "value": 4
+                            }
+                        }
+                    },
+                    "Offhand Shooter": {
+                        "value": 0,
+                        "cost": 1,
+                        "tooltip": "Req: Dexterity 4",
+                        "requirements": {
+                            "Dexterity": {
+                                "type": ">=",
+                                "value": 4
+                            }
+                        }
+                    },
+                    "Quick Learner": {
+                        "value": 0,
+                        "cost": 1,
+                        "tooltip": "Req: Charisma 3, Not Jarhead, Not Thick-skulled",
+                        "requirements": {
+                            "Charisma": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Jarhead": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Thick-skulled": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Rise and shine": {
+                        "value": 0,
+                        "cost": 1
+                    },
+                    "Scarred Veteran": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: 10 missions, Purple Heart"
+                    },
+                    "Sea legs": {
+                        "value": 0,
+                        "cost": 1,
+                        "tooltip": "Req: Seamanship 3, Terrain: Sea",
+                        "requirements": {
+                            "Seamanship": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Sea": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "Secondary Weapon": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Req: Reaction 4",
+                        "requirements": {
+                            "Reaction": {
+                                "type": ">=",
+                                "value": 4
+                            }
+                        }
+                    },
+                    "Shake n' Bake Colonist": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Background, Terrain: Barren, Colonist 2",
+                        "extended": "background",
+                        "requirements": {
+                            "Colonist": {
+                                "type": ">=",
+                                "value": 2
+                            },
+                            "Barren": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    }
+                },
+                "   ": {
+                    "Shellback": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: 10 missions, Space Crew 4, Terrain: Space",
+                        "requirements": {
+                            "Space Crew": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Space": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "Smuggler Tricks": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Criminal 1, Terrain: Space",
+                        "requirements": {
+                            "Criminal": {
+                                "type": ">=",
+                                "value": 1
+                            },
+                            "Space": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "Snake-eater": {
+                        "value": 0,
+                        "cost": 1,
+                        "tooltip": "Req: Outdoorsman 3, Terrain: Jungle",
+                        "requirements": {
+                            "Outdoorsman": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Jungle": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "Spacer": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Background, Space Crew 1, Terrain: Space",
+                        "extended": "background",
+                        "requirements": {
+                            "Space Crew": {
+                                "type": ">=",
+                                "value": 1
+                            },
+                            "Space": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "Spotter": {
+                        "value": 0,
+                        "cost": 1,
+                        "tooltip": "Req: Shooting: Aimed 3, Soldiering 2, Any sniper/scoped rifle expertise",
+                        "requirements": {
+                            "Shooting: Aimed": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Soldiering": {
+                                "type": ">=",
+                                "value": 3
+                            }
+                        }
+                    },
+                    "Squad Leader": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Made Lance Corporal (E3) at boot camp.\nReq: Background, Cha 3, Infantry Tactics, Not Scapegoat",
+                        "extended": "background",
+                        "requirements": {
+                            "Charisma": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Infantry Tactics": {
+                                "type": "==",
+                                "value": 1
+                            },
+                            "Scapegoat": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Stiff upper lip": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Corporal (E4), Not life of the party, \nNot Bad Hygiene",
+                        "requirements": {
+                            "Rank": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Life of the party": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Bad Hygiene": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Streetfighter": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Background",
+                        "extended": "background"
+                    },
+                    "Swamp Rat": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Outdoorsman 3, Terrain: Swamp",
+                        "requirements": {
+                            "Outdoorsman": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Swamp": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "The Big Five": {
+                        "value": 0,
+                        "cost": 1,
+                        "tooltip": "Req: You must have met all five during missions"
+                    },
+                    "Thick-skulled": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Psyche < 3, Not Glass Joe, Not Quick Learner",
+                        "requirements": {
+                            "Psyche": {
+                                "type": "<=",
+                                "value": 2
+                            },
+                            "Glass Joe": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Quick Learner": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Tough": {
+                        "value": 0,
+                        "cost": 6,
+                        "tooltip": "Get one more box in your Health bar"
+                    },
+                    "Tunnel Rat": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Take no stress from enclosed spaces.\nReq: Background, Dex 3, Str < 4, Not Strategic reserves",
+                        "extended": "background",
+                        "requirements": {
+                            "Dexterity": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Strength": {
+                                "type": "<=",
+                                "value": 3
+                            },
+                            "Strategic reserves": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Trusted Leader": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Sergeant (E5), Psyche 3, Soldiering 3, \nInfantry Tactics",
+                        "requirements": {
+                            "Rank": {
+                                "type": ">=",
+                                "value": 4
+                            },
+                            "Psyche": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Soldiering": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Infantry Tactics": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "Ultimate Badass": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Req: Master Sergeant (E8), Soldiering 5",
+                        "requirements": {
+                            "Rank": {
+                                "type": ">=",
+                                "value": 7
+                            },
+                            "Soldiering": {
+                                "type": ">=",
+                                "value": 5
+                            }
+                        }
+                    }
+                }
+            },
+            "Disadvantages": {
+                " ": {
+                    "Absent-minded": {
+                        "value": 0,
+                        "cost": -4
+                    },
+                    "All out of bubble gum": {
+                        "value": 0,
+                        "cost": -3,
+                        "tooltip": "Req: Not Private who?, Not Impressive Stature, \nNot Victim",
+                        "requirements": {
+                            "Private who?": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Impressive Stature": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Victim": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Apricot Eater": {
+                        "value": 0,
+                        "cost": -2
+                    },
+                    "Bad aura": {
+                        "value": 0,
+                        "cost": -2,
+                        "tooltip": "Req: Not Attractive, Not Life of the party, \nNot Private who?",
+                        "requirements": {
+                            "Private who?": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Life of the party": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Attractive": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Bad Hygiene": {
+                        "value": 0,
+                        "cost": -1,
+                        "tooltip": "Req: Not Stiff upper lip",
+                        "requirements": {
+                            "Stiff upper lip": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Blabbermouth": {
+                        "value": 0,
+                        "cost": -1,
+                        "tooltip": "Req: Charisma 3",
+                        "requirements": {
+                            "Charisma": {
+                                "type": ">=",
+                                "value": 3
+                            }
+                        }
+                    },
+                    "Canary": {
+                        "value": 0,
+                        "cost": -1
+                    },
+                    "Combat Shakes": {
+                        "value": 0,
+                        "cost": -1,
+                        "tooltip": "Req: Background, Not Gung Ho",
+                        "extended": "background",
+                        "requirements": {
+                            "Gung Ho": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Compulsive Gambler": {
+                        "value": 0,
+                        "cost": -4,
+                        "tooltip": "Req: Gambling 1",
+                        "requirements": {
+                            "Gambling": {
+                                "type": ">=",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "Debt to the Mafia": {
+                        "value": 0,
+                        "cost": -4
+                    },
+                    "Dislike androids": {
+                        "value": 0,
+                        "cost": -1
+                    },
+                    "Fear of the dark": {
+                        "value": 0,
+                        "cost": -3,
+                        "tooltip": "Req: Not Ninja",
+                        "requirements": {
+                            "Ninja": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Fire in the hole!": {
+                        "value": 0,
+                        "cost": -2,
+                        "tooltip": "Req: Demolition 3, Not Cautious",
+                        "requirements": {
+                            "Demolition": {
+                                "type": ">=",
+                                "value": 3
+                            },
+                            "Cautious": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Former Alcoholic": {
+                        "value": 0,
+                        "cost": -3,
+                        "tooltip": "Req: Background, Not Low Tolerance",
+                        "extended": "background",
+                        "requirements": {
+                            "Low Tolerance": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Glass Joe": {
+                        "value": 0,
+                        "cost": -2,
+                        "tooltip": "Req: Not Thick-skulled",
+                        "requirements": {
+                            "Thick-skulled": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Heart Issue": {
+                        "value": 0,
+                        "cost": -2
+                    },
+                    "I'm gonna die!!!": {
+                        "value": 0,
+                        "cost": -2,
+                        "tooltip": "Req: Background, Not Gung Ho, Not Tough, \nNot Just a flesh wound",
+                        "extended": "background",
+                        "requirements": {
+                            "Gung Ho": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Tough": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Just a flesh wound": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Inflated Ego": {
+                        "value": 0,
+                        "cost": -2
+                    },
+                    "Jinxed": {
+                        "value": 0,
+                        "cost": -4
+                    },
+                    "Just a flesh wound": {
+                        "value": 0,
+                        "cost": -2,
+                        "tooltip": "Req: Not I'm gonna die!!!",
+                        "requirements": {
+                            "I'm gonna die!!!": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Kleptomaniac": {
+                        "value": 0,
+                        "cost": -2,
+                        "tooltip": "Req: Not Righteous"
+                    },
+                    "Low Tolerance": {
+                        "value": 0,
+                        "cost": -1,
+                        "tooltip": "Req: Background, Not Former Alcoholic",
+                        "extended": "background",
+                        "requirements": {
+                            "Former Alcoholic": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Lucky Charm": {
+                        "value": 0,
+                        "cost": -2
+                    },
+                    "Mean Bastard": {
+                        "value": 0,
+                        "cost": -4,
+                        "tooltip": "Intimidation 2, Not Fixer, Not Whipped, \nNot Soft hearted, Not Life of the party, Not Victim",
+                        "requirements": {
+                            "Intimidation": {
+                                "type": ">=",
+                                "value": 2
+                            },
+                            "Fixer": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Soft hearted": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Life of the party": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Victim": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Mentally unstable": {
+                        "value": 0,
+                        "cost": -2
+                    },
+                    "Nervous": {
+                        "value": 0,
+                        "cost": -1
+                    },
+                    "Not one step back": {
+                        "value": 0,
+                        "cost": -4
+                    },
+                    "Psychic powers": {
+                        "value": 0,
+                        "cost": -1,
+                        "tooltip": "Req: Psi value unknown"
+                    },
+                    "Rival": {
+                        "value": 0,
+                        "cost": -1
+                    }
+                },
+                "  ": {
+                    "Scapegoat": {
+                        "value": 0,
+                        "cost": -2,
+                        "tooltip": "Req: Background, Not Righteous, Not Squad Leader",
+                        "extended": "background",
+                        "requirements": {
+                            "Squad Leader": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Sleepyhead": {
+                        "value": 0,
+                        "cost": -2,
+                        "tooltip": "Req: Not Alert, Not Gung Ho, Not Rise and shine",
+                        "requirements": {
+                            "Alert": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Gung Ho": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Rise and shine": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Soft hearted": {
+                        "value": 0,
+                        "cost": -3,
+                        "tooltip": "Req: Not Bloodthirst, Not Mean Bastard, Not Killer",
+                        "requirements": {
+                            "Bloodthirst": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Mean Bastard": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Killer": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Victim": {
+                        "value": 0,
+                        "cost": -1,
+                        "tooltip": "Req: Str < 4, Cha < 4, Not Mean Bastard",
+                        "requirements": {
+                            "Strength": {
+                                "type": "<=",
+                                "value": 3
+                            },
+                            "Charisma": {
+                                "type": "<=",
+                                "value": 3
+                            },
+                            "Mean Bastard": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Voodoo curse": {
+                        "value": 0,
+                        "cost": -2
+                    },
+                    "Wanted": {
+                        "value": 0,
+                        "cost": -4,
+                        "tooltip": "Req: Background, Convict",
+                        "extended": "background",
+                        "requirements": {
+                            "Convict": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    },
+                    "Watched": {
+                        "value": 0,
+                        "cost": 0,
+                        "tooltip": "Req: Can not be chosen, given out by the GM if appropriate"
+                    },
+                    "Whisper-voiced": {
+                        "value": 0,
+                        "cost": -3,
+                        "tooltip": "Req: Not Life of the party, Not Mean Bastard, Not Drill Instructor",
+                        "requirements": {
+                            "Life of the party": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Mean Bastard": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Drill Instructor": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "Psychotic Disadvantages": {
+                " ": {
+                    "3rd Deck Dive Team": {
+                        "value": 0,
+                        "cost": 1
+                    },
+                    "Alcoholic": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Not Low Tolerance",
+                        "requirements": {
+                            "Low Tolerance": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Anger issues": {
+                        "value": 0,
+                        "cost": 1
+                    },
+                    "Confusion": {
+                        "value": 0,
+                        "cost": 2
+                    },
+                    "Flashbacks": {
+                        "value": 0,
+                        "cost": 1
+                    },
+                    "Freezes": {
+                        "value": 0,
+                        "cost": 2
+                    },
+                    "Killer": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Req: Not Soft hearted",
+                        "requirements": {
+                            "Soft hearted": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Loner": {
+                        "value": 0,
+                        "cost": 1,
+                        "tooltip": "Req: Not Fixer, Not Monophobia, Not Life of the party, Not Neon Tan",
+                        "requirements": {
+                            "Fixer": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Monophobia": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Life of the party": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Neon Tan": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Lunatic": {
+                        "value": 0,
+                        "cost": 1
+                    },
+                    "Monophobia": {
+                        "value": 0,
+                        "cost": 1,
+                        "tooltip": "Req: Not Loner, Not Nosy",
+                        "requirements": {
+                            "Loner": {
+                                "type": "==",
+                                "value": 0
+                            },
+                            "Nosy": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Nightmares": {
+                        "value": 0,
+                        "cost": 1,
+                        "tooltip": "Req: Not Catnapper",
+                        "requirements": {
+                            "Catnapper": {
+                                "type": "==",
+                                "value": 0
+                            }
+                        }
+                    },
+                    "Post-Combat shakes": {
+                        "value": 0,
+                        "cost": 1
+                    },
+                    "Psychiatric care": {
+                        "value": 0,
+                        "cost": 2
+                    },
+                    "Pyromaniac": {
+                        "value": 0,
+                        "cost": 2
+                    },
+                    "Twisted Thoughts": {
+                        "value": 0,
+                        "cost": 1
+                    },
+                    "Whiskey Tango Foxtrot": {
+                        "value": 0,
+                        "cost": 1
+                    }
+                }
+            },
+            "Cybernetics": {
+                " ": {
+                    "Left arm": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Right arm": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Left leg": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Right leg": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Vitals": {
+                        "value": 0,
+                        "cost": 0
+                    },
+                    "Gun Hand": {
+                        "value": 0,
+                        "cost": 0,
+                        "tooltip": "Illegal and impossible to get via normally available surgery.\nReq: Cybernetic Hand/Arm"
+                    },
+                    "Hook Hand": {
+                        "value": 0,
+                        "cost": 0
                     }
                 }
             }

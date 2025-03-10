@@ -47,6 +47,7 @@ class CharacterGenerator:
         self._rank_alternatives = self._current_character["Config"]["Rank Labels"]
 
         self._create_mode = create_mode
+        self._extend_character["background"] = create_mode
 
         self._section_title_color = [150, 250, 150]
 
@@ -78,8 +79,7 @@ class CharacterGenerator:
             },
             "Psycho Points": {
                 "value": 0,
-                "tooltip": "Earned when playing and can be reduced by buying \
-                    psychotic disadvantages.",
+                "tooltip": "Earned when playing and can be reduced by buying psychotic disadvantages.",  # noqa: B950
             },
             "Attribute Points": {
                 "value": (
@@ -307,11 +307,15 @@ class CharacterGenerator:
 
     def _check_property_disable(self):
         for property in self._serial_properties:
-            if "requirements" in self._serial_properties[property]:
+            if "requirements" in self._serial_properties[property] and (
+                "extended" not in self._serial_properties[property]
+                or self._extend_character[self._serial_properties[property]["extended"]]
+            ):
                 enabled = True
                 for req_name, criterium in self._serial_properties[property][
                     "requirements"
                 ].items():
+                    # An OR option would be useful but not trivial to include
                     if criterium["type"] == "==":
                         if (
                             not criterium["value"]
@@ -469,10 +473,11 @@ class CharacterGenerator:
         leadership_points: int = (
             self._current_character["Config"]["Rank Bonus"][rank_index] + charisma_value
         )
+        bonus_string = "".join(self._check_active_bonuses("Leadership Points"))
         self._stats["Leadership Points"]["value"] = leadership_points
         dpg.set_value(
             item="Leadership Points",
-            value=leadership_points,
+            value=f"{leadership_points} {bonus_string}",
         )
 
     def _update_ap_status(self):
@@ -721,6 +726,7 @@ class CharacterGenerator:
                                     or self._extend_character[
                                         property_value["extended"]
                                     ]
+                                    or bool(property_value["value"])
                                 ):
                                     with dpg.group(horizontal=True):
                                         with dpg.table(
@@ -766,11 +772,21 @@ class CharacterGenerator:
                                                     ),
                                                 )
                                                 item_refs[property_key] = item_id
-                                                dpg.add_text(property_key)
+                                                dpg.add_text(
+                                                    property_key,
+                                                    tag="tooltip_" + property_key,
+                                                )
                                                 if show_cost:
                                                     dpg.add_text(
                                                         f"({property_value['cost']})"
                                                     )
+                                                if "tooltip" in property_value:
+                                                    with dpg.tooltip(
+                                                        "tooltip_" + property_key
+                                                    ):
+                                                        dpg.add_text(
+                                                            property_value["tooltip"]
+                                                        )
         return item_refs
 
     def _add_slider_input(
@@ -800,6 +816,7 @@ class CharacterGenerator:
                                     or self._extend_character[
                                         property_value["extended"]
                                     ]
+                                    or bool(property_value["value"])
                                 ):
                                     with dpg.table(
                                         header_row=False,
@@ -993,6 +1010,7 @@ class CharacterSelector:
             "military": True,
             "navy": True,
             "colonist": True,
+            "background": self._create_mode,
         }
 
         for file in get_character_save_location().glob("*.json"):
