@@ -79,8 +79,7 @@ class CharacterGenerator:
             },
             "Psycho Points": {
                 "value": 0,
-                "tooltip": "Earned when playing and can be reduced by buying \
-                    psychotic disadvantages.",
+                "tooltip": "Earned when playing and can be reduced by buying psychotic disadvantages.",  # noqa: B950
             },
             "Attribute Points": {
                 "value": (
