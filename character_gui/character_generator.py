@@ -138,11 +138,16 @@ class CharacterGenerator:
                 sum_cost = sum_cost + cost_table[knowledge["value"]]
         return sum_cost
 
+    def _character_attributes(self):
+        return self._current_character["Character"]["Attributes"]["All"]["Attribute"]
+
+    def _get_attribute_value(self, attribute: str) -> int:
+        attributes = self._character_attributes()
+        return attributes[attribute]["value"]
+
     def _get_total_attribute_cost(self) -> int:
         sum_points = 0
-        # fmt: off
-        for attribute in self._current_character["Character"]["Attributes"]["All"]["Attribute"].values():  # noqa: B950
-            # fmt: on
+        for attribute in self._character_attributes().values():
             sum_points = sum_points + attribute["value"]
         return sum_points
 
@@ -162,13 +167,12 @@ class CharacterGenerator:
 
     def _get_count_traits(self) -> int:
         sum_traits = 0
-        # fmt: off
-        for main_group in self._current_character["Character"]["Traits"]:
-            for sub_group in self._current_character["Character"]["Traits"][main_group]:
-                for property in self._current_character["Character"]["Traits"][main_group][sub_group].values():  # noqa: B950
+        traits = self._current_character["Character"]["Traits"]
+        for main_group in traits:
+            for sub_group in traits[main_group]:
+                for property in traits[main_group][sub_group].values():
                     if property["value"]:
                         sum_traits = sum_traits + 1
-        # fmt: on
         return sum_traits
 
     @staticmethod
@@ -192,6 +196,11 @@ class CharacterGenerator:
         if self._create_mode:
             min = item["min"]
         return min
+
+    def _add_tooltip(self, tooltip_label: str, tooltip_dict: dict) -> None:
+        if "tooltip" in tooltip_dict:
+            with dpg.tooltip("tooltip_" + tooltip_label):
+                dpg.add_text(tooltip_dict["tooltip"])
 
     def _is_check_box_change_allowed(self, item: dict) -> bool:
         """
@@ -305,40 +314,44 @@ class CharacterGenerator:
         self._update_stress_limit()
         self._update_overview()
 
+    def _has_requirements(self, property: str) -> bool:
+        return "requirements" in self._serial_properties[property]
+
+    def _property_is_extended(self, property: dict) -> bool:
+        return "extended" in property
+
+    def _property_has_value(self, property: dict) -> bool:
+        return bool(property["value"])
+
+    def _extension_active(self, property: dict) -> bool:
+        return self._extend_character[property["extended"]]
+
+    def _extensions_not_hidden(self, property: str) -> bool:
+        if self._property_is_extended(self._serial_properties[property]):
+            return self._extension_active(self._serial_properties[property])
+        return True
+
+    def _requirements_fulfilled(self, property: str) -> bool:
+        reqs: dict = self._serial_properties[property]["requirements"]
+        fulfilled = True
+        for req_name, req in reqs.items():
+            # TODO: An OR option would be useful but not trivial to include
+            actual_value: int = self._serial_properties[req_name]["value"]
+            if (req["type"] == "==") and (not actual_value == req["value"]):
+                fulfilled = False
+            if (req["type"] == ">=") and (not actual_value >= req["value"]):
+                fulfilled = False
+            if (req["type"] == "<=") and (not actual_value <= req["value"]):
+                fulfilled = False
+        return fulfilled
+
     def _check_property_disable(self):
         for property in self._serial_properties:
-            if "requirements" in self._serial_properties[property] and (
-                "extended" not in self._serial_properties[property]
-                or self._extend_character[self._serial_properties[property]["extended"]]
+            if self._has_requirements(property) and self._extensions_not_hidden(
+                property
             ):
-                enabled = True
-                for req_name, criterium in self._serial_properties[property][
-                    "requirements"
-                ].items():
-                    # An OR option would be useful but not trivial to include
-                    if criterium["type"] == "==":
-                        if (
-                            not criterium["value"]
-                            == self._serial_properties[req_name]["value"]
-                        ):
-                            enabled = False
-                    if criterium["type"] == ">=":
-                        if not (
-                            self._serial_properties[req_name]["value"]
-                            >= criterium["value"]
-                        ):
-                            enabled = False
-                    if criterium["type"] == "<=":
-                        if not (
-                            self._serial_properties[req_name]["value"]
-                            <= criterium["value"]
-                        ):
-                            enabled = False
-
-                if enabled:
-                    dpg.configure_item(property, enabled=True)
-                else:
-                    dpg.configure_item(property, enabled=False)
+                fulfilled = self._requirements_fulfilled(property)
+                dpg.configure_item(property, enabled=fulfilled)
 
     def _check_active_bonuses(self, target: str) -> list:
         final_bonus = []
@@ -358,18 +371,15 @@ class CharacterGenerator:
         """
         Triggered when changing player info such as name, platoon etc.
         """
-        # fmt: off
-        state = self._current_character["Player Info"][user_data["label"]] = app_data  # noqa: F841, B950
-        # fmt: on
+        idx: str = user_data["label"]
+        state = self._current_character["Player Info"][idx] = app_data  # noqa: F841
 
     def _update_psycho_limit(self):
         """
         Update the printout of current Psycho limit.
         Must be called whenever a related value have been change.
         """
-        # fmt: off
-        psycho_limit: int = self._current_character["Character"]["Attributes"]["All"]["Attribute"]["Psyche"]["value"]  # noqa: B950
-        # fmt: on
+        psycho_limit = self._get_attribute_value("Psyche")
         self._stats["Psycho Limit"]["value"] = psycho_limit
         dpg.set_value(
             item="Psycho Limit",
@@ -382,13 +392,7 @@ class CharacterGenerator:
         Must be called whenever a related value have been change.
         """
 
-        stress_limit: int = (
-            # fmt: off
-            self._current_character["Character"]["Attributes"]["All"]["Attribute"]["Psyche"]["value"]
-            # noqa: B950
-            # fmt: on
-            * 2
-        )
+        stress_limit = self._get_attribute_value("Psyche") * 2
         bonus_string = "".join(self._check_active_bonuses("Stress Limit"))
         self._stats["Stress Limit"]["value"] = stress_limit
         dpg.set_value(
@@ -402,9 +406,7 @@ class CharacterGenerator:
         Must be called whenever a related value have been change.
         """
 
-        # fmt: off
-        stunt_cap: int = self._current_character["Character"]["Attributes"]["All"]["Attribute"]["Charisma"]["value"]  # noqa: B950
-        # fmt: on
+        stunt_cap = self._get_attribute_value("Charisma")
         self._stats["Stunt Cap"]["value"] = stunt_cap
         dpg.set_value(
             item="Stunt Cap",
@@ -417,12 +419,7 @@ class CharacterGenerator:
         Must be called whenever a related value have been change.
         """
 
-        # fmt: off
-        health: int = (
-            self._current_character["Character"]["Attributes"]["All"]
-            ["Attribute"]["Endurance"]["value"] + 3
-        )
-        # fmt: on
+        health = self._get_attribute_value("Endurance") + 3
         self._stats["Health"]["value"] = health
         dpg.set_value(
             item="Health",
@@ -434,12 +431,8 @@ class CharacterGenerator:
         Update the printout of current carry capacity.
         Must be called whenever a related value have been change.
         """
-        # fmt: off
-        idx = self._current_character["Character"]["Attributes"]["All"]["Attribute"]["Strength"]["value"] - 1  # noqa: B950
-        # fmt: on
-        carry_capacity: int = self._current_character["Config"]["Carry Capacity Table"][
-            idx
-        ]
+        idx = self._get_attribute_value("Strength") - 1
+        carry_capacity = self._current_character["Config"]["Carry Capacity Table"][idx]
         self._stats["Carry Capacity"]["value"] = carry_capacity
         dpg.set_value(
             item="Carry Capacity",
@@ -451,9 +444,7 @@ class CharacterGenerator:
         Update the printout of current combat load.
         Must be called whenever a related value have been change.
         """
-        # fmt: off
-        idx = self._current_character["Character"]["Attributes"]["All"]["Attribute"]["Strength"]["value"] - 1  # noqa: B950
-        # fmt: on
+        idx = self._get_attribute_value("Strength") - 1
         combat_load = self._current_character["Config"]["Combat Load Table"][idx]
         self._stats["Combat Load"]["value"] = combat_load
         dpg.set_value(
@@ -467,12 +458,8 @@ class CharacterGenerator:
         Must be called whenever a related value have been change.
         """
         rank_index = self._current_character["Player Info"]["Rank"]
-        # fmt: off
-        charisma_value = self._current_character["Character"]["Attributes"]["All"]["Attribute"]["Charisma"]["value"]  # noqa: B950
-        # fmt: on
-        leadership_points: int = (
-            self._current_character["Config"]["Rank Bonus"][rank_index] + charisma_value
-        )
+        rank_bonus = self._current_character["Config"]["Rank Bonus"][rank_index]
+        leadership_points = self._get_attribute_value("Charisma") + rank_bonus
         bonus_string = "".join(self._check_active_bonuses("Leadership Points"))
         self._stats["Leadership Points"]["value"] = leadership_points
         dpg.set_value(
@@ -640,9 +627,7 @@ class CharacterGenerator:
             with dpg.table_row():
                 dpg.add_text("Rank:")
                 rank_index = self._current_character["Player Info"]["Rank"]
-                # fmt: off
-                rank_label = self._current_character["Config"]["Rank Labels"][rank_index]
-                # fmt: on
+                rank_label = self._rank_alternatives[rank_index]
                 dpg.add_text(rank_label)
 
             with dpg.table_row():
@@ -722,11 +707,9 @@ class CharacterGenerator:
                             dpg.add_text(category_key, color=self._section_title_color)
                             for property_key, property_value in category_value.items():
                                 if (
-                                    "extended" not in property_value
-                                    or self._extend_character[
-                                        property_value["extended"]
-                                    ]
-                                    or bool(property_value["value"])
+                                    not self._property_is_extended(property_value)
+                                    or self._extension_active(property_value)
+                                    or self._property_has_value(property_value)
                                 ):
                                     with dpg.group(horizontal=True):
                                         with dpg.table(
@@ -747,11 +730,6 @@ class CharacterGenerator:
                                                     width_fixed=True,
                                                     init_width_or_weight=cost_width,
                                                 )
-                                                # fmt: off
-                                                cost = property_value["cost"]  # noqa: F841, B950
-                                            else:
-                                                cost = None  # noqa : F841
-                                                # fmt: on
                                             with dpg.table_row():
                                                 item_id = dpg.add_checkbox(
                                                     tag=property_key,
@@ -780,13 +758,9 @@ class CharacterGenerator:
                                                     dpg.add_text(
                                                         f"({property_value['cost']})"
                                                     )
-                                                if "tooltip" in property_value:
-                                                    with dpg.tooltip(
-                                                        "tooltip_" + property_key
-                                                    ):
-                                                        dpg.add_text(
-                                                            property_value["tooltip"]
-                                                        )
+                                                self._add_tooltip(
+                                                    property_key, property_value
+                                                )
         return item_refs
 
     def _add_slider_input(
@@ -812,11 +786,9 @@ class CharacterGenerator:
                             dpg.add_text(category_key, color=self._section_title_color)
                             for property_key, property_value in category_value.items():
                                 if (
-                                    "extended" not in property_value
-                                    or self._extend_character[
-                                        property_value["extended"]
-                                    ]
-                                    or bool(property_value["value"])
+                                    not self._property_is_extended(property_value)
+                                    or self._extension_active(property_value)
+                                    or self._property_has_value(property_value)
                                 ):
                                     with dpg.table(
                                         header_row=False,
@@ -855,13 +827,9 @@ class CharacterGenerator:
                                             )
                                             item_refs[property_key] = item_id
 
-                                            if "tooltip" in property_value:
-                                                with dpg.tooltip(
-                                                    "tooltip_" + property_key
-                                                ):
-                                                    dpg.add_text(
-                                                        property_value["tooltip"]
-                                                    )
+                                            self._add_tooltip(
+                                                property_key, property_value
+                                            )
         return item_refs
 
     def main(self):
@@ -894,9 +862,7 @@ class CharacterGenerator:
                                 tag=stat_label,
                                 default_value=stat_value["value"],
                             )
-                            if "tooltip" in stat_value:
-                                with dpg.tooltip("tooltip_" + stat_label):
-                                    dpg.add_text(stat_value["tooltip"])
+                            self._add_tooltip(stat_label, stat_value)
 
             with dpg.group(width=300):
                 dpg.add_spacer(height=50)
@@ -1259,9 +1225,8 @@ class CharacterToPdf:
         self._write_line(" ")
 
         self._write_line("Attributes", title=True)
-        # fmt: off
-        for attribute, content in self._character["Character"]["Attributes"]["All"]["Attribute"].items():  # noqa: B950
-            # fmt: on
+        attributes = self._character["Character"]["Attributes"]["All"]["Attribute"]
+        for attribute, content in attributes.items():
             value = content["value"]
             self._write_line(f"{attribute}: {value}")
 
@@ -1274,9 +1239,8 @@ class CharacterToPdf:
 
         for tab_label in ["Traits", "Expertise"]:
             self._write_line(tab_label, title=True)
-            # fmt: off
-            for sub_tab_label, sub_tab_content in self._character["Character"][tab_label].items():  # noqa: B950
-                # fmt: on
+            tab: dict[str, dict[str, dict]] = self._character["Character"][tab_label]
+            for sub_tab_label, sub_tab_content in tab.items():
                 self._write_line(sub_tab_label, title=True)
                 for category_content in sub_tab_content.values():
                     for label, label_content in category_content.items():
