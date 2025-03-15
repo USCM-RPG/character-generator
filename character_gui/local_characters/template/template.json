@@ -484,7 +484,7 @@
                     },
                     "Rotorcraft": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 6
                     },
                     "Cargo Platform": {
                         "value": 0,
@@ -497,7 +497,7 @@
                     },
                     "UD4 Dropship": {
                         "value": 0,
-                        "cost": 12
+                        "cost": 8
                     },
                     "M421 Firefly": {
                         "value": 0,
