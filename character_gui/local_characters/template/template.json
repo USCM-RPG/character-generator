@@ -650,10 +650,6 @@
                         "value": 0,
                         "cost": 8
                     },
-                    "M240 Flamer": {
-                        "value": 0,
-                        "cost": 3
-                    },
                     "M56 Smartgun": {
                         "value": 0,
                         "cost": 8
@@ -678,6 +674,10 @@
                         "value": 0,
                         "cost": 3,
                         "extended": "colonist"
+                    },
+                    "Flamer": {
+                        "value": 0,
+                        "cost": 3
                     },
                     "Hand Grenade": {
                         "value": 0,
@@ -766,11 +766,6 @@
                         "value": 0,
                         "cost": 6,
                         "tooltip": "Represents general training on plasma technology\napplicable both for mounted weapons or other uses like welding."
-                    },
-                    "Flamer": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Vehicle mounted flamethrowers. Uses Shooting: Auto."
                     }
                 },
                 "Support Weapons": {
