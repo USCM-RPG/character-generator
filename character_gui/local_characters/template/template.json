@@ -1239,6 +1239,10 @@
                     "Cryogenics": {
                         "value": 0,
                         "cost": 4
+                         },
+                    "Cybernetics": {
+                        "value": 0,
+                        "cost": 6
                     },
                     "Dive Medicine": {
                         "value": 0,
@@ -1399,6 +1403,11 @@
                         "value": 0,
                         "cost": 3,
                         "tooltip": "Used with Swimming."
+                    },
+                    "Docking": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Normally used with Pilot: Space."
                     },
                     "Environmental Suit": {
                         "value": 1,
