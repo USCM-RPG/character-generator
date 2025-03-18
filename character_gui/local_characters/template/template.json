@@ -503,6 +503,16 @@
                         "value": 0,
                         "cost": 5
                     },
+                    "AD-19 Bearcat": {
+                        "value": 0,
+                        "cost": 8,
+                        "tooltip": "VTOL strikeship which can perform recon/CAS/medevac missions."
+                    },
+                    "EVAC-3": {
+                        "value": 0,
+                        "cost": 8,
+                        "tooltip": "Aerospace fighter for escort or air/orbital superiority missions."
+                    },
                     "M86 UAV": {
                         "value": 0,
                         "cost": 4
@@ -547,6 +557,11 @@
                         "value": 0,
                         "cost": 5,
                         "tooltip": "Firing it is done with the Indirect Fire skill\nand requires the Artillery expertise."
+                    },
+                    "XT-37 Stinger": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Light off-road attack vehicle capable of being airdropped."
                     }
                 },
                 "Sea Vehicles": {
