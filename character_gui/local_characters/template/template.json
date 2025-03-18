@@ -590,57 +590,57 @@
                 "Starship": {
                     "Freighter": {
                         "value": 0,
-                        "cost": 15,
+                        "cost": 3,
                         "extended": "navy"
                     },
                     "Colony Ship": {
                         "value": 0,
-                        "cost": 15,
+                        "cost": 3,
                         "extended": "navy"
                     },
                     "Salvage Vessel": {
                         "value": 0,
-                        "cost": 15,
+                        "cost": 3,
                         "extended": "navy"
                     },
                     "Survey Ship": {
                         "value": 0,
-                        "cost": 15,
+                        "cost": 3,
                         "extended": "navy"
                     },
                     "Tanker": {
                         "value": 0,
-                        "cost": 15,
+                        "cost": 3,
                         "extended": "navy"
                     },
                     "Conestoga Frigate": {
                         "value": 0,
-                        "cost": 15,
+                        "cost": 4,
                         "extended": "navy"
                     },
                     "Bougainville Attack Transport": {
                         "value": 0,
-                        "cost": 15,
+                        "cost": 4,
                         "extended": "navy"
                     },
                     "Tientsin Assault Ship": {
                         "value": 0,
-                        "cost": 15,
+                        "cost": 4,
                         "extended": "navy"
                     },
                     "Valley Forge Class": {
                         "value": 0,
-                        "cost": 15,
+                        "cost": 4,
                         "extended": "navy"
                     },
                     "Henderson Field Transport": {
                         "value": 0,
-                        "cost": 15,
+                        "cost": 3,
                         "extended": "navy"
                     },
                     "Okinawa Assault Carrier": {
                         "value": 0,
-                        "cost": 15,
+                        "cost": 5,
                         "extended": "navy"
                     }
                 }
@@ -1247,6 +1247,11 @@
                         "cost": 3,
                         "extended": "navy"
                     },
+                    "Androids": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Knowledge of common android models, their capabilities and how to service them including basic procedures like rebooting or installing a module chip. Service and simpler repairs like fluid refill use Mechanic Tools. Diagnostics use Computer Systems."
+                    },
                     "Autodoc": {
                         "value": 0,
                         "cost": 5,
@@ -1263,7 +1268,8 @@
                          },
                     "Cybernetics": {
                         "value": 0,
-                        "cost": 6
+                        "cost": 6,
+                        "tooltip": "Installation or repair of cybernetic implants (this may also require Surgery). Used with Medical. Some repairs like fixing EMP damage in limbs are also possible with Electronic Tools. Also covers basic procedures for common android models like rebooting or installing a module chip."
                     },
                     "Dive Medicine": {
                         "value": 0,
@@ -1309,7 +1315,7 @@
                     },
                     "Veterinary": {
                         "value": 0,
-                        "cost": 6,
+                        "cost": 5,
                         "tooltip": "Used with Animal Handling or Medical."
                     }
                 },
@@ -3191,7 +3197,8 @@
                 " ": {
                     "Left arm": {
                         "value": 0,
-                        "cost": 0
+                        "cost": 0,
+                        "tooltip": "Installation or repair of cybernetic implants (this may also require Surgery). Used with Medical. Some repairs like fixing EMP damage are also possible with Electronic Tools. Also covers basic procedures for common android models like rebooting or installing a module chip."
                     },
                     "Right arm": {
                         "value": 0,
