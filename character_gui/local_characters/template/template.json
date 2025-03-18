@@ -930,6 +930,12 @@
                         "extended": "colonist",
                         "tooltip": "Can be used with Mechanic Tools or Outdoorsman."
                     },
+                    "Cooling Systems": {
+                        "value": 0,
+                        "cost": 4,
+                        "extended": "colonist",
+                        "tooltip": "Used for reactors, aboard starships and for different types of industrial machinery. Includes safe handling of cryogenic fluids and fuel."
+                    },
                     "Damage Control": {
                         "value": 0,
                         "cost": 3,
@@ -1029,7 +1035,7 @@
                         "cost": 4,
                         "tooltip": "Mobile and armored warfare.\nIncludes vehicle combat and how to operate tactically during traveling\nand escort duty. Used with Soldiering or Driving."
                     },
-                    "Naval Tactics": {
+                    "Maritime Tactics": {
                         "value": 0,
                         "cost": 5,
                         "tooltip": "Wet navy tactics, on or below the surface. Used with Seamanship."
@@ -1348,7 +1354,7 @@
                     },
                     "Performance": {
                         "value": 0,
-                        "cost": 8,
+                        "cost": 6,
                         "extended": "colonist"
                     },
                     "Singing": {
@@ -1358,7 +1364,7 @@
                     },
                     "Writing": {
                         "value": 0,
-                        "cost": 8,
+                        "cost": 6,
                         "extended": "colonist"
                     },
                     "Guitar": {
