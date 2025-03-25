@@ -1172,6 +1172,12 @@
                         "extended": "colonist",
                         "tooltip": "Uses Outdoorsman."
                     },
+                    "Butchering": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist",
+                        "tooltip": "You can skin and butcher animals and fillet fish. \nUsed with Cooking or Sleight of Hand."
+                    },
                     "Evasion": {
                         "value": 0,
                         "cost": 5,
@@ -1196,7 +1202,7 @@
                     "Hunting": {
                         "value": 0,
                         "cost": 5,
-                        "tooltip": "You know where to find game, how to get close and how \nto skin and butcher them after the shot. Used with Outdoorsman \nand terrain expertise."
+                        "tooltip": "You know where to find game, how to get close and how to process & skin them after the shot. Used with Outdoorsman \nand terrain expertise."
                     },
                     "K9": {
                         "value": 0,
