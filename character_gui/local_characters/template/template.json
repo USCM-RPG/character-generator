@@ -362,10 +362,9 @@
                         "extended": "colonist"
                     },
                     "Cooking": {
-                        "value": 0,
+                        "value": 1,
                         "min": 0,
-                        "max": 5,
-                        "extended": "colonist"
+                        "max": 5
                     },
                     "First Aid": {
                         "value": 1,
