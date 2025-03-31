@@ -926,7 +926,6 @@
                     "Chainsaw": {
                         "value": 0,
                         "cost": 3,
-                        "extended": "colonist",
                         "tooltip": "Can be used with Mechanic Tools or Outdoorsman."
                     },
                     "Cooling Systems": {
@@ -1150,7 +1149,6 @@
                     "Tightbeam": {
                         "value": 0,
                         "cost": 4,
-                        "extended": "navy",
                         "tooltip": "Operation of tightbeam communication systems which \nwill typically use lasers. Uses Comtech skill."
                     },
                     "USCM Interface": {
@@ -1174,7 +1172,6 @@
                     "Butchering": {
                         "value": 0,
                         "cost": 3,
-                        "extended": "colonist",
                         "tooltip": "You can skin and butcher animals and fillet fish. \nUsed with Cooking or Sleight of Hand."
                     },
                     "Evasion": {
@@ -1189,8 +1186,7 @@
                     },
                     "Fishing": {
                         "value": 0,
-                        "cost": 3,
-                        "extended": "colonist"
+                        "cost": 3
                     },
                     "Herbalism": {
                         "value": 0,
@@ -1285,6 +1281,12 @@
                         "value": 0,
                         "cost": 3
                     },
+                    "Dissection": {
+                        "value": 0,
+                        "cost": 2,
+                        "extended": "colonist",
+                        "tooltip": "Performed on a dead body to for example determine the cause of death or on a plant to study how it functions. Used with Medical or an appropriate Science skill."
+                    },
                     "Forensics": {
                         "value": 0,
                         "cost": 3,
@@ -1327,6 +1329,12 @@
                         "value": 0,
                         "cost": 5,
                         "tooltip": "Used with Animal Handling or Medical."
+                    },
+                    "X-ray": {
+                        "value": 0,
+                        "cost": 2,
+                        "extended": "colonist",
+                        "tooltip": "Mainly used for medical purposes but the expertise would also cover for example space weaponry using the technology. Used with Medical or Sensor Systems skill for X-ray scans."
                     }
                 },
                 "Language": {
