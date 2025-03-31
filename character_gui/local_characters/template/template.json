@@ -1182,11 +1182,6 @@
                         "cost": 5,
                         "tooltip": "Advanced training to hide tracks while moving through \nterrain and strategies to confuse pursuers, dogs or sensors. \nUsed with Outdoorsman or Camouflage."
                     },
-                    "Field Cooking": {
-                        "value": 0,
-                        "cost": 1,
-                        "tooltip": "You can prepare meals using open fire or a field stove and given just something to work with turn a standard issue MRE into something edible. Food always taste better in the field. Used with Cooking or Outdoorsman."
-                    },
                     "Fishing": {
                         "value": 0,
                         "cost": 3,
