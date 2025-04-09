@@ -914,6 +914,10 @@
                     }
                 },
                 "Engineering": {
+                    "Bridge Laying": {
+                        "value": 0,
+                        "cost": 5
+                    },
                     "Building demolition": {
                         "value": 0,
                         "cost": 3
@@ -933,6 +937,11 @@
                         "cost": 4,
                         "extended": "colonist",
                         "tooltip": "Used for reactors, aboard starships and for different types of industrial machinery. Includes safe handling of cryogenic fluids and fuel."
+                    },
+                    "Crane": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Operation of large cranes. Used with Utility Equipment."
                     },
                     "Damage Control": {
                         "value": 0,
@@ -955,6 +964,11 @@
                         "value": 0,
                         "cost": 5,
                         "tooltip": "Explosive Ordnance Disposal. Training in how to find, \nexpose and remove explosive devices. Disarming while keeping \nordnance intact requires Ordnance. Used with Mine Warfare."
+                    },
+                    "Excavator": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Digging with a mechanical excavator arm or dozer blade. Holes, trenches or flattening land for building foundations. Used with Utility Equipment."
                     },
                     "Hotwiring": {
                         "value": 0,
@@ -1438,11 +1452,6 @@
                         "value": 0,
                         "cost": 3,
                         "tooltip": "Used with Gambling or Sleight of Hand."
-                    },
-                    "Crane": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Operation of large cranes. Used with Utility Equipment."
                     },
                     "Diving equipment": {
                         "value": 0,
