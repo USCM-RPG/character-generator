@@ -141,6 +141,9 @@ class CharacterGenerator:
     def _character_attributes(self):
         return self._current_character["Character"]["Attributes"]["All"]["Attribute"]
 
+    def _get_player_info(self, dict_key: str) -> str | int:
+        return self._current_character["Player Info"][dict_key]
+
     def _get_attribute_value(self, attribute: str) -> int:
         attributes = self._character_attributes()
         return attributes[attribute]["value"]
@@ -457,7 +460,7 @@ class CharacterGenerator:
         Update the printout of current health.
         Must be called whenever a related value have been change.
         """
-        rank_index = self._current_character["Player Info"]["Rank"]
+        rank_index = self._get_player_info("Rank")
         rank_bonus = self._current_character["Config"]["Rank Bonus"][rank_index]
         leadership_points = self._get_attribute_value("Charisma") + rank_bonus
         bonus_string = "".join(self._check_active_bonuses("Leadership Points"))
@@ -503,7 +506,7 @@ class CharacterGenerator:
         dpg.set_value("overview_list", overview_list)
 
     def _get_current_character_name(self):
-        current_character_name = self._current_character["Player Info"]["Name"]
+        current_character_name = self._get_player_info("Name")
         return current_character_name.replace(" ", "_").lower()
 
     def _save_character_callback(self):
@@ -569,49 +572,45 @@ class CharacterGenerator:
                 if self._create_mode:
                     dpg.add_input_text(
                         tag="player_input_text",
-                        default_value=(
-                            self._current_character["Player Info"]["Player"]
-                        ),
+                        default_value=self._get_player_info("Player"),
                         width=self._text_input_width,
                         enabled=self._create_mode,
                         user_data={"label": "Player"},
                         callback=self._player_info_callback,
                     )
                 else:
-                    dpg.add_text(self._current_character["Player Info"]["Player"])
+                    dpg.add_text(self._get_player_info("Player"))
 
             with dpg.table_row():
                 dpg.add_text("E-mail:")
                 if self._create_mode:
                     dpg.add_input_text(
                         tag="email_input_text",
-                        default_value=(
-                            self._current_character["Player Info"]["E-mail"]
-                        ),
+                        default_value=self._get_player_info("E-mail"),
                         width=self._text_input_width,
                         enabled=self._create_mode,
                         user_data={"label": "E-mail"},
                         callback=self._player_info_callback,
                     )
                 else:
-                    dpg.add_text(self._current_character["Player Info"]["E-mail"])
+                    dpg.add_text(self._get_player_info("E-mail"))
 
             with dpg.table_row():
                 dpg.add_text("Name:")
                 if self._create_mode:
                     dpg.add_input_text(
-                        default_value=(self._current_character["Player Info"]["Name"]),
+                        default_value=self._get_player_info("Name"),
                         width=self._text_input_width,
                         enabled=self._create_mode,
                         user_data={"label": "Name"},
                         callback=self._player_info_callback,
                     )
                 else:
-                    dpg.add_text(self._current_character["Player Info"]["Name"])
+                    dpg.add_text(self._get_player_info("Name"))
 
             with dpg.table_row():
                 dpg.add_text("Platoon:")
-                current_platoon = self._current_character["Player Info"]["Platoon"]
+                current_platoon = self._get_player_info("Platoon")
 
                 if self._create_mode:
                     dpg.add_combo(
@@ -626,15 +625,13 @@ class CharacterGenerator:
 
             with dpg.table_row():
                 dpg.add_text("Rank:")
-                rank_index = self._current_character["Player Info"]["Rank"]
+                rank_index = self._get_player_info("Rank")
                 rank_label = self._rank_alternatives[rank_index]
                 dpg.add_text(rank_label)
 
             with dpg.table_row():
                 dpg.add_text("Speciality:")
-                # fmt: off
-                current_speciality = self._current_character["Player Info"]["Speciality"]
-                # fmt: on
+                current_speciality = self._get_player_info("Speciality")
                 if self._create_mode:
                     dpg.add_combo(
                         items=self._speciality_alternatives,
@@ -649,7 +646,7 @@ class CharacterGenerator:
 
             with dpg.table_row():
                 dpg.add_text("Gender:")
-                current_gender = self._current_character["Player Info"]["Gender"]
+                current_gender = self._get_player_info("Gender")
 
                 if self._create_mode:
                     dpg.add_combo(
@@ -666,7 +663,7 @@ class CharacterGenerator:
 
             with dpg.table_row():
                 dpg.add_text("Age:")
-                current_age = self._current_character["Player Info"]["Age"]
+                current_age = self._get_player_info("Age")
 
                 if self._create_mode:
                     dpg.add_slider_int(
