@@ -4,6 +4,7 @@ import json
 import os
 import subprocess
 import sys
+import textwrap
 from copy import deepcopy
 from pathlib import Path
 
@@ -200,10 +201,28 @@ class CharacterGenerator:
             min = item["min"]
         return min
 
+    def _wrap_tooltip(self, tooltip: str) -> str:
+        tooltip_width: int = 70
+
+        # Remove multiple whitespaces
+        tooltip_str = " ".join(tooltip.split())
+
+        if "Req:" in tooltip_str and not tooltip_str.startswith("Req:"):
+            # Put Req on a new line, wrapped separately
+            desc_str, req, req_str = tooltip_str.partition("Req:")
+            desc_str = textwrap.fill(desc_str, width=tooltip_width)
+            req_str = " ".join([req, req_str])
+            req_str = textwrap.fill(req_str, width=tooltip_width)
+            wrapped_text = "\n".join([desc_str, req_str])
+        else:
+            wrapped_text = textwrap.fill(tooltip_str, width=tooltip_width)
+        return wrapped_text
+
     def _add_tooltip(self, tooltip_label: str, tooltip_dict: dict) -> None:
         if "tooltip" in tooltip_dict:
+            tooltip_text = self._wrap_tooltip(tooltip_dict["tooltip"])
             with dpg.tooltip("tooltip_" + tooltip_label):
-                dpg.add_text(tooltip_dict["tooltip"])
+                dpg.add_text(tooltip_text)
 
     def _is_check_box_change_allowed(self, item: dict) -> bool:
         """
