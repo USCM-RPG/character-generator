@@ -1309,7 +1309,7 @@ def set_theme():
     dpg.bind_theme(global_theme)
 
 
-if __name__ == "__main__":
+def main() -> None:
     dpg.create_context()
 
     set_theme()
@@ -1323,3 +1323,7 @@ if __name__ == "__main__":
     dpg.show_viewport()
     dpg.start_dearpygui()
     dpg.destroy_context()
+
+
+if __name__ == "__main__":
+    main()
