@@ -201,7 +201,8 @@ class CharacterGenerator:
             min = item["min"]
         return min
 
-    def _wrap_tooltip(self, tooltip: str) -> str:
+    @staticmethod
+    def _wrap_tooltip(tooltip: str) -> str:
         tooltip_width: int = 70
 
         # Remove multiple whitespaces
@@ -339,10 +340,12 @@ class CharacterGenerator:
     def _has_requirements(self, property: str) -> bool:
         return "requirements" in self._serial_properties[property]
 
-    def _property_is_extended(self, property: dict) -> bool:
+    @staticmethod
+    def _property_is_extended(property: dict) -> bool:
         return "extended" in property
 
-    def _property_has_value(self, property: dict) -> bool:
+    @staticmethod
+    def _property_has_value(property: dict) -> bool:
         return bool(property["value"])
 
     def _extension_active(self, property: dict) -> bool:
