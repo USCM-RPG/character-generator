@@ -84,7 +84,9 @@ class CharacterGenerator:
                 "tooltip": "Affected by Endurance and various Traits.",
             },
             "Psycho Points": {
-                "value": 0,
+                "value": (
+                    self._get_base_psycho_points() - self._get_psycho_point_cost()
+                ),
                 "tooltip": "".join(
                     [
                         "Earned when playing and can be reduced by buying ",
@@ -129,6 +131,13 @@ class CharacterGenerator:
 
     def _get_base_available_traits(self) -> int:
         return self._imported_character["Config"]["Starting Traits"]
+
+    def _get_base_psycho_points(self) -> int:
+        if "Psycho Points" in self._imported_character["Config"].keys():
+            imported_pp = self._imported_character["Config"]["Psycho Points"]
+        else:
+            imported_pp = 0
+        return imported_pp
 
     @staticmethod
     def _get_total_knowledge_cost(skills: SkillsSubtab, default_cost: list[int]) -> int:
@@ -196,6 +205,19 @@ class CharacterGenerator:
                     for property in properties[main_group][sub_group].values():
                         if property["value"]:
                             sum_cost = sum_cost + property["cost"]
+        return sum_cost
+
+    def _get_psycho_point_cost(self) -> int:
+        """
+        Calculate the total cost of Psychotic Disadvantages.
+        """
+        properties = self._current_character["Character"]["Traits"]
+        trait_tab = properties["Psychotic Disadvantages"]
+        sum_cost = 0
+        for sub_group in trait_tab:
+            for property in trait_tab[sub_group].values():
+                if property["value"]:
+                    sum_cost = sum_cost + property["cost"]
         return sum_cost
 
     @staticmethod
@@ -323,6 +345,7 @@ class CharacterGenerator:
         )
 
         self._update_xp_status()
+        self._update_pp_status()
         self._check_property_disable()
         self._update_trait_status()
         self._update_stress_limit()
@@ -386,11 +409,11 @@ class CharacterGenerator:
                                 final_bonus.append(f"({this_bonus:+g})")
         return final_bonus
 
-    def _player_info_callback(self, sender, app_data, user_data: dict):
+    def _player_info_callback(self, sender, app_data, user_data: dict[str, str]):
         """
         Triggered when changing player info such as name, platoon etc.
         """
-        idx: str = user_data["label"]
+        idx = user_data["label"]
         state = self._current_character["Player Info"][idx] = app_data  # noqa: F841
         self._player_info = self._current_character["Player Info"]
 
@@ -504,6 +527,12 @@ class CharacterGenerator:
         remaining = self._get_base_experience_points() - self._get_total_xp_usage()
         self._stats["Experience Points"]["value"] = remaining
         dpg.set_value(item="Experience Points", value=remaining)
+
+    def _update_pp_status(self):
+
+        remaining = self._get_base_psycho_points() - self._get_psycho_point_cost()
+        self._stats["Psycho Points"]["value"] = remaining
+        dpg.set_value(item="Psycho Points", value=remaining)
 
     def _update_trait_status(self):
         """
@@ -958,6 +987,7 @@ class CharacterGenerator:
                 self._update_overview()
 
         self._update_xp_status()
+        self._update_pp_status()
         self._update_psycho_limit()
         self._update_stress_limit()
         self._update_stunt_cap()
@@ -1222,17 +1252,26 @@ class CharacterToPdf:
                 self._write_line(f"{key}: {value}")
 
         total_xp = self._character["Config"]["Starting XP"]
-        remaing_xp = self._stats["Experience Points"]["value"]
+        remaining_xp = self._stats["Experience Points"]["value"]
         total_ap = self._character["Config"]["Starting AP"]
-        remaing_ap = self._stats["Attribute Points"]["value"]
-        total_traits = self._character["Config"]["Starting Traits"]  # noqa : F841
-        remaing_traits = self._stats["Available Traits"]["value"]  # noqa : F841
+        remaining_ap = self._stats["Attribute Points"]["value"]
+        total_traits = self._character["Config"]["Starting Traits"]
+        remaining_traits = self._stats["Available Traits"]["value"]
+        if "Psycho Points" in self._character["Config"].keys():
+            total_pp = self._character["Config"]["Psycho Points"]
+        else:
+            total_pp = 0
+        remaining_pp = self._stats["Psycho Points"]["value"]
 
         self._write_line(" ")
         self._write_line(f"Total XP: {total_xp}")
-        self._write_line(f"Remaining XP: {remaing_xp}")
+        self._write_line(f"Remaining XP: {remaining_xp}")
         self._write_line(f"Total AP: {total_ap}")
-        self._write_line(f"Remaining AP: {remaing_ap}")
+        self._write_line(f"Remaining AP: {remaining_ap}")
+        self._write_line(f"Total PP: {total_pp}")
+        self._write_line(f"Remaining PP: {remaining_pp}")
+        self._write_line(f"Total traits: {total_traits}")
+        self._write_line(f"Remaining traits: {remaining_traits}")
         self._write_line(" ")
 
         self._write_line("Attributes", title=True)
