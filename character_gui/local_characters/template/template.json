@@ -240,7 +240,7 @@
                         "value": 0,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Space flight including docking and landing.\nExpertises: Starships and space-capable aircraft"
+                        "tooltip": "Space flight including docking and landing.\nExpertises: Docking, Starships and space-capable aircraft"
                     },
                     "Remote Piloting": {
                         "value": 0,
@@ -256,7 +256,7 @@
                         "value": 1,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Large equipment such as excavators, cranes,\nbulldozers, airlock umbilicals or industrial machinery.\nExpertise: Powerloader, Crane, Engineering machinery"
+                        "tooltip": "A key skill for many workers in space ports or colonies. Most equipment of this type is not mobile or has very limited mobility under own power. Example: Excavators, cranes, bulldozers, airlock umbilicals or industrial machinery.\nExpertise: Bridge Laying, Crane, Docking, Engineering machinery, Excavator, Powerloader"
                     }
                 },
                 "Technical Skills": {
@@ -276,7 +276,7 @@
                         "value": 0,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Tools for working with electronic components and wiring.\nExpertise: Lockpicking, Electricity, Hotwiring"
+                        "tooltip": "Tools for working with electronic components and wiring.\nCybernetics, Electricity, Hotwiring, Lockpicking"
                     },
                     "Mechanic Tools": {
                         "value": 1,
@@ -288,7 +288,7 @@
                         "value": 1,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Using various sensors and reading their output right.\nExpertise: Covert Sensors, IR, Lidar, Motion Tracker,\nPhotography, PUPS, Radar, Sensor Networking"
+                        "tooltip": "Using various sensors and reading their output right.\nExpertise: Covert Sensors, IR, Lidar, Motion Tracker,\nPhotography, PUPS, Radar, Sensor Networking, X-ray"
                     },
                     "Science Equipment": {
                         "value": 0,
@@ -304,7 +304,7 @@
                         "value": 1,
                         "min": 1,
                         "max": 5,
-                        "tooltip": "Basic crew role on a spaceship or station.\nExpertise: Starship, Damage Control, Starship\nIdentification, Environmental Suit, Life Support"
+                        "tooltip": "Basic crew role on a spaceship or station.\nExpertise: Starship, Damage Control, Cooling Systems, Docking, Starship\nIdentification, Environmental Suit, Life Support"
                     },
                     "Starship Bridge": {
                         "value": 0,
@@ -340,7 +340,8 @@
                     "Mine Warfare": {
                         "value": 1,
                         "min": 1,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Used to operate land mines (Anti-Personnell and Anti-Tank) but also to place them well or identify and remove them.\nExpertise: IED, Mines AP, Mines AT, Ordnance, Sensor Networking, USCM Interface"
                     },
                     "Soldiering": {
                         "value": 1,
@@ -359,18 +360,20 @@
                         "value": 0,
                         "min": 0,
                         "max": 5,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "General skill to deal with any technical systems or minor repairs in a colony complex not already covered by a specific skill.\nExpertise: Cooling Systems, Environmental Suit, Life Support"
                     },
                     "Cooking": {
                         "value": 1,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Expertise: Barista, Butchering, Field Cooking"
                     },
                     "First Aid": {
                         "value": 1,
                         "min": 1,
                         "max": 5,
-                        "tooltip": "Initial treatment. Extensive treatment requires the Medical skill.\nExpertise: IV, Surgery, Toxicology, Infections,\nDive Medicine, Aerospace Medicine, Altitude Medicine\nCold climate, Hot climate, CBRN Treatment, Autodoc"
+                        "tooltip": "Initial treatment. Advanced treatment requires the Medical skill.\nExpertise: IV, Surgery, Toxicology, Infections,\nDive Medicine, Aerospace Medicine, Altitude Medicine\nCold climate, Hot climate, CBRN Treatment, Autodoc"
                     },
                     "Gambling": {
                         "value": 0,
@@ -385,18 +388,20 @@
                     "Navigation": {
                         "value": 2,
                         "min": 1,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "General sense of direction in your surroundings and using navigation/astrogation tools. Aboard a ship the starship expertise is used to find your way through corridors.. or ventilation ducts.\nExpertise: Orienteering, Interplanetary, Interstellar, Nautical Charts, Starship"
                     },
                     "Outdoorsman": {
                         "value": 1,
                         "min": 1,
                         "max": 5,
-                        "tooltip": "Expertise: Bushcrafting, Chainsaw, Evasion,\nFishing, Herbalism, Hunting, Rope Work, Skiing,\nTracking, Trapping, Terrain"
+                        "tooltip": "The current terrain should always be considered an additional required expertise.\nExpertise: Bushcrafting, Chainsaw, Evasion, Field Cooking, Fishing, Herbalism, Hunting, Rope Work, Skiing, Tracking, Trapping, Terrain"
                     },
                     "Streetwise": {
                         "value": 0,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Dealing with civilians, pick up the local \"vibe\", gather information in populated areas and quicker find your way around. You may use it instead of Navigation to find your way through a city.\nExpertise: Interrogation, Language, Shadowing"
                     }
                 },
                 "Expert Skills": {
@@ -405,7 +410,7 @@
                         "min": 0,
                         "max": 5,
                         "extended": "colonist",
-                        "tooltip": "Expertise: Forgery, Music, Painting,\nSinging, Performance, Writing"
+                        "tooltip": "Expertise: Forgery, Music, Painting, Singing, Performance, Writing"
                     },
                     "Commerce": {
                         "value": 0,
@@ -1285,7 +1290,7 @@
                     "Cryogenics": {
                         "value": 0,
                         "cost": 4
-                         },
+                    },
                     "Cybernetics": {
                         "value": 0,
                         "cost": 6,
