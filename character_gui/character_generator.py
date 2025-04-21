@@ -99,6 +99,7 @@ class CharacterGenerator:
                     self._get_base_attribute_points() - self._get_total_attribute_cost()
                 )
             },
+            "Extra Attribute Points": {"value": self._get_extra_attribute_points()},
             "Experience Points": {
                 "value": (
                     self._get_base_experience_points() - self._get_total_xp_usage()
@@ -167,6 +168,15 @@ class CharacterGenerator:
             sum_points = sum_points + attribute["value"]
         return sum_points
 
+    def _get_extra_attribute_points(self) -> int:
+        extra_AP = self._get_total_attribute_cost() - self._get_base_attribute_points()
+        return max(extra_AP, 0)
+
+    def _get_extra_attribute_point_cost(self) -> int:
+        xp_per_ap = 8
+        cost = xp_per_ap * self._get_extra_attribute_points()
+        return cost
+
     def _get_total_xp_usage(self) -> int:
         return (
             self._get_total_knowledge_cost(
@@ -179,6 +189,7 @@ class CharacterGenerator:
             + self._get_total_property_cost(
                 self._current_character["Character"]["Traits"]
             )
+            + self._get_extra_attribute_point_cost()
         )
 
     def _get_count_traits(self) -> int:
@@ -264,6 +275,7 @@ class CharacterGenerator:
             new_value=app_data,
         )
         self._update_ap_status()
+        self._update_xp_status()
         self._update_psycho_limit()
         self._update_stress_limit()
         self._update_stunt_cap()
@@ -515,9 +527,12 @@ class CharacterGenerator:
         Update the printout of available attribute points.
         Must be called whenever a related value have been change.
         """
+        extra = self._get_extra_attribute_points()
         remaining = self._get_base_attribute_points() - self._get_total_attribute_cost()
         self._stats["Attribute Points"]["value"] = remaining
         dpg.set_value(item="Attribute Points", value=remaining)
+        self._stats["Extra Attribute Points"]["value"] = extra
+        dpg.set_value(item="Extra Attribute Points", value=extra)
 
     def _update_xp_status(self):
         """
@@ -529,7 +544,10 @@ class CharacterGenerator:
         dpg.set_value(item="Experience Points", value=remaining)
 
     def _update_pp_status(self):
-
+        """
+        Update the printout of available psycho points.
+        Must be called whenever a related value have been change.
+        """
         remaining = self._get_base_psycho_points() - self._get_psycho_point_cost()
         self._stats["Psycho Points"]["value"] = remaining
         dpg.set_value(item="Psycho Points", value=remaining)
