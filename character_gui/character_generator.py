@@ -10,11 +10,15 @@ from pathlib import Path
 
 import dearpygui.dearpygui as dpg
 from extra_types import (
-    CharacterDataType,
-    ExpertisesType,
-    MinMaxType,
-    SkillGroupType,
-    TraitsType,
+    AttributesTab,
+    AttributeSubtab,
+    CharacterData,
+    ExpertisesTab,
+    ExpertiseSubtab,
+    SkillsSubtab,
+    SkillsTab,
+    TraitsSubtab,
+    TraitsTab,
     ValueType,
 )
 from reportlab.pdfgen import canvas
@@ -23,7 +27,7 @@ from reportlab.pdfgen import canvas
 class CharacterGenerator:
     def __init__(
         self,
-        character: CharacterDataType,
+        character: CharacterData,
         create_mode: bool,
         extend_character: dict[str, bool],
     ) -> None:
@@ -40,12 +44,13 @@ class CharacterGenerator:
         self._version = 0.1
         self._text_input_width = 200
 
-        self._platoon_alternatives = self._current_character["Config"]["platoons"]
-        self._speciality_alternatives = (
-            self._current_character["Config"]["specialities"]  # fmt: skip
-        )
-        self._gender_alternatives = self._current_character["Config"]["genders"]
-        self._rank_alternatives = self._current_character["Config"]["Rank Labels"]
+        self._config = self._current_character["Config"]
+        self._player_info = self._current_character["Player Info"]
+
+        self._platoon_alternatives = self._config["platoons"]
+        self._speciality_alternatives = self._config["specialities"]
+        self._gender_alternatives = self._config["genders"]
+        self._rank_alternatives = self._config["Rank Labels"]
 
         self._create_mode = create_mode
         self._extend_character["background"] = create_mode
@@ -80,7 +85,12 @@ class CharacterGenerator:
             },
             "Psycho Points": {
                 "value": 0,
-                "tooltip": "Earned when playing and can be reduced by buying psychotic disadvantages.",  # noqa: B950
+                "tooltip": "".join(
+                    [
+                        "Earned when playing and can be reduced by buying ",
+                        "psychotic disadvantages.",
+                    ]
+                ),
             },
             "Attribute Points": {
                 "value": (
@@ -99,9 +109,7 @@ class CharacterGenerator:
 
         self._serial_properties.update(self._serialize_properties(self._stats))
         self._serial_properties.update(
-            self._serialize_properties(
-                {"Rank": {"value": self._current_character["Player Info"]["Rank"]}}
-            )
+            self._serialize_properties({"Rank": {"value": self._player_info["Rank"]}})
         )
 
     def _serialize_properties(self, character: dict):
@@ -123,11 +131,9 @@ class CharacterGenerator:
         return self._imported_character["Config"]["Starting Traits"]
 
     @staticmethod
-    def _get_total_knowledge_cost(
-        skills: SkillGroupType, default_cost: list[int]
-    ) -> int:
+    def _get_total_knowledge_cost(skills: SkillsSubtab, default_cost: list[int]) -> int:
         """
-        Calulate the xp cost for either all skills.
+        Calulate the xp cost for all skills.
         """
         sum_cost = 0
         for category in skills.values():
@@ -141,9 +147,6 @@ class CharacterGenerator:
 
     def _character_attributes(self):
         return self._current_character["Character"]["Attributes"]["All"]["Attribute"]
-
-    def _get_player_info(self, dict_key: str) -> str | int:
-        return self._current_character["Player Info"][dict_key]
 
     def _get_attribute_value(self, attribute: str) -> int:
         attributes = self._character_attributes()
@@ -180,7 +183,7 @@ class CharacterGenerator:
         return sum_traits
 
     @staticmethod
-    def _get_total_property_cost(properties: TraitsType | ExpertisesType) -> int:
+    def _get_total_property_cost(properties: TraitsTab | ExpertisesTab) -> int:
         """
         Calculate the total cost from boolean poperties .
         For example 'Advantages'.
@@ -194,12 +197,6 @@ class CharacterGenerator:
                         if property["value"]:
                             sum_cost = sum_cost + property["cost"]
         return sum_cost
-
-    def _get_allowed_min_value(self, item: MinMaxType) -> int:
-        min = item["value"]
-        if self._create_mode:
-            min = item["min"]
-        return min
 
     @staticmethod
     def _wrap_tooltip(tooltip: str) -> str:
@@ -219,13 +216,13 @@ class CharacterGenerator:
             wrapped_text = textwrap.fill(tooltip_str, width=tooltip_width)
         return wrapped_text
 
-    def _add_tooltip(self, tooltip_label: str, tooltip_dict: dict) -> None:
+    def _add_tooltip(self, tooltip_label: str, tooltip_dict: ValueType) -> None:
         if "tooltip" in tooltip_dict:
             tooltip_text = self._wrap_tooltip(tooltip_dict["tooltip"])
             with dpg.tooltip("tooltip_" + tooltip_label):
                 dpg.add_text(tooltip_text)
 
-    def _is_check_box_change_allowed(self, item: dict) -> bool:
+    def _allow_change(self, item: ValueType) -> bool:
         """
         When editing an existing character, boxes are not allowed to be
         unchecked.
@@ -259,29 +256,23 @@ class CharacterGenerator:
         Helper function to get a specific value.
         """
         section = property_data["section"]
-        tab_label = property_data["tab_label"]
-        sub_tab_label = property_data["sub_tab_label"]
+        tab = property_data["tab_label"]
+        sub_tab = property_data["sub_tab_label"]
         category = property_data["category"]
         label = property_data["label"]
-        # fmt: off
-        return self._current_character[section][tab_label][sub_tab_label][category][label]["value"]  # noqa: B950
-        # fmt: on
+        return self._current_character[section][tab][sub_tab][category][label]["value"]
 
     def _set_value_in_character_state(self, property_data: dict, new_value: int):
         """
         Helper function to set a specific value.
         """
         section = property_data["section"]
-        tab_label = property_data["tab_label"]
-        sub_tab_label = property_data["sub_tab_label"]
-        category = property_data["category"]
+        tab = property_data["tab_label"]
+        sub_tab = property_data["sub_tab_label"]
+        cat = property_data["category"]
         label = property_data["label"]
 
-        # print(f"{section} - {tab_label} - {sub_tab_label} - {category}
-        # - {label}")
-        # fmt: off
-        self._current_character[section][tab_label][sub_tab_label][category][label]["value"] = new_value  # noqa: B950
-        # fmt: on
+        self._current_character[section][tab][sub_tab][cat][label]["value"] = new_value
 
     def _set_value_and_display_difference(
         self,
@@ -341,15 +332,18 @@ class CharacterGenerator:
         return "requirements" in self._serial_properties[property]
 
     @staticmethod
-    def _property_is_extended(property: dict) -> bool:
+    def _property_is_extended(property: ValueType) -> bool:
         return "extended" in property
 
     @staticmethod
-    def _property_has_value(property: dict) -> bool:
+    def _property_has_value(property: ValueType) -> bool:
         return bool(property["value"])
 
-    def _extension_active(self, property: dict) -> bool:
-        return self._extend_character[property["extended"]]
+    def _extension_active(self, property: ValueType) -> bool:
+        if self._property_is_extended(property):
+            return self._extend_character[property["extended"]]
+        else:
+            return True
 
     def _extensions_not_hidden(self, property: str) -> bool:
         if self._property_is_extended(self._serial_properties[property]):
@@ -398,6 +392,7 @@ class CharacterGenerator:
         """
         idx: str = user_data["label"]
         state = self._current_character["Player Info"][idx] = app_data  # noqa: F841
+        self._player_info = self._current_character["Player Info"]
 
     def _update_psycho_limit(self):
         """
@@ -457,7 +452,7 @@ class CharacterGenerator:
         Must be called whenever a related value have been change.
         """
         idx = self._get_attribute_value("Strength") - 1
-        carry_capacity = self._current_character["Config"]["Carry Capacity Table"][idx]
+        carry_capacity = self._config["Carry Capacity Table"][idx]
         self._stats["Carry Capacity"]["value"] = carry_capacity
         dpg.set_value(
             item="Carry Capacity",
@@ -482,7 +477,7 @@ class CharacterGenerator:
         Update the printout of current health.
         Must be called whenever a related value have been change.
         """
-        rank_index = self._get_player_info("Rank")
+        rank_index = self._player_info["Rank"]
         rank_bonus = self._current_character["Config"]["Rank Bonus"][rank_index]
         leadership_points = self._get_attribute_value("Charisma") + rank_bonus
         bonus_string = "".join(self._check_active_bonuses("Leadership Points"))
@@ -528,7 +523,7 @@ class CharacterGenerator:
         dpg.set_value("overview_list", overview_list)
 
     def _get_current_character_name(self):
-        current_character_name = self._get_player_info("Name")
+        current_character_name = self._player_info["Name"]
         return current_character_name.replace(" ", "_").lower()
 
     def _save_character_callback(self):
@@ -594,45 +589,45 @@ class CharacterGenerator:
                 if self._create_mode:
                     dpg.add_input_text(
                         tag="player_input_text",
-                        default_value=self._get_player_info("Player"),
+                        default_value=self._player_info["Player"],
                         width=self._text_input_width,
                         enabled=self._create_mode,
                         user_data={"label": "Player"},
                         callback=self._player_info_callback,
                     )
                 else:
-                    dpg.add_text(self._get_player_info("Player"))
+                    dpg.add_text(self._player_info["Player"])
 
             with dpg.table_row():
                 dpg.add_text("E-mail:")
                 if self._create_mode:
                     dpg.add_input_text(
                         tag="email_input_text",
-                        default_value=self._get_player_info("E-mail"),
+                        default_value=self._player_info["E-mail"],
                         width=self._text_input_width,
                         enabled=self._create_mode,
                         user_data={"label": "E-mail"},
                         callback=self._player_info_callback,
                     )
                 else:
-                    dpg.add_text(self._get_player_info("E-mail"))
+                    dpg.add_text(self._player_info["E-mail"])
 
             with dpg.table_row():
                 dpg.add_text("Name:")
                 if self._create_mode:
                     dpg.add_input_text(
-                        default_value=self._get_player_info("Name"),
+                        default_value=self._player_info["Name"],
                         width=self._text_input_width,
                         enabled=self._create_mode,
                         user_data={"label": "Name"},
                         callback=self._player_info_callback,
                     )
                 else:
-                    dpg.add_text(self._get_player_info("Name"))
+                    dpg.add_text(self._player_info["Name"])
 
             with dpg.table_row():
                 dpg.add_text("Platoon:")
-                current_platoon = self._get_player_info("Platoon")
+                current_platoon = self._player_info["Platoon"]
 
                 if self._create_mode:
                     dpg.add_combo(
@@ -647,13 +642,13 @@ class CharacterGenerator:
 
             with dpg.table_row():
                 dpg.add_text("Rank:")
-                rank_index = self._get_player_info("Rank")
+                rank_index = self._player_info["Rank"]
                 rank_label = self._rank_alternatives[rank_index]
                 dpg.add_text(rank_label)
 
             with dpg.table_row():
                 dpg.add_text("Speciality:")
-                current_speciality = self._get_player_info("Speciality")
+                current_speciality = self._player_info["Speciality"]
                 if self._create_mode:
                     dpg.add_combo(
                         items=self._speciality_alternatives,
@@ -668,7 +663,7 @@ class CharacterGenerator:
 
             with dpg.table_row():
                 dpg.add_text("Gender:")
-                current_gender = self._get_player_info("Gender")
+                current_gender = self._player_info["Gender"]
 
                 if self._create_mode:
                     dpg.add_combo(
@@ -685,7 +680,7 @@ class CharacterGenerator:
 
             with dpg.table_row():
                 dpg.add_text("Age:")
-                current_age = self._get_player_info("Age")
+                current_age = self._player_info["Age"]
 
                 if self._create_mode:
                     dpg.add_slider_int(
@@ -698,7 +693,7 @@ class CharacterGenerator:
                         callback=self._player_info_callback,
                     )
                 else:
-                    dpg.add_text(current_age)
+                    dpg.add_text(str(current_age))
 
     def _add_property_check_boxes(
         self,
@@ -715,7 +710,9 @@ class CharacterGenerator:
         Add components for traits, advantages or disadvantages.
         """
         item_refs = dict()
-        properties = self._current_character[section][tab_label][sub_tab_label]
+        tab: TraitsTab | ExpertisesTab = self._current_character[section][tab_label]
+        properties = tab[sub_tab_label]
+        split_items: list[TraitsSubtab | ExpertiseSubtab]
         split_items = self._split_dict(properties, num_per_row)
 
         with dpg.group(horizontal=True):
@@ -725,11 +722,10 @@ class CharacterGenerator:
                         with dpg.group(width=300):
                             dpg.add_text(category_key, color=self._section_title_color)
                             for property_key, property_value in category_value.items():
-                                if (
-                                    not self._property_is_extended(property_value)
-                                    or self._extension_active(property_value)
-                                    or self._property_has_value(property_value)
-                                ):
+                                active = self._extension_active(property_value)
+                                has_value = self._property_has_value(property_value)
+                                allow_change = self._allow_change(property_value)
+                                if active or has_value:
                                     with dpg.group(horizontal=True):
                                         with dpg.table(
                                             header_row=False,
@@ -761,12 +757,8 @@ class CharacterGenerator:
                                                     },
                                                     indent=5,
                                                     callback=callback,
-                                                    default_value=bool(
-                                                        property_value["value"]
-                                                    ),
-                                                    enabled=self._is_check_box_change_allowed(
-                                                        property_value
-                                                    ),
+                                                    default_value=has_value,
+                                                    enabled=allow_change,
                                                 )
                                                 item_refs[property_key] = item_id
                                                 dpg.add_text(
@@ -794,9 +786,12 @@ class CharacterGenerator:
         """
         Add sliders for skills.
         """
-        categories = self._current_character[section][tab_label][sub_tab_label]
         item_refs = dict()
+        tab: AttributesTab | SkillsTab = self._current_character[section][tab_label]
+        categories = tab[sub_tab_label]
+        split_items: list[AttributeSubtab | SkillsSubtab]
         split_items = self._split_dict(categories, num_per_row)
+
         with dpg.group(horizontal=True):
             for part in split_items:
                 with dpg.group():
@@ -804,11 +799,14 @@ class CharacterGenerator:
                         with dpg.group(width=300):
                             dpg.add_text(category_key, color=self._section_title_color)
                             for property_key, property_value in category_value.items():
-                                if (
-                                    not self._property_is_extended(property_value)
-                                    or self._extension_active(property_value)
-                                    or self._property_has_value(property_value)
-                                ):
+                                if self._create_mode:
+                                    min_value = property_value["min"]
+                                else:
+                                    min_value = property_value["value"]
+
+                                active = self._extension_active(property_value)
+                                has_value = self._property_has_value(property_value)
+                                if active or has_value:
                                     with dpg.table(
                                         header_row=False,
                                         row_background=False,
@@ -829,10 +827,8 @@ class CharacterGenerator:
                                             )
                                             item_id = dpg.add_slider_int(
                                                 tag=property_key,
-                                                default_value=(property_value["value"]),
-                                                min_value=self._get_allowed_min_value(
-                                                    property_value,
-                                                ),
+                                                default_value=property_value["value"],
+                                                min_value=min_value,
                                                 max_value=property_value["max"],
                                                 width=50,
                                                 user_data={
@@ -879,7 +875,7 @@ class CharacterGenerator:
                             dpg.add_text(stat_label, tag="tooltip_" + stat_label)
                             dpg.add_text(
                                 tag=stat_label,
-                                default_value=stat_value["value"],
+                                default_value=str(stat_value["value"]),
                             )
                             self._add_tooltip(stat_label, stat_value)
 
@@ -1025,9 +1021,8 @@ class CharacterSelector:
         """
         Continue with the selected character and setup next stage for edit mode.
         """
-        self._selected_character_file = self._characters_files[
-            self._available_characters.index(self._selected_character)
-        ]
+        idx = self._available_characters.index(self._selected_character)
+        self._selected_character_file = self._characters_files[idx]
 
         ci = CharacterImport.from_json(self._selected_character_file)
         cg = CharacterGenerator(
@@ -1151,7 +1146,7 @@ class CharacterImport:
     Handle import of character. Currenty only from json-file.
     """
 
-    def __init__(self, character: CharacterDataType):
+    def __init__(self, character: CharacterData):
         self._character = character
 
     @classmethod
@@ -1167,28 +1162,27 @@ class CharacterImport:
 
 class CharacterExport:
     """
-    Handle import of character. Currenty only from json-file.
+    Handle export of character. Currenty only to json-file.
     """
 
-    def __init__(self, character_path: Path, character: CharacterDataType):
+    def __init__(self, character_path: Path, character: CharacterData):
         self._character = deepcopy(character)
         self._character_path = character_path
 
     @classmethod
-    def to_json(cls, character_path: Path, character: CharacterDataType):
+    def to_json(cls, character_path: Path, character: CharacterData):
         character_out = deepcopy(character)
+
         # Convert from true/false to 1/0
-        # fmt: off
-        for tab_label in character_out["Character"]:
-            for sub_tab_label in character_out["Character"][tab_label].keys():
-                for category in character_out["Character"][tab_label][sub_tab_label].keys():  # noqa: B950
-                    for label in character_out["Character"][tab_label][sub_tab_label][category].keys():  # noqa: B950
-                        (
-                            character_out["Character"][tab_label][sub_tab_label][category][label]["value"]  # noqa: B950
-                        ) = int(
-                            character_out["Character"][tab_label][sub_tab_label][category][label]["value"]  # noqa: B950
-                        )
-        # fmt: on
+        char_prop = character_out["Character"]
+        for tab in char_prop:
+            for sub_tab in char_prop[tab].keys():
+                for category in char_prop[tab][sub_tab].keys():
+                    for label in char_prop[tab][sub_tab][category].keys():
+                        val = char_prop[tab][sub_tab][category][label]["value"]
+                        char_prop[tab][sub_tab][category][label]["value"] = int(val)
+        character_out["Character"] = char_prop
+
         as_json = json.dumps(character_out, indent=4)
         with character_path.open(mode="w") as out_file:
             out_file.write(as_json)
@@ -1196,9 +1190,7 @@ class CharacterExport:
 
 
 class CharacterToPdf:
-    def __init__(
-        self, character: CharacterDataType, stats: dict[str, ValueType], out_file
-    ):
+    def __init__(self, character: CharacterData, stats: dict[str, ValueType], out_file):
         self._line_height = 15
         self._current_y = 820
         self._current_x = 20
@@ -1258,7 +1250,7 @@ class CharacterToPdf:
 
         for tab_label in ["Traits", "Expertise"]:
             self._write_line(tab_label, title=True)
-            tab: dict[str, dict[str, dict]] = self._character["Character"][tab_label]
+            tab: TraitsTab | ExpertisesTab = self._character["Character"][tab_label]
             for sub_tab_label, sub_tab_content in tab.items():
                 self._write_line(sub_tab_label, title=True)
                 for category_content in sub_tab_content.values():
