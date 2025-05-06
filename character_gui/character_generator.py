@@ -87,19 +87,16 @@ class CharacterGenerator:
                 "value": (
                     self._get_base_psycho_points() - self._get_psycho_point_cost()
                 ),
-                "tooltip": "".join(
-                    [
-                        "Earned when playing and can be reduced by buying ",
-                        "psychotic disadvantages.",
-                    ]
+                "tooltip": (
+                    "Earned when playing and can be reduced by buying "
+                    "psychotic disadvantages."
                 ),
             },
-            "Attribute Points": {
-                "value": (
-                    self._get_base_attribute_points() - self._get_total_attribute_cost()
-                )
+            "Attribute Points": {"value": self._get_attribute_points()},
+            "Extra Attribute Points": {
+                "value": self._get_extra_attribute_points(),
+                "tooltip": "Additional Attribute Points costing 8 XP per extra point.",
             },
-            "Extra Attribute Points": {"value": self._get_extra_attribute_points()},
             "Experience Points": {
                 "value": (
                     self._get_base_experience_points() - self._get_total_xp_usage()
@@ -167,6 +164,10 @@ class CharacterGenerator:
         for attribute in self._character_attributes().values():
             sum_points = sum_points + attribute["value"]
         return sum_points
+
+    def _get_attribute_points(self) -> int:
+        AP = self._get_base_attribute_points() - self._get_total_attribute_cost()
+        return max(AP, 0)
 
     def _get_extra_attribute_points(self) -> int:
         extra_AP = self._get_total_attribute_cost() - self._get_base_attribute_points()
@@ -528,7 +529,7 @@ class CharacterGenerator:
         Must be called whenever a related value have been change.
         """
         extra = self._get_extra_attribute_points()
-        remaining = self._get_base_attribute_points() - self._get_total_attribute_cost()
+        remaining = self._get_attribute_points()
         self._stats["Attribute Points"]["value"] = remaining
         dpg.set_value(item="Attribute Points", value=remaining)
         self._stats["Extra Attribute Points"]["value"] = extra
