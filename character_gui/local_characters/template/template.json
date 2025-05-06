@@ -1330,7 +1330,8 @@
                     },
                     "Cryogenics": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 4,
+                        "tooltip": "Maintenance & repair of hypersleep pods including safe handling of cryogenic fluids and fuel."
                     },
                     "Cybernetics": {
                         "value": 0,
@@ -1404,19 +1405,33 @@
                     },
                     "English": {
                         "value": 1,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Main language for the US, 3WE and many major corporations like Weyland-Yutani."
+                    },
+                    "French": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Required for the French Foreign Legion."
                     },
                     "Japanese": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Used within 3WE, Weyland-Yutani and several other corporations."
                     },
                     "Russian": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Major language in the UPP countries."
+                    },
+                    "Scandinavian": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Swedish/Danish/Norwegian"
                     },
                     "Spanish": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Second largest language in the US. Several colony worlds are mainly spanish-speaking."
                     }
                 },
                 "Creative": {
@@ -1439,17 +1454,19 @@
                     "Performance": {
                         "value": 0,
                         "cost": 6,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "You are a trained actor and can believably portray different emotions or personalities."
                     },
                     "Photography": {
                         "value": 0,
                         "cost": 2,
-                        "tooltip": "Used with Perception, Sensor Systems or Intelligence."
+                        "tooltip": "You know how to properly use a camera or a video camera, for artistic or documentation purposes. Used with Artistry, Sensor Systems or Intelligence."
                     },
                     "Singing": {
                         "value": 0,
                         "cost": 5,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Being a trained singer lets you control your voice and hit specific notes."
                     },
                     "Writing": {
                         "value": 0,
@@ -1499,6 +1516,11 @@
                         "cost": 3,
                         "tooltip": "Provides bonus when jumping, balancing or falling and \nallows you to do maneuvers that would be impossible without \ntraining, like a free handstand. Used with Dexterity."
                     },
+                    "Barista": {
+                        "value": 0,
+                        "cost": 1,
+                        "tooltip": "You are skilled at making coffee and coffee-based drinks which can be a morale booster in many situations. Used with Cooking."
+                    },
                     "Card Cheating": {
                         "value": 0,
                         "cost": 3,
@@ -1512,12 +1534,12 @@
                     "Docking": {
                         "value": 0,
                         "cost": 2,
-                        "tooltip": "Normally used with Pilot: Space."
+                        "tooltip": "Docking procedures for starships, umbilicals or land based airlocks. Also allows you to perform manual overrides similar as if you had Lockpicking. Used with Pilot: Space for ships, Space Crew for manual operation or Utility Equipment for umbilicals."
                     },
                     "Environmental Suit": {
                         "value": 1,
                         "cost": 3,
-                        "tooltip": "Cover all types of basic suits like space, biohazard \nor high-pressure. Used with Zero-G or CBRN Warfare."
+                        "tooltip": "Training on suits for extreme environments like space, biohazard or high-pressure. Advanced accessories/tools require separate expertise. Used with Zero-G, CBRN Warfare, Space Crew or Colonist."
                     },
                     "Forgery": {
                         "value": 0,
@@ -1543,12 +1565,12 @@
                         "value": 0,
                         "cost": 8,
                         "extended": "colonist",
-                        "tooltip": "Usable with Policework, Commerce for trade laws."
+                        "tooltip": "Usable with Policework for criminal law, Commerce for trade laws. Officers may use it with Soldiering for military law."
                     },
                     "Life Support": {
                         "value": 0,
                         "cost": 3,
-                        "tooltip": "Space Crew or Colonist to operate and service. \nMechanic or Electronics Tools for more extensive repairs or \nmodifications."
+                        "tooltip": "Space Crew or Colonist to operate and maintain. \nMechanic or Electronics Tools for more extensive repairs or \nmodifications."
                     },
                     "Rope Work": {
                         "value": 0,
@@ -2068,14 +2090,37 @@
                             }
                         ]
                     },
+                    "EOD Expert": {
+                        "value": 0,
+                        "cost": 1,
+                        "tooltip": "Explosive Ordnance Disposal. Someone got to do it and you have the proper training. +1 on detecting and disposing mines and IED:s. +1 Stealth when sneaking past a motion sensor by moving extremely slow.\nReq: IED, Mines AP, Mines AT, Ordnance.",
+                        "requirements": {
+                            "IED": {
+                                "type": "==",
+                                "value": 1
+                            },
+                            "Mines AP": {
+                                "type": "==",
+                                "value": 1
+                            },
+                            "Mines AT": {
+                                "type": "==",
+                                "value": 1
+                            },
+                            "Ordnance": {
+                                "type": "==",
+                                "value": 1
+                            }
+                        }
+                    },
                     "Escape Artist": {
                         "value": 0,
                         "cost": 5,
-                        "tooltip": "Req: Dexterity 4, Lockpicking, Rope Work",
+                        "tooltip": "Req: Sleight of Hand 3, Lockpicking, Rope Work",
                         "requirements": {
-                            "Dexterity": {
+                            "Sleight of Hand": {
                                 "type": ">=",
-                                "value": 4
+                                "value": 3
                             },
                             "Lockpicking": {
                                 "type": "==",
