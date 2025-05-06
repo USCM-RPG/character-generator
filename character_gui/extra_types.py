@@ -5,7 +5,6 @@ class ValueType(TypedDict):
     value: int
     tooltip: NotRequired[str]
     extended: NotRequired[str]
-    cost_table: NotRequired[list[int]]
 
 
 class MinMaxType(ValueType):
@@ -13,8 +12,15 @@ class MinMaxType(ValueType):
     min: int
 
 
+class BonusType(TypedDict):
+    Target: str
+    Type: str
+    Value: int
+
+
 class CostType(ValueType):
     cost: int
+    bonus: NotRequired[list[BonusType]]
 
 
 class RequirementType(TypedDict):
@@ -22,44 +28,52 @@ class RequirementType(TypedDict):
     value: int
 
 
-class RequirementsType(TypedDict, total=False):
-    requirements: dict[str, RequirementType]
+class AttributeType(TypedDict):
+    value: int
+    max: int
+    min: int
 
 
-class AttributeType(MinMaxType):
-    pass
+type AttributeCategory = dict[str, AttributeType]
 
 
-type AttributeSubgroupType = dict[str, AttributeType]
-type AttributeGroupType = dict[str, AttributeSubgroupType]
-type AttributesType = dict[str, AttributeGroupType]
+class AttributeSubtab(TypedDict):
+    Attribute: AttributeCategory
+
+
+class AttributesTab(TypedDict):
+    All: AttributeSubtab
 
 
 class SkillType(MinMaxType):
-    pass
+    cost_table: NotRequired[list[int]]
 
 
-type SkillSubGroupType = dict[str, SkillType]
-type SkillGroupType = dict[str, SkillSubGroupType]
-type SkillsType = dict[str, SkillGroupType]
+type SkillsCategory = dict[str, SkillType]
+type SkillsSubtab = dict[str, SkillsCategory]
 
 
-class TraitType(CostType, RequirementsType):
-    pass
+class SkillsTab(TypedDict):
+    All: SkillsSubtab
 
 
-type TraitSubgroupType = dict[str, TraitType]
-type TraitGroupType = dict[str, TraitSubgroupType]
-type TraitsType = dict[str, TraitGroupType]
+class TraitType(CostType):
+    requirements: NotRequired[dict[str, RequirementType]]
+
+
+type TraitsCategory = dict[str, TraitType]
+type TraitsSubtab = dict[str, TraitsCategory]
+type TraitsTab = dict[str, TraitsSubtab]
 
 
 class ExpertiseType(CostType):
     pass
 
 
-type ExpertiseSubcategoryType = dict[str, ExpertiseType]
-type ExpertiseCategoryType = dict[str, ExpertiseSubcategoryType]
-type ExpertisesType = dict[str, ExpertiseCategoryType]
+type ExpertiseCategory = dict[str, ExpertiseType]
+type ExpertiseSubtab = dict[str, ExpertiseCategory]
+type ExpertisesTab = dict[str, ExpertiseSubtab]
+
 
 PlayerInfoType = TypedDict(
     "PlayerInfoType",
@@ -74,6 +88,7 @@ PlayerInfoType = TypedDict(
         "Age": int,
     },
 )
+
 
 CharacterConfigType = TypedDict(
     "CharacterConfigType",
@@ -94,18 +109,18 @@ CharacterConfigType = TypedDict(
 )
 
 
-class CharacterPropertiesType(TypedDict):
-    Attributes: AttributesType
-    Skills: SkillsType
-    Traits: TraitsType
-    Expertise: ExpertisesType
+class CharacterProperties(TypedDict):
+    Attributes: AttributesTab
+    Skills: SkillsTab
+    Traits: TraitsTab
+    Expertise: ExpertisesTab
 
 
-CharacterDataType = TypedDict(
-    "CharacterDataType",
+CharacterData = TypedDict(
+    "CharacterData",
     {
         "Player Info": PlayerInfoType,
         "Config": CharacterConfigType,
-        "Character": CharacterPropertiesType,
+        "Character": CharacterProperties,
     },
 )
