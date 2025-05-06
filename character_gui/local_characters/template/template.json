@@ -440,7 +440,7 @@
                         "value": 0,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Expertise: IV, Toxicology, Infections, Dive Medicine,\nAerospace Medicine, Altitude Medicine, Cold climate,\nHerbalism, Hot climate, CBRN Treatment, Autodoc, Surgery."
+                        "tooltip": "Profession skill of doctors and nurses.\nExpertise: Aerospace Medicine, Autodoc, CBRN Treatment, Cryogenics, Cybernetics, Dissection, Dive Medicine, Herbalism, Infections, IV, Surgery, Toxicology, X-ray."
                     },
                     "Mining": {
                         "value": 0,
@@ -469,7 +469,8 @@
                         "value": 0,
                         "min": 0,
                         "max": 5,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Expertise: Meteorology, Oceanography"
                     }
                 }
             }
@@ -480,20 +481,23 @@
                     "Shuttle": {
                         "value": 0,
                         "cost": 5,
-                        "tooltip": "Includes the CS-14 Briaeros."
+                        "tooltip": "Unarmed shuttle sized aerospace craft from a small EEV up to a CS-14 Briaeros"
                     },
                     "Gliderplane": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Engineless aircraft or parafoil. May be used with Pilot or Parachute skills."
                     },
                     "Rotorcraft": {
                         "value": 0,
-                        "cost": 6
+                        "cost": 6,
+                        "tooltip": "Unarmed helicopters."
                     },
                     "Cargo Platform": {
                         "value": 0,
                         "cost": 5,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Flying cargo platforms like the WY-37B Cargo Lifter Sled."
                     },
                     "COTS Drone": {
                         "value": 0,
@@ -524,7 +528,7 @@
                     "PUPS": {
                         "value": 0,
                         "cost": 12,
-                        "tooltip": "Advanced antigrav spectrograh drone.\nRestricted WY technology not available in normal military training."
+                        "tooltip": "Advanced antigrav spectrograh drone. Used with Sensor Systems skill as they are largely automated. For direct control use Remote Piloting. Restricted WY technology not available in normal military training."
                     }
                 },
                 "Land Vehicles": {
@@ -555,12 +559,33 @@
                     },
                     "M57 APC": {
                         "value": 0,
-                        "cost": 6
+                        "cost": 6,
+                        "tooltip": "Light APC that comes in variants with different armament like dual 20mm HMG:s, plasma/laser cannons or a mortar. The M577 is the main vehicle used by colonial marines."
+                    },
+                    "M34 Longstreet": {
+                        "value": 0,
+                        "cost": 6,
+                        "tooltip": "Light tank."
+                    },
+                    "M22 Jackson": {
+                        "value": 0,
+                        "cost": 7,
+                        "tooltip": "Medium tank."
+                    },
+                    "M40 Ridgeway": {
+                        "value": 0,
+                        "cost": 8,
+                        "tooltip": "Heavy tank."
+                    },
+                    "M201 MLRS": {
+                        "value": 0,
+                        "cost": 6,
+                        "tooltip": "Self-propelled 250mm rocket artillery."
                     },
                     "M292 Artillery": {
                         "value": 0,
                         "cost": 5,
-                        "tooltip": "Firing it is done with the Indirect Fire skill\nand requires the Artillery expertise."
+                        "tooltip": "Firing it is done with the Indirect Fire skill\nand requires the Artillery weapon expertise."
                     },
                     "XT-37 Stinger": {
                         "value": 0,
@@ -613,6 +638,11 @@
                         "extended": "navy"
                     },
                     "Tanker": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "navy"
+                    },
+                    "Tug": {
                         "value": 0,
                         "cost": 3,
                         "extended": "navy"
@@ -681,13 +711,15 @@
                     }
                 },
                 "Generic": {
-                    "Pistol": {
+                    "Artillery": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 5,
+                        "tooltip": "Any type of field artillery firing shells of 120mm+. Uses Indirect Fire."
                     },
-                    "Shotgun": {
+                    "Dartgun": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 3,
+                        "tooltip": "Fires darts - which could contain for example a sedative to capture animals."
                     },
                     "Deer Rifle": {
                         "value": 0,
@@ -696,27 +728,32 @@
                     },
                     "Flamer": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Carbine-format or vehicle mounted flamethrowers. Uses Shooting: Auto."
                     },
                     "Hand Grenade": {
                         "value": 0,
                         "cost": 3
                     },
-                    "Dartgun": {
-                        "value": 0,
-                        "cost": 3
-                    },
                     "Harpoon": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Harpoon grappling device used in space or underwater harpoon gun."
                     },
                     "Mortar": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Allows firing any type of basic mortar, portable or vehicle-mounted. Uses Indirect Fire."
                     },
-                    "Artillery": {
+                    "Pistol": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 2,
+                        "tooltip": "Any model of basic pistol or revolver."
+                    },
+                    "Shotgun": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "To hunt smaller animals or birds, but can also be a potent short range combat weapon. Shells can contain shot in different sizes depending on the intended target. Uses Shooting: Dynamic."
                     }
                 },
                 "Other military small arms": {
@@ -839,7 +876,7 @@
                     "ASM": {
                         "value": 0,
                         "cost": 3,
-                        "tooltip": "Air-surface missile. Also applies for orbit-surface. \nIncludes dropship armament like the AGM-220C, Mk.88 SGW, \nMk.10 ZEUS and Banshee 70."
+                        "tooltip": "Air-surface missile. Also applies for orbit-surface. Includes dropship armament like the AGM-220C, Mk.88 SGW, Mk.10 ZEUS and Banshee 70."
                     },
                     "SAM": {
                         "value": 0,
@@ -856,12 +893,12 @@
                     "Bayonet": {
                         "value": 0,
                         "cost": 1,
-                        "tooltip": "Part of basic infantry training since ancient times \nand provides +1 Close Combat: Standup bonus with a bayonet \nmounted on your weapon."
+                        "tooltip": "Part of basic infantry training since ancient times and provides a Close Combat: Standup bonus with a bayonet mounted on your weapon."
                     },
                     "Handcuffs": {
                         "value": 0,
                         "cost": 2,
-                        "tooltip": "Techniques to handcuff an unwilling target."
+                        "tooltip": "Techniques to secure an unwilling target with handcuffs or zip-ties."
                     },
                     "Knife": {
                         "value": 0,
@@ -921,7 +958,8 @@
                 "Engineering": {
                     "Bridge Laying": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Used with Utility Equipment."
                     },
                     "Building demolition": {
                         "value": 0,
@@ -964,11 +1002,6 @@
                         "cost": 15,
                         "extended": "colonist",
                         "tooltip": "Used with Utility Equipment for direct operation, \nComputer Systems for programming them or Engineering for \ncreating a new design."
-                    },
-                    "EOD": {
-                        "value": 0,
-                        "cost": 5,
-                        "tooltip": "Explosive Ordnance Disposal. Training in how to find, \nexpose and remove explosive devices. Disarming while keeping \nordnance intact requires Ordnance. Used with Mine Warfare."
                     },
                     "Excavator": {
                         "value": 0,
@@ -1047,15 +1080,25 @@
                         "cost": 3,
                         "tooltip": "Used with Policework, Intelligence, Intimidation,\nStreetwise or Charisma depending on situation."
                     },
-                    "Mobile Tactics": {
-                        "value": 0,
-                        "cost": 4,
-                        "tooltip": "Mobile and armored warfare.\nIncludes vehicle combat and how to operate tactically during traveling\nand escort duty. Used with Soldiering or Driving."
-                    },
                     "Maritime Tactics": {
                         "value": 0,
                         "cost": 5,
                         "tooltip": "Wet navy tactics, on or below the surface. Used with Seamanship."
+                    },
+                    "Mines AP": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Anti-personnell mines like the claymore or bounding variants. Training in setting them, but also applies to disposal. Disarming an unknown (not placed by you) mine while keeping it intact also requires Ordnance. Used with Mine Warfare."
+                    },
+                    "Mines AT": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Anti-vehicle mines buried or off-route variants. Training in setting them, but also applies to disposal. Disarming an unknown (not placed by you) mine while keeping it intact also requires Ordnance. Used with Mine Warfare."
+                    },
+                    "Mobile Tactics": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Mobile and armoured warfare. Includes vehicle combat and how to operate tactically during traveling and escort duty. Used with Soldiering or Driving."
                     },
                     "Nuclear Bomb": {
                         "value": 0,
@@ -1141,11 +1184,6 @@
                         "cost": 2,
                         "tooltip": "Uses Comtech skill."
                     },
-                    "Photography": {
-                        "value": 0,
-                        "cost": 2,
-                        "tooltip": "Used with Perception, Sensor Systems or Intelligence."
-                    },
                     "Programming": {
                         "value": 0,
                         "cost": 8,
@@ -1191,12 +1229,12 @@
                     "Butchering": {
                         "value": 0,
                         "cost": 3,
-                        "tooltip": "You can skin and butcher animals and fillet fish. \nUsed with Cooking or Sleight of Hand."
+                        "tooltip": "You can skin and butcher animals and fillet fish. Used with Cooking or Sleight of Hand."
                     },
                     "Evasion": {
                         "value": 0,
                         "cost": 5,
-                        "tooltip": "Advanced training to hide tracks while moving through \nterrain and strategies to confuse pursuers, dogs or sensors. \nUsed with Outdoorsman or Camouflage."
+                        "tooltip": "Techniques to hide tracks while moving through terrain and strategies to confuse pursuers, dogs or sensors. Also requires terrain expertise. Used with Outdoorsman or Camouflage."
                     },
                     "Field Cooking": {
                         "value": 0,
@@ -1230,11 +1268,13 @@
                     },
                     "Riding": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 4,
+                        "tooltip": "Used with Animal Handling"
                     },
                     "Skiing": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "You can ski and also had training on how to work as a squad to bring a sled with you. Used with Outdoorsman or Dexterity."
                     },
                     "Tracking": {
                         "value": 0,
@@ -1243,7 +1283,8 @@
                     },
                     "Trapping": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 4,
+                        "tooltip": "Used with Outdoorsman and terrain expertise."
                     }
                 },
                 "Navigation": {
@@ -1399,6 +1440,11 @@
                         "value": 0,
                         "cost": 6,
                         "extended": "colonist"
+                    },
+                    "Photography": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Used with Perception, Sensor Systems or Intelligence."
                     },
                     "Singing": {
                         "value": 0,
