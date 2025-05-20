@@ -1,3 +1,0 @@
-dearpygui
-pre-commit
-reportlab

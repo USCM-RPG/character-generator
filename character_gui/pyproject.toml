@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uscm_character_generator"
+requires-python = ">= 3.12"
+# readme = "README.md"
+classifiers = [
+"Private :: Do Not Upload",
+]
+dependencies = [
+    "dearpygui",
+    "pre-commit",
+    "reportlab"
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+bundle = ["pyinstaller"]
+
+[project.urls]
+Homepage = "https://uscm.se"
+Repository = "https://github.com/USCM-RPG/character-generator.git"
+GitHub = "https://github.com/USCM-RPG/character-generator"
+
+[project.gui-scripts]
+uscm-start = "uscm_character_generator:character_generator.main"
+
+[tool.setuptools_scm]
+
+[tool.isort]
+profile = "black"
+skip_gitignore = true
