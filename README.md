@@ -8,17 +8,17 @@ The application is expected to work with Python 3.12 or newer.
 ## Setup and run
 1. Clone the repo or download the code.
 
-2. Inside the folder `character_gui`, setup virtual environment, install requred packages and activate environment:
+2. Inside the folder `uscm_character_generator`, setup virtual environment, install requred packages and activate environment:
 ```
-python -m venv venv/
+python -m venv .venv/
 ```
 Windows:
 ```
-source venv/Scripts/activate
+source .venv/Scripts/activate
 ```
 Linux:
 ```
-source venv/bin/activate
+source .venv/bin/activate
 ```
 
 Normal installation:

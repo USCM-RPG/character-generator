@@ -4,8 +4,7 @@ config.php
 .project
 .venv
 venv
-/character_gui/local_characters/*.pdf
-/character_gui/local_characters/*.json
+local_characters
 *.pyc
 .vscode
 *.egg-info
