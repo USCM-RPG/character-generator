@@ -9,7 +9,9 @@ from copy import deepcopy
 from pathlib import Path
 
 import dearpygui.dearpygui as dpg
-from extra_types import (
+from reportlab.pdfgen import canvas
+
+from .extra_types import (
     AttributesTab,
     AttributeSubtab,
     CharacterData,
@@ -21,7 +23,11 @@ from extra_types import (
     TraitsTab,
     ValueType,
 )
-from reportlab.pdfgen import canvas
+from .utils import (
+    get_character_save_location,
+    get_character_template,
+    get_pdf_save_location,
+)
 
 
 class CharacterGenerator:
@@ -1320,45 +1326,6 @@ class CharacterToPdf:
 
         self._canvas.showPage()
         self._canvas.save()
-
-
-def get_installation_dir() -> Path:
-    installation_path = Path(__file__).resolve().parent
-    return installation_path
-
-
-def get_character_template_location() -> Path:
-    template_dir = Path(
-        os.getenv(
-            "USCM_TEMPLATE_DIR",
-            default=get_installation_dir().joinpath("local_characters", "template"),
-        )
-    )
-    return template_dir
-
-
-def get_character_save_location() -> Path:
-    character_save_dir = Path(
-        os.getenv(
-            "USCM_CHARACTER_DIR",
-            default=get_installation_dir().joinpath("local_characters"),
-        )
-    )
-    return character_save_dir
-
-
-def get_pdf_save_location() -> Path:
-    pdf_save_dir = Path(
-        os.getenv(
-            "USCM_PDF_DIR", default=get_installation_dir().joinpath("local_characters")
-        )
-    )
-    return pdf_save_dir
-
-
-def get_character_template() -> Path:
-    template = get_character_template_location().joinpath("template.json")
-    return template
 
 
 def set_theme():
