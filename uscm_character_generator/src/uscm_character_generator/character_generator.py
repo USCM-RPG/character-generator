@@ -952,7 +952,7 @@ class CharacterGenerator:
             """
 
         with dpg.window(
-            width=1000,
+            width=1050,
             height=1000,
             pos=[301, 0],
             no_move=True,
@@ -997,7 +997,7 @@ class CharacterGenerator:
         with dpg.window(
             width=300,
             height=1000,
-            pos=[1302, 0],
+            pos=[1352, 0],
             no_move=True,
             no_close=True,
             no_collapse=True,
