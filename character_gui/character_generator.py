@@ -515,7 +515,7 @@ class CharacterGenerator:
         """
         rank_index = self._player_info["Rank"]
         rank_bonus = self._current_character["Config"]["Rank Bonus"][rank_index]
-        leadership_points = self._get_attribute_value("Charisma") + rank_bonus
+        leadership_points = self._get_attribute_value("Charisma") + rank_bonus - 2
         bonus_string = "".join(self._check_active_bonuses("Leadership Points"))
         self._stats["Leadership Points"]["value"] = leadership_points
         dpg.set_value(
