@@ -146,12 +146,14 @@
                     "Shooting: Dynamic": {
                         "value": 3,
                         "min": 1,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Tactical short-range shooting where you fire quickly from varied positions and from behind cover. The default skill to use in combat"
                     },
                     "Shooting: Auto": {
                         "value": 3,
                         "min": 1,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Firing on full auto both directly at identified targets and for suppressive purpose. Used for small arms and up to HMG."
                     },
                     "Indirect Fire": {
                         "value": 1,
@@ -179,11 +181,12 @@
                     }
                 },
                 "Physical Skills": {
-                    "Throwing": {
-                        "value": 2,
-                        "min": 1,
-                        "max": 5
-                    },
+                     "Throwing": {
+                         "value": 2,
+                         "min": 1,
+                         "max": 5,
+                         "tooltip": "\"The enemy can not push a button... if you disable his hand. Medic!\" - Starship Troopers"
+                     },
                     "Close Combat: Standup": {
                         "value": 2,
                         "min": 1,
@@ -196,10 +199,11 @@
                         "max": 5,
                         "tooltip": "Wrestling and fighting on the ground."
                     },
-                    "Stealth": {
-                        "value": 2,
-                        "min": 0,
-                        "max": 5
+                     "Stealth": {
+                         "value": 2,
+                         "min": 0,
+                         "max": 5,
+                         "tooltip": "Moving silently, like sneaking up behind someone or perform an action without drawing attention to yourself. For hiding Camouflage is used. Avoiding sensors while moving would be a combined roll with Camouflage."
                     },
                     "Swimming": {
                         "value": 1,
@@ -207,17 +211,18 @@
                         "max": 5,
                         "tooltip": "At skill level 2 you can stay afloat in calm water\n(DL 2) without any dice rolls."
                     },
-                    "Sleight of Hand": {
-                        "value": 0,
-                        "min": 0,
-                        "max": 5,
-                        "tooltip": "Combined roll with any Tools skill to complete work faster."
+                     "Sleight of Hand": {
+                         "value": 0,
+                         "min": 0,
+                         "max": 5,
+                         "tooltip": "Combined roll with any Tools skill to complete work faster."
                     },
-                    "Zero-G": {
-                        "value": 2,
-                        "min": 1,
-                        "max": 5
-                    }
+                     "Zero-G": {
+                         "value": 2,
+                         "min": 1,
+                         "max": 5,
+                         "tooltip": "Skill handling yourself in freefall or microgravity environments and to operate a space suit. For combat in such environments this skill is required as a combined roll for any weapon that has a recoil."
+                     }
                 },
                 "Vehicle Skills": {
                     "Driving": {
@@ -227,26 +232,29 @@
                         "tooltip": "Expertise on a vehicle and Driving >0\nmeans you have a drivers license for it."
                     },
                     "Parachute": {
-                        "value": 2,
-                        "min": 1,
-                        "max": 5
-                    },
+                         "value": 2,
+                         "min": 1,
+                         "max": 5,
+                         "tooltip": "Plan and perform parachute jumps. Also used for glider planes."
+                     },
                     "Pilot: Atmospheric": {
-                        "value": 0,
-                        "min": 0,
-                        "max": 5
-                    },
+                         "value": 0,
+                         "min": 0,
+                         "max": 5,
+                         "tooltip": "Flight inside an atmosphere."
+                     },
                     "Pilot: Space": {
-                        "value": 0,
-                        "min": 0,
-                        "max": 5,
+                         "value": 0,
+                         "min": 0,
+                         "max": 5,
                         "tooltip": "Space flight including docking and landing.\nExpertises: Docking, Starships and space-capable aircraft"
-                    },
+                     },
                     "Remote Piloting": {
-                        "value": 0,
-                        "min": 0,
-                        "max": 5
-                    },
+                         "value": 0,
+                         "min": 0,
+                         "max": 5,
+                         "tooltip": "Aircraft purpose-built for remote piloting (UA V:s, drones) require only this skill. Manned craft require a combined roll with their regular piloting skill."
+                     },
                     "Ship Class Rating": {
                         "value": 0,
                         "min": 0,
@@ -255,10 +263,11 @@
                         "tooltip": "This represents training on operating a ship as bridge crew and cost a fixed 8XP per level (like attributes). Having a rating equal to the craft you operate means you can do this without penalty. The rating requirement is based on size with military craft requiring one level higher compared to the corresponding civilian size."
                     },
                     "Seamanship": {
-                        "value": 1,
-                        "min": 1,
-                        "max": 5
-                    },
+                         "value": 1,
+                         "min": 1,
+                         "max": 5,
+                         "tooltip": "Handling a small boat or functioning as a crew on a larger ship."
+                     },
                     "Utility Equipment": {
                         "value": 1,
                         "min": 0,
@@ -532,30 +541,36 @@
                 },
                 "Land Vehicles": {
                     "Car": {
-                        "value": 0,
-                        "cost": 2
-                    },
+                         "value": 0,
+                         "cost": 2,
+                         "tooltip": "Regular car."
+                     },
                     "ATVL": {
-                        "value": 0,
-                        "cost": 2
-                    },
+                         "value": 0,
+                         "cost": 2,
+                         "tooltip": "4-wheeled small terrain vehicles."
+                     },
                     "Motorcycle": {
-                        "value": 0,
-                        "cost": 2
-                    },
+                         "value": 0,
+                         "cost": 2,
+                         "tooltip": "Regular motorcycles with up to 3 wheels."
+                     },
                     "Hoverbike": {
-                        "value": 0,
-                        "cost": 4
-                    },
+                         "value": 0,
+                         "cost": 4,
+                         "tooltip": "Anti-grav based craft only viable on some planets depending on the gravitational field."
+                     },
                     "Tractor": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "colonist"
-                    },
+                         "value": 0,
+                         "cost": 3,
+                         "extended": "colonist",
+                         "tooltip": "Everything from the classic farm tractor to the terrain-going Daihotai series."
+                     },
                     "Truck": {
-                        "value": 0,
-                        "cost": 3
-                    },
+                         "value": 0,
+                         "cost": 3,
+                         "tooltip": "Heavy cargo-trailer vehicle or similar significantly larger than a regular car."
+                     },
                     "M57 APC": {
                         "value": 0,
                         "cost": 6,
@@ -582,10 +597,10 @@
                         "tooltip": "Self-propelled 250mm rocket artillery."
                     },
                     "M292 Artillery": {
-                        "value": 0,
-                        "cost": 5,
-                        "tooltip": "Firing it is done with the Indirect Fire skill\nand requires the Artillery weapon expertise."
-                    },
+                         "value": 0,
+                         "cost": 5,
+                         "tooltip": "Self-propelled 158mm artillery gun. Firing it is done with the Indirect Fire skill and requires the Artillery expertise."
+                     },
                     "XT-37 Stinger": {
                         "value": 0,
                         "cost": 4,
@@ -594,27 +609,29 @@
                 },
                 "Other Military Land Vehicles": {
                     "HAMPV": {
-                        "value": 0,
-                        "cost": 5,
-                        "extended": "military"
+                         "value": 0,
+                         "cost": 5,
+                         "extended": "military",
+                         "tooltip": "Large UPP APC configurable for multiple roles. Has Plasma cannon, flamer and HMMG."
                     }
                 },
                 "Sea Vehicles": {
                     "CRRC": {
-                        "value": 0,
-                        "cost": 2,
-                        "tooltip": "Combat Rubber Reconnaissance Craft.\nOften used by marines and special forces."
-                    },
+                         "value": 0,
+                         "cost": 2,
+                         "tooltip": "Combat Rubber Reconnaissance Craft.\nOften  used by marines and special forces."
+                     },
                     "Kayak": {
-                        "value": 0,
-                        "cost": 2,
-                        "extended": "colonist"
-                    },
+                         "value": 0,
+                         "cost": 2,
+                         "extended": "colonist",
+                         "tooltip": "Small one or two person boat powered by paddling."
+                     },
                     "Motorboat": {
-                        "value": 0,
-                        "cost": 3,
+                         "value": 0,
+                         "cost": 3,
                         "tooltip": "Motor powered solid hull boats up to class 3\n(which would include coastal Fast Attack Crafts, FAC:s)."
-                    },
+                     },
                     "Sailing": {
                         "value": 0,
                         "cost": 5,
@@ -626,32 +643,35 @@
             "Weapons": {
                 "US Military Small Arms": {
                     "M41 Pulse Rifle": {
-                        "value": 0,
-                        "cost": 5,
+                         "value": 0,
+                         "cost": 5,
                         "tooltip": "Also covers the built-in U1 grenade launcher\nand variants like the M41AE2 AR."
-                    },
+                     },
                     "M39 SMG": {
-                        "value": 0,
-                        "cost": 3
-                    },
+                         "value": 0,
+                         "cost": 3,
+                         "tooltip": "A 9mm submachine gun capable of mounting a silencer or other accessories."
+                     },
                     "VP55 LR Pistol": {
                         "value": 0,
                         "cost": 3,
                         "tooltip": "Low-recoil pistol specialized for use aboard spacecraft."
                     },
                     "M42 Sniper Rifle": {
-                        "value": 0,
-                        "cost": 8
-                    },
+                         "value": 0,
+                         "cost": 8,
+                         "tooltip": "Highly advanced 10mm sniper rifle."
+                     },
                     "M56 Smartgun": {
-                        "value": 0,
-                        "cost": 8
-                    },
+                         "value": 0,
+                         "cost": 8,
+                         "tooltip": "Highly advanced auto-targeting 10mm machine gun."
+                     },
                     "Morita I AR": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "military",
-                        "tooltip": "Used mainly by mobile infantry."
+                         "value": 0,
+                         "cost": 3,
+                         "extended": "military",
+                         "tooltip": "Used mainly by mobile infantry."
                     }
                 },
                 "Generic": {
@@ -661,10 +681,10 @@
                         "tooltip": "Any type of field artillery firing shells of 120mm+. Uses Indirect Fire."
                     },
                     "Dartgun": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Fires darts - which could contain for example a sedative to capture animals."
-                    },
+                         "value": 0,
+                         "cost": 3,
+                         "tooltip": "Fires darts - which could contain for example a sedative to capture animals."
+                     },
                     "Deer Rifle": {
                         "value": 0,
                         "cost": 3,
