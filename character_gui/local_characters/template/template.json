@@ -247,6 +247,13 @@
                         "min": 0,
                         "max": 5
                     },
+                    "Ship Class Rating": {
+                        "value": 0,
+                        "min": 0,
+                        "max": 5,
+                        "cost_table": [0, 8, 16, 24, 32, 40],
+                        "tooltip": "This represents training on operating a ship as bridge crew and cost a fixed 8XP per level (like attributes). Having a rating equal to the craft you operate means you can do this without penalty. The rating requirement is based on size with military craft requiring one level higher compared to the corresponding civilian size."
+                    },
                     "Seamanship": {
                         "value": 1,
                         "min": 1,
@@ -329,7 +336,14 @@
                     "Demolition": {
                         "value": 1,
                         "min": 1,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Used to make and correctly apply explosive charges."
+                    },
+                    "Leadership": {
+                        "value": 0,
+                        "min": 1,
+                        "max": 5,
+                        "tooltip": "Leading larger groups of people, communicating and motivating. Coordinating several squads or workteams. Used by officers."
                     },
                     "Intelligence": {
                         "value": 0,
@@ -478,11 +492,6 @@
         "Expertise": {
             "Vehicles": {
                 "Aircraft": {
-                    "Shuttle": {
-                        "value": 0,
-                        "cost": 5,
-                        "tooltip": "Unarmed shuttle sized aerospace craft from a small EEV up to a CS-14 Briaeros"
-                    },
                     "Gliderplane": {
                         "value": 0,
                         "cost": 3,
@@ -503,23 +512,13 @@
                         "value": 0,
                         "cost": 2
                     },
-                    "UD4 Dropship": {
+                    "Decoy Drone": {
                         "value": 0,
-                        "cost": 8
+                        "cost": 3
                     },
                     "M421 Firefly": {
                         "value": 0,
                         "cost": 5
-                    },
-                    "AD-19 Bearcat": {
-                        "value": 0,
-                        "cost": 8,
-                        "tooltip": "VTOL strikeship which can perform recon/CAS/medevac missions."
-                    },
-                    "EVAC-3": {
-                        "value": 0,
-                        "cost": 8,
-                        "tooltip": "Aerospace fighter for escort or air/orbital superiority missions."
                     },
                     "M86 UAV": {
                         "value": 0,
@@ -579,7 +578,7 @@
                     },
                     "M201 MLRS": {
                         "value": 0,
-                        "cost": 6,
+                        "cost": 5,
                         "tooltip": "Self-propelled 250mm rocket artillery."
                     },
                     "M292 Artillery": {
@@ -591,6 +590,13 @@
                         "value": 0,
                         "cost": 4,
                         "tooltip": "Light off-road attack vehicle capable of being airdropped."
+                    }
+                },
+                "Other Military Land Vehicles": {
+                    "HAMPV": {
+                        "value": 0,
+                        "cost": 5,
+                        "extended": "military"
                     }
                 },
                 "Sea Vehicles": {
@@ -615,72 +621,10 @@
                         "extended": "colonist",
                         "tooltip": "Any boat or larger ship as long as it is mainly sail-powered."
                     }
-                },
-                "Starship": {
-                    "Freighter": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "navy"
-                    },
-                    "Colony Ship": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "navy"
-                    },
-                    "Salvage Vessel": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "navy"
-                    },
-                    "Survey Ship": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "navy"
-                    },
-                    "Tanker": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "navy"
-                    },
-                    "Tug": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "navy"
-                    },
-                    "Conestoga Frigate": {
-                        "value": 0,
-                        "cost": 4,
-                        "extended": "navy"
-                    },
-                    "Bougainville Attack Transport": {
-                        "value": 0,
-                        "cost": 4,
-                        "extended": "navy"
-                    },
-                    "Tientsin Assault Ship": {
-                        "value": 0,
-                        "cost": 4,
-                        "extended": "navy"
-                    },
-                    "Valley Forge Class": {
-                        "value": 0,
-                        "cost": 4,
-                        "extended": "navy"
-                    },
-                    "Henderson Field Transport": {
-                        "value": 0,
-                        "cost": 3,
-                        "extended": "navy"
-                    },
-                    "Okinawa Assault Carrier": {
-                        "value": 0,
-                        "cost": 5,
-                        "extended": "navy"
-                    }
                 }
             },
             "Weapons": {
-                "US military small arms": {
+                "US Military Small Arms": {
                     "M41 Pulse Rifle": {
                         "value": 0,
                         "cost": 5,
@@ -726,6 +670,11 @@
                         "cost": 3,
                         "extended": "colonist"
                     },
+                    "EMP": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": " Electromagnetic pulse weapons designed to harm electronics. Could be in the form of a grenade, a directed energy weapon or effects from a nuclear detonation."
+                    },
                     "Flamer": {
                         "value": 0,
                         "cost": 3,
@@ -756,7 +705,19 @@
                         "tooltip": "To hunt smaller animals or birds, but can also be a potent short range combat weapon. Shells can contain shot in different sizes depending on the intended target. Uses Shooting: Dynamic."
                     }
                 },
-                "Other military small arms": {
+                "Other Military Small Arms": {
+                    "AK-104 Suit Gun": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "military",
+                        "tooltip": "Belt fed pulse action gun built into the UPP CCC5 combat suits."
+                    },
+                    "AK-4047 Pulse Rifle": {
+                        "value": 0,
+                        "cost": 4,
+                        "extended": "military",
+                        "tooltip": "The standard assault rifle for UPP forces. Rugged and reliable."
+                    },
                     "F44AA Pulse Rifle": {
                         "value": 0,
                         "cost": 3,
@@ -953,17 +914,21 @@
                     "Space": {
                         "value": 0,
                         "cost": 0
+                    },
+                    "Nebula": {
+                        "value": 0,
+                        "cost": 0
                     }
                 },
                 "Engineering": {
+                    "Building demolition": {
+                        "value": 0,
+                        "cost": 3
+                    },
                     "Bridge Laying": {
                         "value": 0,
                         "cost": 5,
                         "tooltip": "Used with Utility Equipment."
-                    },
-                    "Building demolition": {
-                        "value": 0,
-                        "cost": 3
                     },
                     "Carpentry": {
                         "value": 0,
@@ -997,7 +962,7 @@
                         "extended": "colonist",
                         "tooltip": "Professional knowledge of electric cabling, power \ngenerators, batteries and safety near high voltage lines. Used \nwith Electronics Tools."
                     },
-                    "Engineering machinery": {
+                    "Engineering Machinery": {
                         "value": 0,
                         "cost": 15,
                         "extended": "colonist",
@@ -1007,6 +972,11 @@
                         "value": 0,
                         "cost": 3,
                         "tooltip": "Digging with a mechanical excavator arm or dozer blade. Holes, trenches or flattening land for building foundations. Used with Utility Equipment."
+                    },
+                    "Fusion Reactor": {
+                        "value": 0,
+                        "cost": 10,
+                        "extended": "colonist"
                     },
                     "Hotwiring": {
                         "value": 0,
@@ -1023,10 +993,21 @@
                         "cost": 4,
                         "tooltip": "Improvised Explosive Device. Knowledge how to create \nimprovised mines or explosive charges. Used with Demolition or \nMine Warfare."
                     },
+                    "Life Support": {
+                        "value": 0,
+                        "cost": 4,
+                        "extended": "colonist",
+                        "tooltip": "Knowledge of life support system which could be on a ship or colony."
+                    },
                     "Lockpicking": {
                         "value": 0,
                         "cost": 7,
                         "tooltip": "Low-tech locks may be possible to defeat with a pin \nand the Sleight of Hand or Criminal skill. More advanced locks \nrequire Mechanic Tools or Electronics Tools skills to run a \nbypass."
+                    },
+                    "Powerloader": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Exoskeleton powerloader Class II license. \nUsed with Utility Equipment."
                     },
                     "Power Tools": {
                         "value": 0,
@@ -1079,6 +1060,11 @@
                         "value": 0,
                         "cost": 3,
                         "tooltip": "Used with Policework, Intelligence, Intimidation,\nStreetwise or Charisma depending on situation."
+                    },
+                    "Logistics": {
+                        "value": 0,
+                        "cost": 5,
+                        "tooltip": "Plan and manage expendable resources for a military unit or a starship. Used with Leadership."
                     },
                     "Maritime Tactics": {
                         "value": 0,
@@ -1139,6 +1125,12 @@
                     }
                 },
                 "Sensors & IT": {
+                    "3WE Interface": {
+                        "value": 0,
+                        "cost": 2,
+                        "extended": "navy",
+                        "tooltip": "Computer interface used on 3WE space navy starships."
+                    },
                     "Covert Sensors": {
                         "value": 0,
                         "cost": 4,
@@ -1208,6 +1200,12 @@
                         "cost": 4,
                         "tooltip": "Operation of tightbeam communication systems which \nwill typically use lasers. Uses Comtech skill."
                     },
+                    "UPP Interface": {
+                        "value": 0,
+                        "cost": 2,
+                        "extended": "military",
+                        "tooltip": "Computer interface used on UPP space navy starships."
+                    },
                     "USCM Interface": {
                         "value": 0,
                         "cost": 2,
@@ -1266,10 +1264,30 @@
                         "cost": 8,
                         "tooltip": "You have specialist K9 training to work with dogs for \nfor searching, guarding etc. Your squad will benefit from the \nsenses of your dog for detection purposes (combined roll using \ndog perception + your Animal Handling which in practice means \nyour skill is used since it will be lower)."
                     },
+                    "Nautical Charts": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "You know how to read ocean and coastal maps and use nautical navigation aids if available"
+                    },
+                    "Orienteering": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Provides bonus to navigation over land regardless of terrain."
+                    },
                     "Riding": {
                         "value": 0,
                         "cost": 4,
                         "tooltip": "Used with Animal Handling"
+                    },
+                    "Rope Work": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Used with Seamanship, Sleight of Hand or Outdoorsman \nto tie knots or make rope ladders. With Dexterity for \nrappelling. With Animal Handling to improvise a harness & leash."
+                    },
+                    "Scaling": {
+                        "value": 0,
+                        "cost": 4,
+                        "tooltip": "Trained to use professional climbing equipment. \nUsed with Dexterity."
                     },
                     "Skiing": {
                         "value": 0,
@@ -1287,7 +1305,17 @@
                         "tooltip": "Used with Outdoorsman and terrain expertise."
                     }
                 },
-                "Navigation": {
+                "Space & piloting": {
+                    "Docking": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Docking procedures for starships, umbilicals or land based airlocks. Also allows you to perform manual overrides similar as if you had Lockpicking. Used with Pilot: Space for ships, Space Crew for manual operation or Utility Equipment for umbilicals."
+                    },
+                    "Environmental Suit": {
+                        "value": 1,
+                        "cost": 3,
+                        "tooltip": "Training on suits for extreme environments like space, biohazard or high-pressure. Advanced accessories/tools require separate expertise. Used with Zero-G, CBRN Warfare, Space Crew or Colonist."
+                    },
                     "Interplanetary": {
                         "value": 0,
                         "cost": 6
@@ -1297,14 +1325,10 @@
                         "cost": 10,
                         "extended": "navy"
                     },
-                    "Orienteering": {
+                    "Thrusterpack": {
                         "value": 0,
-                        "cost": 2,
-                        "tooltip": "Provides bonus to navigation over land regardless of terrain."
-                    },
-                    "Nautical Charts": {
-                        "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Operate spacesuit thrusters with the Zero-G skill."
                     }
                 },
                 "Science & Medicine": {
@@ -1435,6 +1459,12 @@
                     }
                 },
                 "Creative": {
+                    "Dancing": {
+                        "value": 0,
+                        "cost": 4,
+                        "extended": "colonist",
+                        "tooltip": "Used with Dexterity."
+                    },
                     "Music": {
                         "value": 0,
                         "cost": 8,
@@ -1461,6 +1491,11 @@
                         "value": 0,
                         "cost": 2,
                         "tooltip": "You know how to properly use a camera or a video camera, for artistic or documentation purposes. Used with Artistry, Sensor Systems or Intelligence."
+                    },
+                    "Public Speech": {
+                        "value": 0,
+                        "cost": 3,
+                        "tooltip": "Write and deliver a speech addressing a crowd."
                     },
                     "Singing": {
                         "value": 0,
@@ -1526,20 +1561,16 @@
                         "cost": 3,
                         "tooltip": "Used with Gambling or Sleight of Hand."
                     },
+                    "Conservation": {
+                        "value": 0,
+                        "cost": 3,
+                        "extended": "colonist",
+                        "tooltip": "Knowledge how to preserve food like curing meat, pressure cooking jars or adding the right amount of chemicals."
+                    },
                     "Diving equipment": {
                         "value": 0,
                         "cost": 3,
                         "tooltip": "Used with Swimming."
-                    },
-                    "Docking": {
-                        "value": 0,
-                        "cost": 2,
-                        "tooltip": "Docking procedures for starships, umbilicals or land based airlocks. Also allows you to perform manual overrides similar as if you had Lockpicking. Used with Pilot: Space for ships, Space Crew for manual operation or Utility Equipment for umbilicals."
-                    },
-                    "Environmental Suit": {
-                        "value": 1,
-                        "cost": 3,
-                        "tooltip": "Training on suits for extreme environments like space, biohazard or high-pressure. Advanced accessories/tools require separate expertise. Used with Zero-G, CBRN Warfare, Space Crew or Colonist."
                     },
                     "Forgery": {
                         "value": 0,
@@ -1556,41 +1587,16 @@
                         "cost": 4,
                         "tooltip": "Used with Sleight of Hand vs Perception."
                     },
-                    "Powerloader": {
-                        "value": 0,
-                        "cost": 4,
-                        "tooltip": "Exoskeleton powerloader Class II license. \nUsed with Utility Equipment."
-                    },
                     "Law": {
                         "value": 0,
                         "cost": 8,
                         "extended": "colonist",
                         "tooltip": "Usable with Policework for criminal law, Commerce for trade laws. Officers may use it with Soldiering for military law."
                     },
-                    "Life Support": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Space Crew or Colonist to operate and maintain. \nMechanic or Electronics Tools for more extensive repairs or \nmodifications."
-                    },
-                    "Rope Work": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Used with Seamanship, Sleight of Hand or Outdoorsman \nto tie knots or make rope ladders. With Dexterity for \nrappelling. With Animal Handling to improvise a harness & leash."
-                    },
-                    "Scaling": {
-                        "value": 0,
-                        "cost": 4,
-                        "tooltip": "Trained to use professional climbing equipment. \nUsed with Dexterity."
-                    },
                     "Shadowing": {
                         "value": 0,
                         "cost": 4,
                         "tooltip": "Opposed roll vs targets Streetwise. \nUsed with Intelligence, Policework, Streetwise or \nRemote Piloting (if using a drone)."
-                    },
-                    "Thrusterpack": {
-                        "value": 0,
-                        "cost": 3,
-                        "tooltip": "Operate spacesuit thrusters with the Zero-G skill."
                     }
                 }
             }
@@ -2384,6 +2390,21 @@
                             }
                         }
                     },
+                    "Management by Fear": {
+                        "value": 0,
+                        "cost": 2,
+                        "tooltip": "Req: Not Catnapper",
+                        "requirements": {
+                            "Intimidation": {
+                                "type": "<=",
+                                "value": 2
+                            },
+                            "Rank": {
+                                "type": ">=",
+                                "value": 3
+                            }
+                        }
+                    },
                     "Martial Artist: Grappler": {
                         "value": 0,
                         "cost": 3,
@@ -2520,6 +2541,12 @@
                                 "value": 4
                             }
                         }
+                    },
+                    "Officer": {
+                        "value": 0,
+                        "cost": 15,
+                        "extended": "navy",
+                        "tooltip": "You have officer training from a military academy."
                     },
                     "Quick Learner": {
                         "value": 0,
@@ -2824,7 +2851,7 @@
                         "value": 0,
                         "cost": -4
                     },
-                    "All out of bubble gum": {
+                    "All out of bubblegum": {
                         "value": 0,
                         "cost": -3,
                         "tooltip": "Req: Not Private who?, Not Impressive Stature, \nNot Victim",
@@ -3070,6 +3097,11 @@
                     "Nervous": {
                         "value": 0,
                         "cost": -1
+                    },
+                    "No sense of direction": {
+                        "value": 0,
+                        "cost": -2,
+                        "tooltip": "Rolls for Navigation or Indirect Fire get +2R."
                     },
                     "Not one step back": {
                         "value": 0,
