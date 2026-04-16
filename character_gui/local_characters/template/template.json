@@ -316,24 +316,20 @@
                     "Science Equipment": {
                         "value": 0,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Some soldiers are trained in the use of specialized equipment to collect samples or perform tests \"for science\"."
                     },
                     "Welding": {
                         "value": 0,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Operate welding equipment and apply it safely for cutting or joining."
                     },
                     "Space Crew": {
                         "value": 1,
                         "min": 1,
                         "max": 5,
                         "tooltip": "Basic crew role on a spaceship or station.\nExpertise: Starship, Damage Control, Cooling Systems, Docking, Starship\nIdentification, Environmental Suit, Life Support"
-                    },
-                    "Starship Bridge": {
-                        "value": 0,
-                        "min": 0,
-                        "max": 5,
-                        "extended": "navy"
                     }
                 },
                 "Military Skills": {
@@ -384,7 +380,8 @@
                     "Animal Handling": {
                         "value": 0,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Experience and aptitude dealing with animals, tame or wild."
                     },
                     "Colonist": {
                         "value": 0,
@@ -397,7 +394,7 @@
                         "value": 1,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Expertise: Barista, Butchering, Field Cooking"
+                        "tooltip": "Making real food from basic ingredients may be a rare thing with military logistics based on MRE:s and nutritious pink goo, but can be a boost to both morale and energy if you get the opportunity."
                     },
                     "First Aid": {
                         "value": 1,
@@ -408,12 +405,14 @@
                     "Gambling": {
                         "value": 0,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Skill based games where you play for money, or possibly even higher stakes."
                     },
                     "Intimidation": {
                         "value": 0,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Threaten someone to make them back down, give you information or simply bully them in a situation where they perceive you have the advantage. "
                     },
                     "Navigation": {
                         "value": 2,
@@ -446,54 +445,62 @@
                         "value": 0,
                         "min": 0,
                         "max": 5,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Profession skill for traders, shopowners etc. Covers basic accounting, budgeting, knowledge of regulations market trends etc."
                     },
                     "Criminal": {
                         "value": 0,
                         "min": 0,
                         "max": 5,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Profession skill for thiefs, smugglers, pirates, mafia members etc. Covers knowledge of and contacts in the criminal world."
                     },
                     "Engineering": {
                         "value": 0,
                         "min": 0,
                         "max": 5,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Engineering."
                     },
                     "Farming": {
                         "value": 0,
                         "min": 0,
                         "max": 5,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Profession skill for a farmer on a terraformed world. Everything from growing vegetables in a small greenhouse to running a large farm."
                     },
                     "Medical": {
                         "value": 0,
                         "min": 0,
                         "max": 5,
-                        "tooltip": "Profession skill of doctors and nurses.\nExpertise: Aerospace Medicine, Autodoc, CBRN Treatment, Cryogenics, Cybernetics, Dissection, Dive Medicine, Herbalism, Infections, IV, Surgery, Toxicology, X-ray."
+                        "tooltip": "Profession skill of doctors and nurses used for diagnoses, treatment over time and advanced medical procedures."
                     },
                     "Mining": {
                         "value": 0,
                         "min": 0,
                         "max": 5,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Profession skill for miners, covering planetside or asteroid mining."
                     },
                     "Policework": {
                         "value": 0,
                         "min": 0,
                         "max": 5,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Profession skill for police officers, military police or colonial marshals."
                     },
                     "Science": {
                         "value": 0,
                         "min": 0,
-                        "max": 5
+                        "max": 5,
+                        "tooltip": "Scientific methodology and training in the foundations that will allow you to grasp more complex topics, and maybe one day make your own contributions."
                     },
                     "Survey": {
                         "value": 0,
                         "min": 0,
                         "max": 5,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Working as a surveyor to find and quantify mineral deposits."
                     },
                     "Terraforming": {
                         "value": 0,
