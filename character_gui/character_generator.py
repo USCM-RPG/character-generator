@@ -361,7 +361,13 @@ class CharacterGenerator:
         self._update_pp_status()
         self._check_property_disable()
         self._update_trait_status()
+        self._update_psycho_limit()
         self._update_stress_limit()
+        self._update_stunt_cap()
+        self._update_health_limit()
+        self._update_leadership_points()
+        self._update_carry_capacity()
+        self._update_combat_load()
         self._update_overview()
 
     def _has_requirements(self, property: str) -> bool:
@@ -436,10 +442,11 @@ class CharacterGenerator:
         Must be called whenever a related value have been change.
         """
         psycho_limit = self._get_attribute_value("Psyche")
+        bonus_string = "".join(self._check_active_bonuses("Psycho Limit"))
         self._stats["Psycho Limit"]["value"] = psycho_limit
         dpg.set_value(
             item="Psycho Limit",
-            value=psycho_limit,
+            value=f"{psycho_limit} {bonus_string}",
         )
 
     def _update_stress_limit(self):
@@ -463,10 +470,11 @@ class CharacterGenerator:
         """
 
         stunt_cap = self._get_attribute_value("Charisma")
+        bonus_string = "".join(self._check_active_bonuses("Stunt Cap"))
         self._stats["Stunt Cap"]["value"] = stunt_cap
         dpg.set_value(
             item="Stunt Cap",
-            value=stunt_cap,
+            value=f"{stunt_cap} {bonus_string}",
         )
 
     def _update_health_limit(self):
@@ -476,10 +484,11 @@ class CharacterGenerator:
         """
 
         health = self._get_attribute_value("Endurance") + 3
+        bonus_string = "".join(self._check_active_bonuses("Health"))
         self._stats["Health"]["value"] = health
         dpg.set_value(
             item="Health",
-            value=health,
+            value=f"{health} {bonus_string}",
         )
 
     def _update_carry_capacity(self):
@@ -489,10 +498,11 @@ class CharacterGenerator:
         """
         idx = self._get_attribute_value("Strength") - 1
         carry_capacity = self._config["Carry Capacity Table"][idx]
+        bonus_string = "".join(self._check_active_bonuses("Carry Capacity"))
         self._stats["Carry Capacity"]["value"] = carry_capacity
         dpg.set_value(
             item="Carry Capacity",
-            value=carry_capacity,
+            value=f"{carry_capacity} {bonus_string}",
         )
 
     def _update_combat_load(self):
@@ -502,10 +512,11 @@ class CharacterGenerator:
         """
         idx = self._get_attribute_value("Strength") - 1
         combat_load = self._current_character["Config"]["Combat Load Table"][idx]
+        bonus_string = "".join(self._check_active_bonuses("Combat Load"))
         self._stats["Combat Load"]["value"] = combat_load
         dpg.set_value(
             item="Combat Load",
-            value=combat_load,
+            value=f"{combat_load} {bonus_string}",
         )
 
     def _update_leadership_points(self):

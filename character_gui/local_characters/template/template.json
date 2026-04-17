@@ -295,7 +295,7 @@
                         "max": 5,
                         "tooltip": "Knowing your way around a computer terminal.\nExpertise: Interface 2037, USCM Interface, USN Interface,\nProgramming, Hacking, AI, Autodoc, Engineering machinery"
                     },
-                    "Electronic Tools": {
+                    "Electronics Tools": {
                         "value": 0,
                         "min": 0,
                         "max": 5,
@@ -329,7 +329,7 @@
                         "value": 1,
                         "min": 1,
                         "max": 5,
-                        "tooltip": "Basic crew role on a spaceship or station.\nExpertise: Starship, Damage Control, Cooling Systems, Docking, Starship\nIdentification, Environmental Suit, Life Support"
+                        "tooltip": "Basic crew role on a spaceship or station.\nExpertise: Starship, Damage Control, Cooling Systems, Docking, Starship Identification, Environmental Suit, Life Support"
                     }
                 },
                 "Military Skills": {
@@ -373,7 +373,7 @@
                         "value": 1,
                         "min": 1,
                         "max": 1,
-                        "tooltip": "Anything a soldier \"should\" know not covered by a separate skill.\nExpertise: Drill, Forward Observer, FAC, Infantry Tactics,\nMobile Tactics, RTI Vehicle Identification"
+                        "tooltip": "Anything a soldier \"should\" know not covered by a separate skill.\nExpertise: Drill, Forward Observer, FAC, Infantry Tactics,\nMobile Tactics, RTI, Vehicle Identification"
                     }
                 },
                 "General Skills": {
@@ -400,7 +400,7 @@
                         "value": 1,
                         "min": 1,
                         "max": 5,
-                        "tooltip": "Initial treatment. Advanced treatment requires the Medical skill.\nExpertise: IV, Surgery, Toxicology, Infections,\nDive Medicine, Aerospace Medicine, Altitude Medicine\nCold climate, Hot climate, CBRN Treatment, Autodoc"
+                        "tooltip": "Initial treatment. Advanced treatment requires the Medical skill.\nExpertise: IV, Surgery, Toxicology, Infections,\nDive Medicine, Aerospace Medicine, CBRN Treatment, Autodoc"
                     },
                     "Gambling": {
                         "value": 0,
@@ -533,19 +533,23 @@
                     },
                     "COTS Drone": {
                         "value": 0,
-                        "cost": 2
+                        "cost": 2,
+                        "tooltip": "Basic civilian Commercial Off The Shelf drone operated via Remote Piloting."
                     },
                     "Decoy Drone": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Various models exist for operation in atmosphere or space."
                     },
                     "M421 Firefly": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Unarmed vectored thrust craft (can also be used with Ship Class Rating 1)."
                     },
                     "M86 UAV": {
                         "value": 0,
-                        "cost": 4
+                        "cost": 4,
+                        "tooltip": "Unmanned Aerial Vehicle, unarmed but with military grade sensors. Used with Remote Piloting."
                     },
                     "PUPS": {
                         "value": 0,
@@ -626,7 +630,7 @@
                         "value": 0,
                         "cost": 5,
                         "extended": "military",
-                        "tooltip": "Large UPP APC configurable for multiple roles. Has Plasma cannon, flamer and HMMG."
+                        "tooltip": "Large UPP APC configurable for multiple roles. Has Plasma cannon, flamer and HMG."
                     }
                 },
                 "Sea Vehicles": {
@@ -702,12 +706,13 @@
                     "Deer Rifle": {
                         "value": 0,
                         "cost": 3,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Scoped rifle typically used for hunting larger animals."
                     },
                     "EMP": {
                         "value": 0,
                         "cost": 3,
-                        "tooltip": " Electromagnetic pulse weapons designed to harm electronics. Could be in the form of a grenade, a directed energy weapon or effects from a nuclear detonation."
+                        "tooltip": "Electromagnetic pulse weapons designed to harm electronics. Could be in the form of a grenade, a directed energy weapon or effects from a nuclear detonation."
                     },
                     "Flamer": {
                         "value": 0,
@@ -716,7 +721,8 @@
                     },
                     "Hand Grenade": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Basic grenade exploding 3 seconds after being thrown causing blast and shrapnel."
                     },
                     "Harpoon": {
                         "value": 0,
@@ -802,11 +808,13 @@
                     },
                     "Laser": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Laser weapons on vehicles or starships."
                     },
                     "Railgun": {
                         "value": 0,
-                        "cost": 5
+                        "cost": 5,
+                        "tooltip": "Railgun weapons typically mounted on starships."
                     },
                     "Particle Beam": {
                         "value": 0,
@@ -957,7 +965,8 @@
                 "Engineering": {
                     "Building demolition": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Specific training on how to efficiently demolish buildings by applying explosives. Uses Demolition skill."
                     },
                     "Bridge Laying": {
                         "value": 0,
@@ -967,7 +976,8 @@
                     "Carpentry": {
                         "value": 0,
                         "cost": 4,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "General know-how of wood fitting and construction material assembly."
                     },
                     "Chainsaw": {
                         "value": 0,
@@ -1010,7 +1020,8 @@
                     "Fusion Reactor": {
                         "value": 0,
                         "cost": 10,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Specialized fusion reactor operation and maintenance license."
                     },
                     "Hotwiring": {
                         "value": 0,
@@ -1178,7 +1189,8 @@
                     "FTL Communication": {
                         "value": 0,
                         "cost": 3,
-                        "extended": "navy"
+                        "extended": "navy",
+                        "tooltip": "Training to operate systems for FTL communication."
                     },
                     "Hacking": {
                         "value": 0,
@@ -1227,7 +1239,8 @@
                     },
                     "Sensor Networking": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Knowledge how to build distributed sensors systems for example by using a portable system hub and lots of wire."
                     },
                     "Tightbeam": {
                         "value": 0,
@@ -1248,7 +1261,8 @@
                     "USN Interface": {
                         "value": 0,
                         "cost": 2,
-                        "extended": "navy"
+                        "extended": "navy",
+                        "tooltip": "Computer interface used on US space navy starships."
                     }
                 },
                 "Nature & Animals": {
@@ -1256,7 +1270,7 @@
                         "value": 0,
                         "cost": 3,
                         "extended": "colonist",
-                        "tooltip": "Uses Outdoorsman."
+                        "tooltip": "You can make simple tools from the environment around you, like breaking rocks to produce a sharp edge for cutting or fold leaves into a bowl to carry water."
                     },
                     "Butchering": {
                         "value": 0,
@@ -1275,7 +1289,8 @@
                     },
                     "Fishing": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "You know how to set bait and catch fish, with net or fishing rod."
                     },
                     "Herbalism": {
                         "value": 0,
@@ -1286,7 +1301,8 @@
                     "Herding": {
                         "value": 0,
                         "cost": 4,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": " You know how to handle large herds of animals, directing them and not get trampled."
                     },
                     "Hunting": {
                         "value": 0,
@@ -1352,12 +1368,14 @@
                     },
                     "Interplanetary": {
                         "value": 0,
-                        "cost": 6
+                        "cost": 6,
+                        "tooltip": "You understand orbital mechanics and can plot courses within a star system."
                     },
                     "Interstellar": {
                         "value": 0,
                         "cost": 10,
-                        "extended": "navy"
+                        "extended": "navy",
+                        "tooltip": "Enough understanding of FTL travel mechanics and star charts that you with some computational assistance can plot courses between star systems"
                     },
                     "Thrusterpack": {
                         "value": 0,
@@ -1369,7 +1387,8 @@
                     "Aerospace Medicine": {
                         "value": 0,
                         "cost": 3,
-                        "extended": "navy"
+                        "extended": "navy",
+                        "tooltip": "Training for space navy medics dealing with for example conditions arising from microgravity or vacuum exposure."
                     },
                     "Androids": {
                         "value": 0,
@@ -1398,7 +1417,8 @@
                     },
                     "Dive Medicine": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Diagnose and treat effects from diving, for example decompression sickness."
                     },
                     "Dissection": {
                         "value": 0,
@@ -1417,7 +1437,8 @@
                     },
                     "IV": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Administrating intravenous fluids."
                     },
                     "Laboratory equipment": {
                         "value": 0,
@@ -1427,12 +1448,14 @@
                     "Meteorology": {
                         "value": 0,
                         "cost": 3,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Operate equipment for planetary weather forecasting. Also used to deploy weather balloons or other meteorological sensors."
                     },
                     "Oceanography": {
                         "value": 0,
                         "cost": 3,
-                        "extended": "colonist"
+                        "extended": "colonist",
+                        "tooltip": "Operate equipment for prediction of oceanic dynamics like currents, waves etc. Also used to deploy oceanographic sensors."
                     },
                     "Surgery": {
                         "value": 0,
@@ -1459,7 +1482,8 @@
                 "Language": {
                     "Chinese": {
                         "value": 0,
-                        "cost": 3
+                        "cost": 3,
+                        "tooltip": "Major language in the UPP countries and for corporations like Shiriyen."
                     },
                     "English": {
                         "value": 1,
@@ -1656,7 +1680,7 @@
                     "Bloodthirst": {
                         "value": 0,
                         "cost": 0,
-                        "tooltip": "Req: Not Religious, Not Righteous, Not Soft hearted",
+                        "tooltip": "Req: Not Religious, Not Soft hearted",
                         "requirements": {
                             "Religious": {
                                 "type": "==",
@@ -2274,7 +2298,7 @@
                         "requirements": {
                             "Soldiering": {
                                 "type": ">=",
-                                "value": 3
+                                "value": 5
                             }
                         }
                     }
@@ -2427,11 +2451,15 @@
                     "Management by Fear": {
                         "value": 0,
                         "cost": 2,
-                        "tooltip": "Req: Not Catnapper",
+                        "tooltip": "Req: Charisma < 3, Intimidation 3, Corporal (E4)",
                         "requirements": {
-                            "Intimidation": {
+                            "Charisma": {
                                 "type": "<=",
                                 "value": 2
+                            },
+                            "Intimidation": {
+                                "type": ">=",
+                                "value": 3
                             },
                             "Rank": {
                                 "type": ">=",
@@ -2726,7 +2754,7 @@
                             },
                             "Soldiering": {
                                 "type": ">=",
-                                "value": 3
+                                "value": 2
                             }
                         }
                     },
@@ -2817,7 +2845,14 @@
                     "Tough": {
                         "value": 0,
                         "cost": 6,
-                        "tooltip": "Get one more box in your Health bar"
+                        "tooltip": "Get one more box in your Health bar",
+                        "bonus": [
+                            {
+                                "target": "Health",
+                                "type": "permanent",
+                                "value": 1
+                            }
+                        ]
                     },
                     "Tunnel Rat": {
                         "value": 0,
@@ -3078,8 +3113,7 @@
                     },
                     "Kleptomaniac": {
                         "value": 0,
-                        "cost": -2,
-                        "tooltip": "Req: Not Righteous"
+                        "cost": -2
                     },
                     "Low Tolerance": {
                         "value": 0,
@@ -3100,7 +3134,7 @@
                     "Mean Bastard": {
                         "value": 0,
                         "cost": -4,
-                        "tooltip": "Intimidation 2, Not Fixer, Not Whipped, \nNot Soft hearted, Not Life of the party, Not Victim",
+                        "tooltip": "Intimidation 2, Not Fixer, \nNot Soft hearted, Not Life of the party, Not Victim",
                         "requirements": {
                             "Intimidation": {
                                 "type": ">=",
@@ -3155,7 +3189,7 @@
                     "Scapegoat": {
                         "value": 0,
                         "cost": -2,
-                        "tooltip": "Req: Background, Not Righteous, Not Squad Leader",
+                        "tooltip": "Req: Background, Not Squad Leader",
                         "extended": "background",
                         "requirements": {
                             "Squad Leader": {
@@ -3386,8 +3420,7 @@
                 " ": {
                     "Left arm": {
                         "value": 0,
-                        "cost": 0,
-                        "tooltip": "Installation or repair of cybernetic implants (this may also require Surgery). Used with Medical. Some repairs like fixing EMP damage are also possible with Electronic Tools. Also covers basic procedures for common android models like rebooting or installing a module chip."
+                        "cost": 0
                     },
                     "Right arm": {
                         "value": 0,
