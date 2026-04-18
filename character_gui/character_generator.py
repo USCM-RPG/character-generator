@@ -1048,9 +1048,9 @@ class CharacterSelector:
         self._create_mode: bool = False
 
         self._extend_character = {
-            "military": True,
-            "navy": True,
-            "colonist": True,
+            "military": False,
+            "navy": False,
+            "colonist": False,
             "background": self._create_mode,
         }
 
