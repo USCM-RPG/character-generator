@@ -16,16 +16,16 @@ Download the content of this repo.
 install UV yourself or let the script below help you.
 
 #### Windows
-run `USCM_Character_Generator_for_Windows.bat`.
+run `Start_USCM_Character_Generator_for_Windows.bat`.
 
 #### Linux / macOS
 
 ```bash
 # First time only:
-chmod +x USCM_Character_Generator_for_linux_or_Mac.sh
+chmod +x Start_USCM_Character_Generator_for_linux_or_Mac.sh
 
 # Then:
-./USCM_Character_Generator_for_linux_or_Mac.sh
+./Start_USCM_Character_Generator_for_linux_or_Mac.sh
 ```
 
 ### Getting Started
