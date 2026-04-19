@@ -6,7 +6,7 @@ Application for creating characters for USCM roleplaying game.
 
 ### Prerequisites
 
-- UV python package manaager -> installed automatically if not available.
+- UV python package manager -> installed automatically if not available.
 - Windows, macOS, Linux
 
 ### Quick Start
