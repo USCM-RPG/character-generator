@@ -1,0 +1,16 @@
+[project]
+name = "uscm-character-generator"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dearpygui>=2.2",
+    "pre-commit>=4.5.1",
+    "reportlab>=4.4.10",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.10",
+]
