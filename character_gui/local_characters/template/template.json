@@ -1040,7 +1040,7 @@
                     },
                     "Life Support": {
                         "value": 0,
-                        "cost": 4,
+                        "cost": 3,
                         "extended": "colonist",
                         "tooltip": "Knowledge of life support system which could be on a ship or colony."
                     },
